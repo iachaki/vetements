@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+{
+    NSArray *strArray;
+}
+
+@property IBOutlet UICollectionView *collectionView;
 
 @end

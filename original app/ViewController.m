@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    NSString *selctedName;
+}
 
 @end
 
@@ -18,12 +20,40 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    strArray = [NSArray arrayWithObjects:@"まっすー",@"いあ",@"たーきゃん", nil];
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
 }
 
-- (void)didReceiveMemoryWarning
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 1;
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 18;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell;
+    
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
+    NSString *imgName =[NSString stringWithFormat:@"photo%d.jpg",(int)(indexPath.row+1)];
+    UIImage *image = [UIImage imageNamed:imgName];
+    imageView.image =image;
+    
+    UILabel*label = (UILabel *)[cell viewWithTag:2];
+    label.text = [NSString stringWithFormat:@"No.%d",(int)(indexPath.row+1)];
+    
+    return cell;
+    
+}
+
 
 @end
