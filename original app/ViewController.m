@@ -21,10 +21,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    strArray = [NSArray arrayWithObjects:@"まっすー",@"いあ",@"たーきゃん", nil];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.collectionView.scrollEnabled = YES;
+    self.collectionView.userInteractionEnabled = YES;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -39,6 +40,8 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    //_collectionView.scrollEnabled=YES;
+    
     UICollectionViewCell *cell;
     
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
@@ -55,5 +58,11 @@
     
 }
 
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+
+    NSLog(@"selected %d", (int)indexPath.row);
+}
 
 @end

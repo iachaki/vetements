@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 {
-    NSArray *strArray;
+    
 }
 
 @property IBOutlet UICollectionView *collectionView;
