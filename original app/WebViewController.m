@@ -26,6 +26,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSURL *url = [NSURL URLWithString:@"http://www.dholic.co.jp/"];
+
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:req];
+    
+    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] init];
+    gs.numberOfTapsRequired = 1;
+    gs.delegate = self;
+    [self.view addGestureRecognizer:gs];
+
 	
     //UIWebViewのインスタンス化
 //    CGRect rect = self.view.frame;
@@ -38,7 +48,7 @@
     //webView.delegate = self;
     
     //URLを指定
-    NSURL *url =[NSURL URLWithString:@"http://www.google.com"];
+    //NSURL *url =[NSURL URLWithString:@"http://www.google.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     //リクエストを投げる
@@ -78,6 +88,37 @@
 //NSLog(@"%@",url);
 label2.text=[NSString stringWithFormat:@"%@",url];
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    NSLog(@"TAPPED");
+    //Touch gestures below top bar should not make the page turn.
+    //EDITED Check for only Tap here instead.
+    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
+        CGPoint touchPoint = [touch locationInView:self.view];
+        
+        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+        bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
+        NSLog(@"pageFlag tapbtnRight %d", pageFlag);
+        
+        if(self.interfaceOrientation==UIInterfaceOrientationPortrait||self.interfaceOrientation==UIInterfaceOrientationPortraitUpsideDown) {
+            NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
+            NSString *urlToSave = [webView stringByEvaluatingJavaScriptFromString:imgURL];
+            NSLog(@"urlToSave :%@",urlToSave);
+            NSURL * imageURL = [NSURL URLWithString:urlToSave];
+            NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+            UIImage * image = [UIImage imageWithData:imageData];
+            imgView.image = image;
+        }
+    }
+    return YES;
+}
+
 
 
 @end

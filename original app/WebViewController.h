@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebViewController : UIViewController<UIWebViewDelegate>
+@interface WebViewController : UIViewController<UIGestureRecognizerDelegate>
 {
     IBOutlet UIWebView *webView;
+    IBOutlet UIImageView *imgView;
     IBOutlet UILabel *label;
     IBOutlet UILabel *label2;
 }
