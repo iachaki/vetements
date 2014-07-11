@@ -61,7 +61,8 @@
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
-   
+    [self performSegueWithIdentifier:@"cellcolection"sender:self];
+    
     NSLog(@"selected %d", (int)indexPath.row);
 }
 
