@@ -25,7 +25,7 @@
 		080DD5F0195D887200D99D0A /* photo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5DE195D887200D99D0A /* photo7.jpg */; };
 		080DD5F1195D887200D99D0A /* photo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5DF195D887200D99D0A /* photo8.jpg */; };
 		080DD5F2195D887200D99D0A /* photo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5E0195D887200D99D0A /* photo9.jpg */; };
-		082C57B41966B78500585CE4 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082C57B31966B78500585CE4 /* WebViewController.m */; };
+		08A5A9961973C7AB0031F1FF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A5A9951973C7AB0031F1FF /* WebViewController.m */; };
 		08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE2195D73CE000A3FF4 /* Foundation.framework */; };
 		08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */; };
 		08E59AE7195D73CE000A3FF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE6195D73CE000A3FF4 /* UIKit.framework */; };
@@ -72,7 +72,7 @@
 		080DD5DF195D887200D99D0A /* photo8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8.jpg; sourceTree = "<group>"; };
 		080DD5E0195D887200D99D0A /* photo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo9.jpg; sourceTree = "<group>"; };
 		082C57B21966B78500585CE4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		082C57B31966B78500585CE4 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		08A5A9951973C7AB0031F1FF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		08E59ADF195D73CE000A3FF4 /* original app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "original app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E59AE2195D73CE000A3FF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -181,7 +181,7 @@
 				08E59AF2195D73CE000A3FF4 /* AppDelegate.m */,
 				08E59AF4195D73CE000A3FF4 /* Main.storyboard */,
 				082C57B21966B78500585CE4 /* WebViewController.h */,
-				082C57B31966B78500585CE4 /* WebViewController.m */,
+				08A5A9951973C7AB0031F1FF /* WebViewController.m */,
 				08E59AF7195D73CE000A3FF4 /* ViewController.h */,
 				08E59AF8195D73CE000A3FF4 /* ViewController.m */,
 				08E59AFA195D73CE000A3FF4 /* Images.xcassets */,
@@ -337,7 +337,7 @@
 				08E59AF9195D73CE000A3FF4 /* ViewController.m in Sources */,
 				08E59AF3195D73CE000A3FF4 /* AppDelegate.m in Sources */,
 				08E59AEF195D73CE000A3FF4 /* main.m in Sources */,
-				082C57B41966B78500585CE4 /* WebViewController.m in Sources */,
+				08A5A9961973C7AB0031F1FF /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

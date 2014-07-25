@@ -2,7 +2,7 @@
 //  WebViewController.m
 //  original app
 //
-//  Created by ia on 2014/07/04.
+//  Created by ia on 2014/07/14.
 //  Copyright (c) 2014年 Life is tech. All rights reserved.
 //
 
@@ -26,8 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
     NSURL *url = [NSURL URLWithString:@"http://www.dholic.co.jp/"];
-
+    
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
     
@@ -35,11 +36,11 @@
     gs.numberOfTapsRequired = 1;
     gs.delegate = self;
     [self.view addGestureRecognizer:gs];
-
-	
+    
+    
     //UIWebViewのインスタンス化
-//    CGRect rect = self.view.frame;
-//    UIWebView *webView = [[UIWebView alloc]initWithFrame:rect];
+    // CGRect rect = self.view.frame;
+    // UIWebView *webView = [[UIWebView alloc]initWithFrame:rect];
     
     //Webページの大きさを自動的に画面にフィットさせる
     //webView.scalesPageToFit = YES;
@@ -59,7 +60,6 @@
     
     
 }
-
 //Webページのロード時にインジケータを動かす
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
@@ -73,20 +73,20 @@
 }
 
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 -(IBAction)getur{
     NSString* title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     //NSLog(@"%@",title);
     label.text=[NSString stringWithFormat:@"%@",title];
     
     NSString* url = [webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
-//NSLog(@"%@",url);
-label2.text=[NSString stringWithFormat:@"%@",url];
+    //NSLog(@"%@",url);
+    label2.text=[NSString stringWithFormat:@"%@",url];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -118,6 +118,8 @@ label2.text=[NSString stringWithFormat:@"%@",url];
     }
     return YES;
 }
+
+
 
 
 

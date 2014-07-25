@@ -15,5 +15,6 @@
     IBOutlet UILabel *label;
     IBOutlet UILabel *label2;
 }
+//-(IBAction)backBtnUserClick;
 
 @end
