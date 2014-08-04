@@ -64,6 +64,13 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"cellcolection"sender:self];
     
     NSLog(@"selected %d", (int)indexPath.row);
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    
+    // NSStringの読み込み試験
+    NSString* string = [defaults stringForKey:@"title"];
+    NSLog(@"タイトルは%@",string);
+    
 }
 
 @end
