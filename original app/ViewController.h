@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MyFashionData.h"
+#import "detailViewController.h"
+
 @interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 {
-    
+    NSArray *result;
+    int selectedId;
 }
 
 @property IBOutlet UICollectionView *collectionView;

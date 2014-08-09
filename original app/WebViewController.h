@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "MyFashionData.h"
+#import "CustomIOS7AlertView.h"
 
-@interface WebViewController : UIViewController<UIGestureRecognizerDelegate>
+@interface WebViewController : UIViewController<UIGestureRecognizerDelegate, CustomIOS7AlertViewDelegate>
 {
     IBOutlet UIWebView *webView;
     IBOutlet UIImageView *imgView;
     IBOutlet UILabel *label;
     IBOutlet UILabel *label2;
+    NSString* jpg64Str;
+
+    NSManagedObjectContext *magicalContext;
 }
 //-(IBAction)backBtnUserClick;
 

@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface detailViewController : UIViewController
-{
+@interface detailViewController : UIViewController <UIScrollViewDelegate,UITextFieldDelegate> {
+    IBOutlet UIScrollView *scrollView;    //今回はスクロールビューにテキストフィールドを載せているので
+    UITextField *activeField;    //選択されたテキストフィールドを入れる
     
     IBOutlet UILabel *titleLabel;
     IBOutlet UILabel *urlLabel;
     IBOutlet UIImageView *imgView;
 }
+
+@property (nonatomic) int entryId;
+
 @end

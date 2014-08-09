@@ -7,6 +7,7 @@
 //
 
 #import "detailViewController.h"
+#import "MyFashionData.h"
 
 @interface detailViewController ()
 
@@ -27,35 +28,76 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];  // 取得
-    NSString *title  = [ud stringForKey:@"KEY_1"];  // KEY_1の内容をNSString型として取得
-    titleLabel.text=[NSString stringWithFormat:@"%@",title];//labelに表示
     
-    NSString *url  = [ud stringForKey:@"KEY_2"];  // KEY_2の内容をNSString型として取得
-    urlLabel.text=[NSString stringWithFormat:@"%@",url];//labelに表示
-
-
-    
+    // 全テキストフィールドのdelegateにselfを代入
+    // ※テキストフィールドをメンバ変数に入れている場合は、それぞれのテキストフィールドに対して、変数名.delegate = self;とすればいい。
+    for (id v in self.view.subviews) {
+        if([NSStringFromClass([v class]) isEqualToString:@"UITextField"]){
+            ((UITextField*)v).delegate = self;
+        }
+    }
 }
+    -(void)keyboardWillShow:(NSNotification*)note
+    {
+        // キーボードの表示完了時の場所と大きさを取得。
+        CGRect keyboardFrameEnd = [[note.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        float screenHeight = screenBounds.size.height;
+        
+        if((activeField.frame.origin.y + activeField.frame.size.height)>(screenHeight - keyboardFrameEnd.size.height - 20)){
+            // テキストフィールドがキーボードで隠れるようなら
+            // 選択中のテキストフィールドの直ぐ下にキーボードの上端が付くように、スクロールビューの位置を上げる
+            [UIView animateWithDuration:0.3
+                             animations:^{
+                                 scrollView.frame = CGRectMake(0, screenHeight - activeField.frame.origin.y - activeField.frame.size.height - keyboardFrameEnd.size.height - 20, scrollView.frame.size.width,scrollView.frame.size.height);
+                             }];
+        }
+        
+    }
+    
+    - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+        // メンバ変数activeFieldに選択されたテキストフィールドを代入
+        activeField = textField;
+        return YES;
+    }
+    
+    - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+        // viewのy座標を元に戻してキーボードをしまう
+        [UIView animateWithDuration:0.2
+            animations:^{
+                scrollView.frame = CGRectMake(0, 0, scrollView.frame.size.width,scrollView.frame.size.height);
+                         }];
+        
+        [textField resignFirstResponder];
+        return YES;
+    }
+    
+
 
 -(void)viewWillAppear:(BOOL)animated{
+    
     [super viewWillAppear:YES];
     
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];  // 取得
-    NSString *title  = [ud stringForKey:@"KEY_1"];  // KEY_1の内容をNSString型として取得
+    NSArray *result = [MyFashionData MR_findAll];
+    MyFashionData *data = [result objectAtIndex:_entryId];
+     
+     
+    NSString *title  = [data name];  // nameの情報を取得
     titleLabel.text=[NSString stringWithFormat:@"%@",title];//labelに表示
     
-    NSString *url  = [ud stringForKey:@"KEY_2"];  // KEY_2の内容をNSString型として取得
+    NSString *url  = [data url];  //urlの情報を取得
     urlLabel.text=[NSString stringWithFormat:@"%@",url];//labelに表示
 
-    NSString *jpg64Str = [ud stringForKey:@"KEY_3"];// KEY_3の内容をNSString型として取得
+    NSString *jpg64Str = [data picture];//pictureの情報を取得
     NSData *jpgData = [[NSData alloc] initWithBase64EncodedString:jpg64Str
                                                           options:NSDataBase64DecodingIgnoreUnknownCharacters];
+     
+    
     
     UIImage* image = [UIImage imageWithData:jpgData];
     imgView.image = image;
-
-
+    
+    
 }
 
 

@@ -26,6 +26,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    magicalContext=[NSManagedObjectContext MR_defaultContext];
+    
+    
+    //ImageViewをボタンとして使えるようにした
+    
+    
+    imgView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap
+    = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(push)];
+    [imgView  addGestureRecognizer:tap];
+    
+   
 	
     NSURL *url = [NSURL URLWithString:@"http://www.dholic.co.jp/"];
     
@@ -78,34 +91,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(IBAction)getur{
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    
-    NSString* title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    //NSLog(@"%@",title);
-    label.text=[NSString stringWithFormat:@"%@",title];
-    [ud setObject:title forKey:@"KEY_1"];  // "title(商品名)"をKEY_1というキーで保存
-    
-    
-    
-    NSString* url = [webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
-    //NSLog(@"%@",url);
-    label2.text=[NSString stringWithFormat:@"%@",url];
-    [ud setObject:url forKey:@"KEY_2"];  // "URL"をKEY_2というキーで保存
-    
-    NSString *s = [ud stringForKey:@"KEY_1"];
-    NSLog(@"保存したタイトルは　%@",s);
-    
-    
-    
-    //NSUserdefaultsを使ってViewController.mにデータを送る
-    
-    //NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    
-    // NSStringの保存
-    //[defaults setObject:title forKey:@"title"];
-    
     
     
 }
@@ -135,24 +120,108 @@
             NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
             UIImage * image = [UIImage imageWithData:imageData];
             imgView.image = image;
-            
-            
-            NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];//NSUserDefaultsを宣言
         
         NSData* jpgData = [[NSData alloc] initWithData:UIImageJPEGRepresentation(image, 1.0f)];
-            NSString* jpg64Str = [jpgData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];//imageViewの画像を文字に変える
+            jpg64Str = [jpgData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];//imageViewの画像を文字に変える
             
-            NSLog(@"%@", jpg64Str);
-            [ud setObject:jpg64Str forKey:@"KEY_3"];  // "jpg64Str"をKEY_3というキーで保存
             
-   
+            //NSLog(@"%@", jpg64Str);
+            
+            if (![jpg64Str isEqualToString:@""]) {
+                
+                // Here we need to pass a full frame
+                CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
+                // Add some custom content to the alert view
+                UIView *picView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
+                
+                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
+                [imageView setImage:image];
+                [picView addSubview:imageView];
+                
+                [alertView setContainerView:picView];
+                
+                // Modify the parameters
+                [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"保存", @"キャンセル", nil]];
+                alertView.delegate = self;
+                NSLog(@"%p", self);
+                
+                [alertView setUseMotionEffects:true];
+                
+                // And launch the dialog
+                [alertView show];
+
+                
+            }
+            
             
         }
     }
     return YES;
 }
 
+-(IBAction)push{
+    // 1数行で書くタイプ（複数ボタンタイプ）
+  
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"確認" message:@"保存しますか？"
+                              delegate:self cancelButtonTitle:@"NO!" otherButtonTitles:@"YES!", nil];
+    [alert show];
+    
 
+}
+
+-(void)customIOS7dialogButtonTouchUpInside:(id)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, (int)[alertView tag]);
+    
+    if (buttonIndex == 0) {
+        
+        MyFashionData *md = [MyFashionData MR_createEntity];
+        md.timestampValue = 1;
+        md.name =[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+        md.picture = jpg64Str;
+        md.url=[webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
+        [magicalContext MR_saveOnlySelfAndWait];
+        
+
+        
+    }
+    
+    [alertView close];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if( buttonIndex != alertView.cancelButtonIndex )
+    {
+        // キャンセル以外がタップされた時の処理
+        
+         //NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];//NSUserDefaultsを宣言
+        
+        //画像をクリックして"画像"を取得するときに、一緒に"商品名"と"URL"の情報も取得できるようにした！
+        //NSString* title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+        //NSLog(@"%@",title);
+                //[ud setObject:title forKey:@"KEY_1"];  // "title(商品名)"をKEY_1というキーで保存
+        
+        
+        
+        //NSString* url = [webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
+        //NSLog(@"%@",url);
+        
+        //[ud setObject:url forKey:@"KEY_2"];  // "URL"をKEY_2というキーで保存
+        
+        //NSString *s = [ud stringForKey:@"KEY_1"];
+        //NSLog(@"保存したタイトルは　%@",s);
+        
+        //[ud setObject:jpg64Str forKey:@"KEY_3"];  // "jpg64Str"をKEY_3というキーで保存
+
+        
+        
+        
+        
+
+    }
+}
 
 
 
