@@ -55,6 +55,8 @@
 		0831090D1990A28F004EC7F3 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 083108EE1990A28F004EC7F3 /* MagicalRecord+ShorthandSupport.m */; };
 		0831090E1990A28F004EC7F3 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 083108F01990A28F004EC7F3 /* MagicalRecord.m */; };
 		0845C0AE198F2E8C0065C298 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0845C0AD198F2E8C0065C298 /* detailViewController.m */; };
+		084C114C19B33DFC002358D6 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 084C114B19B33DFC002358D6 /* start.png */; };
+		084C114E19B33E09002358D6 /* MY-FASHION-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 084C114D19B33E09002358D6 /* MY-FASHION-Background.png */; };
 		08A566F519930E8900574F21 /* REPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566ED19930E8900574F21 /* REPhotoCollectionController.m */; };
 		08A566F619930E8900574F21 /* REPhotoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566EF19930E8900574F21 /* REPhotoGroup.m */; };
 		08A566F719930E8900574F21 /* REPhotoThumbnailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566F219930E8900574F21 /* REPhotoThumbnailsCell.m */; };
@@ -172,6 +174,8 @@
 		0845C096198F25940065C298 /* original app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "original app-Bridging-Header.h"; sourceTree = "<group>"; };
 		0845C0AC198F2E8C0065C298 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detailViewController.h; path = ../detailViewController.h; sourceTree = "<group>"; };
 		0845C0AD198F2E8C0065C298 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = detailViewController.m; path = ../detailViewController.m; sourceTree = "<group>"; };
+		084C114B19B33DFC002358D6 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		084C114D19B33E09002358D6 /* MY-FASHION-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MY-FASHION-Background.png"; sourceTree = "<group>"; };
 		08A566EC19930E8900574F21 /* REPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoCollectionController.h; sourceTree = "<group>"; };
 		08A566ED19930E8900574F21 /* REPhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPhotoCollectionController.m; sourceTree = "<group>"; };
 		08A566EE19930E8900574F21 /* REPhotoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoGroup.h; sourceTree = "<group>"; };
@@ -378,6 +382,8 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				084C114D19B33E09002358D6 /* MY-FASHION-Background.png */,
+				084C114B19B33DFC002358D6 /* start.png */,
 				08A566EB19930E8900574F21 /* REPhotoCollectionController */,
 				08F601611991B79700D7D088 /* CustomIOS7AlertView.h */,
 				08F601621991B79700D7D088 /* CustomIOS7AlertView.m */,
@@ -555,11 +561,13 @@
 				080DD5E6195D887200D99D0A /* photo14.jpg in Resources */,
 				08E59AFB195D73CE000A3FF4 /* Images.xcassets in Resources */,
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
+				084C114C19B33DFC002358D6 /* start.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
 				080DD5EA195D887200D99D0A /* photo18.jpg in Resources */,
 				080DD5F0195D887200D99D0A /* photo7.jpg in Resources */,
+				084C114E19B33E09002358D6 /* MY-FASHION-Background.png in Resources */,
 				08E59AED195D73CE000A3FF4 /* InfoPlist.strings in Resources */,
 				08E59AF6195D73CE000A3FF4 /* Main.storyboard in Resources */,
 			);
