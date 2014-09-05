@@ -77,6 +77,7 @@
 		08E59B04195D73CE000A3FF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE6195D73CE000A3FF4 /* UIKit.framework */; };
 		08E59B0C195D73CE000A3FF4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08E59B0A195D73CE000A3FF4 /* InfoPlist.strings */; };
 		08E59B0E195D73CE000A3FF4 /* original_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E59B0D195D73CE000A3FF4 /* original_appTests.m */; };
+		08EA3CB819B9D55100DF55F3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA3CB719B9D55100DF55F3 /* TableViewController.m */; };
 		08F601631991B79800D7D088 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F601621991B79700D7D088 /* CustomIOS7AlertView.m */; };
 /* End PBXBuildFile section */
 
@@ -207,6 +208,8 @@
 		08E59B09195D73CE000A3FF4 /* original appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "original appTests-Info.plist"; sourceTree = "<group>"; };
 		08E59B0B195D73CE000A3FF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08E59B0D195D73CE000A3FF4 /* original_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = original_appTests.m; sourceTree = "<group>"; };
+		08EA3CB619B9D55100DF55F3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		08EA3CB719B9D55100DF55F3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		08F601611991B79700D7D088 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		08F601621991B79700D7D088 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -432,6 +435,8 @@
 				08E59AF4195D73CE000A3FF4 /* Main.storyboard */,
 				082C57B21966B78500585CE4 /* WebViewController.h */,
 				08A5A9951973C7AB0031F1FF /* WebViewController.m */,
+				08EA3CB619B9D55100DF55F3 /* TableViewController.h */,
+				08EA3CB719B9D55100DF55F3 /* TableViewController.m */,
 				08E59AF7195D73CE000A3FF4 /* ViewController.h */,
 				08E59AF8195D73CE000A3FF4 /* ViewController.m */,
 				0845C0AC198F2E8C0065C298 /* detailViewController.h */,
@@ -607,6 +612,7 @@
 				083109001990A28F004EC7F3 /* NSManagedObject+MagicalRequests.m in Sources */,
 				083109091990A28F004EC7F3 /* MagicalRecord+ErrorHandling.m in Sources */,
 				0831090E1990A28F004EC7F3 /* MagicalRecord.m in Sources */,
+				08EA3CB819B9D55100DF55F3 /* TableViewController.m in Sources */,
 				0831090B1990A28F004EC7F3 /* MagicalRecord+Options.m in Sources */,
 				083108B61990A131004EC7F3 /* MyFashionData.m in Sources */,
 				083108FC1990A28F004EC7F3 /* NSManagedObject+MagicalAggregation.m in Sources */,
