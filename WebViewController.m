@@ -133,9 +133,10 @@
                 // Here we need to pass a full frame
                 CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
                 // Add some custom content to the alert view
-                UIView *picView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 230, 280)];
                 
-                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 210,260 )];
+                UIView *picView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 230, 280)];
+                 
+                 UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 210,260 )];
                 
                 
                 
