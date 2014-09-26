@@ -85,14 +85,16 @@
     NSString *title  = [data name];  // nameの情報を取得
     titleLabel.text=[NSString stringWithFormat:@"%@",title];//labelに表示
     
-    NSString *url  = [data url];  //urlの情報を取得
+    url  = [data url];  //urlの情報を取得
     urlLabel.text=[NSString stringWithFormat:@"%@",url];//labelに表示
+    [urlbtn setTitle:url forState:UIControlStateNormal];
+    
+    
 
     NSString *jpg64Str = [data picture];//pictureの情報を取得
     NSData *jpgData = [[NSData alloc] initWithBase64EncodedString:jpg64Str
                                                           options:NSDataBase64DecodingIgnoreUnknownCharacters];
      
-    
     
     UIImage* image = [UIImage imageWithData:jpgData];
     imgView.image = image;
@@ -100,6 +102,17 @@
     
 }
 
+-(IBAction)openurl{//urlをopenする
+    
+    
+    
+    NSString *urlString = url;
+    NSURL *nsurl = [NSURL URLWithString:urlString];
+    
+    // ブラウザを起動する
+    [[UIApplication sharedApplication] openURL:nsurl];
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

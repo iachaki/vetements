@@ -6,7 +6,10 @@
 //  Copyright (c) 2014年 Life is tech. All rights reserved.
 //
 
+
 #import "WebViewController.h"
+
+
 
 @interface WebViewController ()
 
@@ -38,10 +41,14 @@
     = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(push)];
     [imgView  addGestureRecognizer:tap];
     
-   
-	
-    NSURL *url = [NSURL URLWithString:@"http://www.dholic.co.jp/"];
-    //NSURL *url2 = [NSURL URLWithString:@"http://www.dholic.co.jp/"];
+    
+#pragma mark yuma_fix
+    if (!self.urlString) {
+        self.urlString = @"http://cookpad.com/";
+    }
+    NSURL *url = [NSURL URLWithString:self.urlString];
+    
+    
     
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
@@ -64,10 +71,10 @@
     
     //URLを指定
     //NSURL *url =[NSURL URLWithString:@"http://www.google.com"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     //リクエストを投げる
-    [webView loadRequest:request];
+    //[webView loadRequest:request];
     
     //UIWebViewのインスタンスをビューに追加
     //[self .view addSubview:webView];
@@ -121,8 +128,8 @@
             NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
             UIImage * image = [UIImage imageWithData:imageData];
             imgView.image = image;
-        
-        NSData* jpgData = [[NSData alloc] initWithData:UIImageJPEGRepresentation(image, 1.0f)];
+            
+            NSData* jpgData = [[NSData alloc] initWithData:UIImageJPEGRepresentation(image, 1.0f)];
             jpg64Str = [jpgData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];//imageViewの画像を文字に変える
             
             
@@ -135,8 +142,8 @@
                 // Add some custom content to the alert view
                 
                 UIView *picView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 230, 280)];
-                 
-                 UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 210,260 )];
+                
+                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 210,260 )];
                 
                 
                 
@@ -154,7 +161,7 @@
                 
                 // And launch the dialog
                 [alertView show];
-
+                
                 
             }
             
@@ -166,13 +173,13 @@
 
 -(IBAction)push{
     // 1数行で書くタイプ（複数ボタンタイプ）
-  
+    
     UIAlertView *alert =
-    [[UIAlertView alloc] initWithTitle:@"確認" message:@"保存しますか？"
+    [[UIAlertView alloc] initWithTitle:@"保存しますか？" message:@"確認"
                               delegate:self cancelButtonTitle:@"NO!" otherButtonTitles:@"YES!", nil];
     [alert show];
     
-
+    
 }
 
 -(void)customIOS7dialogButtonTouchUpInside:(id)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -187,7 +194,7 @@
         md.url=[webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
         [magicalContext MR_saveOnlySelfAndWait];
         
-
+        
         
     }
     
@@ -195,18 +202,24 @@
     
 }
 
+- (IBAction)tapToTopButton:(id)sender {
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if( buttonIndex != alertView.cancelButtonIndex )
     {
         // キャンセル以外がタップされた時の処理
         
-         //NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];//NSUserDefaultsを宣言
+        //NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];//NSUserDefaultsを宣言
         
         //画像をクリックして"画像"を取得するときに、一緒に"商品名"と"URL"の情報も取得できるようにした！
         //NSString* title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
         //NSLog(@"%@",title);
-                //[ud setObject:title forKey:@"KEY_1"];  // "title(商品名)"をKEY_1というキーで保存
+        //[ud setObject:title forKey:@"KEY_1"];  // "title(商品名)"をKEY_1というキーで保存
         
         
         
@@ -219,12 +232,12 @@
         //NSLog(@"保存したタイトルは　%@",s);
         
         //[ud setObject:jpg64Str forKey:@"KEY_3"];  // "jpg64Str"をKEY_3というキーで保存
-
         
         
         
         
-
+        
+        
     }
 }
 

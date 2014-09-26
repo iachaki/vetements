@@ -15,7 +15,12 @@
     IBOutlet UILabel *titleLabel;
     IBOutlet UILabel *urlLabel;
     IBOutlet UIImageView *imgView;
+    NSString *url ;
+    
+    IBOutlet UIButton *urlbtn;
 }
+
+-(IBAction)openurl;
 
 @property (nonatomic) int entryId;
 

@@ -23,4 +23,7 @@
 }
 //-(IBAction)backBtnUserClick;
 
+#pragma mark yuma_fix
+@property (nonatomic) NSString *urlString;
+
 @end
