@@ -9,16 +9,9 @@
 #import "TableViewController.h"
 #import "WebViewController.h"
 
-#pragma mark yuma_fix
-@interface WebItem : NSObject
-
-@property (nonatomic) NSString *title;
-@property (nonatomic) NSString *urlString;
-@end
-
-@implementation WebItem
-@end
-
+#pragma mark - yuma_fix
+#import "WebItem.h"
+#import "AppDelegate.h"
 
 @interface TableViewController ()
 {

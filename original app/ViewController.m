@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "WebItem.h"
 
 @interface ViewController (){
     NSString *selctedName;
+    NSMutableArray *array;
 }
 
 @end
@@ -32,7 +34,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
-    //Core Dataからデータ読み出し Magical Recoordをつかって。
+    /*Core Dataからデータ読み出し Magical Recoordをつかって。
     result = [MyFashionData MR_findAll];
     
     NSLog(@"results count ==== %d", [result count]);
@@ -42,10 +44,15 @@
         MyFashionData *data = (MyFashionData *)d;
         //NSLog(@"%@ %@　%@",[data name], [data picture], [data url]);
     }
-    [self.collectionView reloadData];
+    [self.collectionView reloadData];*/
    
     
 
+#pragma mark - yuma_fix
+NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+NSData *data = [ud objectForKey:@"dataArray"];
+array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+[self.collectionView reloadData];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -55,30 +62,35 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    NSLog(@"how many items? %d", [result count]);
-    return [result count];
+    //NSLog(@"how many items? %d", [result count]);
+    //return [result count];
+#pragma mark - yuma_fix
+    return array.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //_collectionView.scrollEnabled=YES;
     
-   UICollectionViewCell *cell;
+    UICollectionViewCell *cell;
     
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
-    NSString *img = [[result objectAtIndex:[indexPath row]] picture];
+    //NSString *img = [[result objectAtIndex:[indexPath row]] picture];
+#pragma mark - yuma_fix
+    WebItem *item = array[indexPath.row];
+    NSString *img = item.imageStr;
     
     //[NSString stringWithFormat:@"photo%d.jpg",(int)(indexPath.row+1)];
     
     NSData *data = [[NSData alloc] initWithBase64EncodedString:img
-                                        options:NSDataBase64DecodingIgnoreUnknownCharacters];
+                                                       options:NSDataBase64DecodingIgnoreUnknownCharacters];
     
     UIImage* image = [UIImage imageWithData:data];
     
     imageView.image = image;
-
+    
     
     
     UILabel*label = (UILabel *)[cell viewWithTag:2];
@@ -87,6 +99,7 @@
     return cell;
     
 }
+
 
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

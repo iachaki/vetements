@@ -12,4 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+#pragma mark - yuma_fix
+@property (nonatomic) NSMutableArray *dataArray;
+
+
 @end

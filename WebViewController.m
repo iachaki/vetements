@@ -8,10 +8,16 @@
 
 
 #import "WebViewController.h"
+#import "WebItem.h"
 
 
 
 @interface WebViewController ()
+{
+    AppDelegate *delegate;
+    NSMutableArray *array;
+}
+
 
 @end
 
@@ -47,6 +53,18 @@
         self.urlString = @"http://cookpad.com/";
     }
     NSURL *url = [NSURL URLWithString:self.urlString];
+    
+    //    delegate = [UIApplication sharedApplication].delegate;
+    //    if (!delegate.dataArray) {
+    //        delegate.dataArray = [NSMutableArray array];
+    //    }
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSData *data = [ud objectForKey:@"dataArray"];
+    array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    if (!array) {
+        array = [NSMutableArray array];
+    }
+
     
     
     
@@ -187,20 +205,30 @@
     
     if (buttonIndex == 0) {
         
-        MyFashionData *md = [MyFashionData MR_createEntity];
+        /*MyFashionData *md = [MyFashionData MR_createEntity];
         md.timestampValue = 1;
         md.name =[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
         md.picture = jpg64Str;
         md.url=[webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
-        [magicalContext MR_saveOnlySelfAndWait];
+        [magicalContext MR_saveOnlySelfAndWait];*/
         
+        WebItem *item = [[WebItem alloc] init];
+        item.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+        item.urlString = [webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
+        item.imageStr = jpg64Str;
+        [array addObject:item];
         
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:array];
+        [ud setObject:data forKey:@"dataArray"];
+        [ud synchronize];
         
     }
     
     [alertView close];
     
 }
+
 
 - (IBAction)tapToTopButton:(id)sender {
     //[self dismissViewControllerAnimated:YES completion:nil];
@@ -240,7 +268,6 @@
         
     }
 }
-
 
 
 @end
