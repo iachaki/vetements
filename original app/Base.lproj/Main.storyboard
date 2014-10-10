@@ -174,24 +174,24 @@
                         <viewControllerLayoutGuide type="bottom" id="sW5-Ya-ffp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9pF-RB-0hT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MY-FASHION-Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="JJR-Ma-bol">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="start-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="JJR-Ma-bol">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djj-0k-6PD">
-                                <rect key="frame" x="65" y="178" width="191" height="78"/>
-                                <state key="normal" title="Button" image="start.png">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-7x-aZ4">
+                                <rect key="frame" x="44" y="422" width="232" height="80"/>
+                                <state key="normal" backgroundImage="button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="APN-bE-Ony" kind="modal" id="spL-hX-fod"/>
+                                    <segue destination="APN-bE-Ony" kind="modal" id="gZI-pC-5sO"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.080708976870000004" blue="0.5330755828" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6Y-Sv-7LZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +219,7 @@
         <!--Detail View Controller-->
         <scene sceneID="C9S-N4-utG">
             <objects>
-                <viewController id="i3r-oe-ys9" customClass="detailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailViewController" id="i3r-oe-ys9" customClass="detailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VXw-x4-xJv"/>
                         <viewControllerLayoutGuide type="bottom" id="O3Q-ha-mNr"/>
@@ -250,7 +250,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-zn-fvP">
-                                <rect key="frame" x="53" y="480" width="247" height="30"/>
+                                <rect key="frame" x="56" y="479" width="247" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -258,6 +258,12 @@
                                     <action selector="openurl" destination="i3r-oe-ys9" eventType="touchUpInside" id="wqx-dP-Obn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeU-0e-czc">
+                                <rect key="frame" x="66" y="449" width="248" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -266,6 +272,7 @@
                     <connections>
                         <outlet property="imgView" destination="IAK-s2-gFf" id="Sou-xx-GiP"/>
                         <outlet property="titleLabel" destination="wT1-Sq-yFX" id="tJ6-wY-ulP"/>
+                        <outlet property="urlLabel" destination="qeU-0e-czc" id="rIt-z9-1Jg"/>
                         <outlet property="urlbtn" destination="rS5-zn-fvP" id="jxS-f0-ghC"/>
                     </connections>
                 </viewController>
@@ -275,8 +282,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MY-FASHION-Background.png" width="1814" height="3220"/>
-        <image name="start.png" width="2309" height="857"/>
+        <image name="button.png" width="425" height="148"/>
+        <image name="start-background.png" width="640" height="1136"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -115,7 +115,14 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"タイトルは%@",string);
      */
     
-    [self performSegueWithIdentifier:@"cellcolection"sender:self];
+    //[self performSegueWithIdentifier:@"cellcolection"sender:self];
+    
+    detailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
+    
+    WebItem *item = array[indexPath.row];
+    detailVC.item = item;
+    
+    [self presentViewController:detailVC animated:YES completion:nil];
     
     
 }

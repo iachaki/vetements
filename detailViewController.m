@@ -78,25 +78,35 @@
     
     [super viewWillAppear:YES];
     
-    NSArray *result = [MyFashionData MR_findAll];
-    MyFashionData *data = [result objectAtIndex:_entryId];
-     
-     
-    NSString *title  = [data name];  // nameの情報を取得
-    titleLabel.text=[NSString stringWithFormat:@"%@",title];//labelに表示
+//    NSArray *result = [MyFashionData MR_findAll];
+//    MyFashionData *data = [result objectAtIndex:_entryId];
     
-    url  = [data url];  //urlの情報を取得
-    urlLabel.text=[NSString stringWithFormat:@"%@",url];//labelに表示
+     
+    //NSString *title  = [data name];  // nameの情報を取得
+    titleLabel.text=[NSString stringWithFormat:@"%@",self.item.title];//labelに表示
+    
+    //url  = [data url];  //urlの情報を取得
+    urlLabel.text=[NSString stringWithFormat:@"%@",self.item.urlString];//labelに表示
+    
+    url = self.item.urlString;
+    
     [urlbtn setTitle:url forState:UIControlStateNormal];
     
     
 
-    NSString *jpg64Str = [data picture];//pictureの情報を取得
-    NSData *jpgData = [[NSData alloc] initWithBase64EncodedString:jpg64Str
-                                                          options:NSDataBase64DecodingIgnoreUnknownCharacters];
-     
+    //NSString *jpg64Str = [data picture];//pictureの情報を取得
+//    NSData *jpgData = [[NSData alloc] initWithBase64EncodedString:jpg64Str
+//                                                          options:NSDataBase64DecodingIgnoreUnknownCharacters];
     
-    UIImage* image = [UIImage imageWithData:jpgData];
+    NSString *img = self.item.imageStr;
+    
+    //[NSString stringWithFormat:@"photo%d.jpg",(int)(indexPath.row+1)];
+    
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:img
+                                                       options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    
+    UIImage* image = [UIImage imageWithData:data];
+    
     imgView.image = image;
     
     

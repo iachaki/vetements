@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebItem.h"
 
 @interface detailViewController : UIViewController <UIScrollViewDelegate,UITextFieldDelegate> {
     IBOutlet UIScrollView *scrollView;    //今回はスクロールビューにテキストフィールドを載せているので
     UITextField *activeField;    //選択されたテキストフィールドを入れる
     
     IBOutlet UILabel *titleLabel;
-    IBOutlet UILabel *urlLabel;
     IBOutlet UIImageView *imgView;
     NSString *url ;
+    IBOutlet UILabel *urlLabel;
     
     IBOutlet UIButton *urlbtn;
 }
@@ -23,5 +24,7 @@
 -(IBAction)openurl;
 
 @property (nonatomic) int entryId;
+
+@property (nonatomic) WebItem *item;
 
 @end
