@@ -53,8 +53,8 @@
     [yumaArray addObject:item];
     
     WebItem *item2 = [[WebItem alloc] init];
-    item2.title = @"ungrid";
-    item2.urlString = @"http://runway-webstore.com/ungrid/?aid2=ungrid_Grmk_140201&gclid=CIm3-oHrnMACFdd5vQodlE0A7A";
+    item2.title = @"Victoria's Secret";
+    item2.urlString = @"https://www.victoriassecret.com/";
     [yumaArray addObject:item2];
     
     WebItem *item3 = [[WebItem alloc] init];
@@ -63,10 +63,25 @@
     [yumaArray addObject:item3];
     
     WebItem *item4 = [[WebItem alloc] init];
-    item4.title = @"SHEL'TTER";
-    item4.urlString = @"http://www.ec-store.net/?uk=0";
+    item4.title = @"H&M";
+    item4.urlString = @"http://www.hm.com/jp/";
     [yumaArray addObject:item4];
     
+    WebItem *item5 = [[WebItem alloc] init];
+    item5.title = @"AMERICAN EAGLE";
+    item5.urlString = @"http://www.aeo.jp/top/CSfTop.jsp?gclid=COWQ5MGFr8ECFZYGvAodpm8AAA";
+    [yumaArray addObject:item5];
+    
+    WebItem *item6 = [[WebItem alloc] init];
+    item6.title = @"GAP";
+    item6.urlString = @"http://www.gap.co.jp/?tid=gjps009609";
+    [yumaArray addObject:item6];
+    
+    WebItem *item7 = [[WebItem alloc] init];
+    item7.title = @"Foever 21";
+    item7.urlString = @"http://www.forever21.co.jp/?gclid=CI2mjsOGr8ECFRBwvAodNV0AhA#";
+    [yumaArray addObject:item7];
+
     
     UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithTitle:@"add"
                                                                       style:UIBarButtonItemStylePlain
