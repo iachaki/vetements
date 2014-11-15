@@ -110,6 +110,8 @@
     imgView.image = image;
     
     
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"menu" style:UIBarButtonItemStylePlain target:self action:@selector(menuback)];
+    self.navigationItem.leftBarButtonItem = button;
 }
 
 -(IBAction)openurl{//urlをopenする
@@ -130,6 +132,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 /*
 #pragma mark - Navigation
 
@@ -140,5 +143,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction)menuback{//menuへ戻る
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

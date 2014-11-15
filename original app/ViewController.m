@@ -122,7 +122,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     WebItem *item = array[indexPath.row];
     detailVC.item = item;
     
-    [self presentViewController:detailVC animated:YES completion:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:detailVC];
+    [self presentViewController:nav animated:YES completion:nil];
     
     
 }
@@ -140,5 +141,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
         vc.entryId = selectedId;
     }
 }
+
+
 
 @end
