@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aBo-6q-1dQ">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -8,7 +9,7 @@
         <scene sceneID="7sn-Kj-vLE">
             <objects>
                 <navigationController id="pmi-Aj-L5a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="menu" id="Qdb-dL-Xof"/>
+                    <tabBarItem key="tabBarItem" title="menu" image="love4.png" id="Qdb-dL-Xof"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zHy-QW-cYm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -22,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-928" y="-14"/>
         </scene>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="m3r-DC-3FD">
             <objects>
                 <tableViewController id="qNX-Wr-nsk" customClass="TableViewController" sceneMemberID="viewController">
@@ -45,8 +46,9 @@
                             <outlet property="delegate" destination="qNX-Wr-nsk" id="s3B-t7-agy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="idJ-dy-FeI"/>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="Oix-Or-hcw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEd-ri-BXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +95,9 @@
         <scene sceneID="9PL-Td-L6e">
             <objects>
                 <navigationController id="7JY-un-vJA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="web site" id="h83-wv-WHJ"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="web site" image="internet5.png" id="h83-wv-WHJ">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="INY-xK-Fz4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -280,6 +284,8 @@
     </scenes>
     <resources>
         <image name="button.png" width="425" height="148"/>
+        <image name="internet5.png" width="30" height="30"/>
+        <image name="love4.png" width="30" height="30"/>
         <image name="start-background.png" width="640" height="1136"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

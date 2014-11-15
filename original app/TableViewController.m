@@ -88,10 +88,27 @@
                                                                      target:self action:@selector(addLinkButtonTap)];
     self.navigationItem.rightBarButtonItem = addLinkButton;
     
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
+    //タブ選択時のフォントとカラー
+    NSDictionary *selectedAttributes = @{NSFontAttributeName : font,
+                                         NSForegroundColorAttributeName : [UIColor redColor]};
     
-
-
+    [[UITabBarItem appearance] setTitleTextAttributes:selectedAttributes
+                                             forState:UIControlStateSelected];
     
+    //通常時のフォントとカラー
+    NSDictionary *attributesNormal = @{NSFontAttributeName : font,
+                                       NSForegroundColorAttributeName : [UIColor blueColor]};
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
+                                             forState:UIControlStateNormal];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];//viewWillAppearは毎回必ず、何回でもよばれる。viewdidloadの次によばれる
+    if (self.tabBarController.tabBar.hidden == YES) {//もしtabBarController.tabBar.hiddenがYESだったら
+        self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
+    }
 }
 
 -(IBAction)addLinkButtonTap{
@@ -194,6 +211,7 @@
     WebItem *item = yumaArray[indexPath.row];
     vc.urlString = item.urlString;
     
+    self.tabBarController.tabBar.hidden= YES;
     [self.navigationController pushViewController:vc animated:YES];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
