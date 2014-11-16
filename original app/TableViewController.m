@@ -58,8 +58,8 @@
     [yumaArray addObject:item2];
     
     WebItem *item3 = [[WebItem alloc] init];
-    item3.title = @"Armani Exchange ";
-    item3.urlString = @"http://www.axstore.jp/";
+    item3.title = @"ehyphen";
+    item3.urlString = @"http://www.ehyphen.jp/";
     [yumaArray addObject:item3];
     
     WebItem *item4 = [[WebItem alloc] init];

@@ -70,9 +70,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGn-Ik-6FE">
-                                <rect key="frame" x="16" y="264" width="60" height="30"/>
-                                <state key="normal" title="Go Back">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGn-Ik-6FE">
+                                <rect key="frame" x="21" y="510" width="112" height="38"/>
+                                <state key="normal" image="back-button1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -283,6 +283,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back-button1.png" width="425" height="148"/>
         <image name="button.png" width="425" height="148"/>
         <image name="internet5.png" width="30" height="30"/>
         <image name="love4.png" width="30" height="30"/>
