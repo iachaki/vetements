@@ -67,6 +67,7 @@
 		08A566F819930E8900574F21 /* REPhotoThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566F419930E8900574F21 /* REPhotoThumbnailView.m */; };
 		08A566FE1993113500574F21 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566FD1993113500574F21 /* Photo.m */; };
 		08A5A9961973C7AB0031F1FF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A5A9951973C7AB0031F1FF /* WebViewController.m */; };
+		08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */; };
 		08AE3AD319D583C00032B940 /* WebItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AE3AD219D583C00032B940 /* WebItem.m */; };
 		08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE2195D73CE000A3FF4 /* Foundation.framework */; };
 		08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */; };
@@ -212,6 +213,7 @@
 		08A566FC1993113500574F21 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		08A566FD1993113500574F21 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		08A5A9951973C7AB0031F1FF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
+		08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-clothes-label.png"; sourceTree = "<group>"; };
 		08AE3AD119D583C00032B940 /* WebItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebItem.h; sourceTree = "<group>"; };
 		08AE3AD219D583C00032B940 /* WebItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebItem.m; sourceTree = "<group>"; };
 		08E59ADF195D73CE000A3FF4 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +396,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */,
 				0860A6391A176E340044E644 /* internet5.png */,
 				0860A6371A176E230044E644 /* love4.png */,
 				089EB46419E8319100DB8F11 /* back-button1.png */,
@@ -615,6 +618,7 @@
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0860A6381A176E230044E644 /* love4.png in Resources */,
+				08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
