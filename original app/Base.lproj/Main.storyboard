@@ -246,6 +246,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-zn-fvP">
                                 <rect key="frame" x="66" y="479" width="247" height="30"/>
                                 <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.436172532" blue="0.48574821499999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

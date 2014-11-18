@@ -110,7 +110,9 @@
     imgView.image = image;
     
     
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"menu" style:UIBarButtonItemStylePlain target:self action:@selector(menuback)];
+    UIBarButtonItem *button = [[UIBarButtonItem alloc]
+    initWithTitle:@"menu" style:UIBarButtonItemStylePlain target:self action:@selector(menuback)];
+    /*initWithImage:@"button-menu.png" style:UIBarButtonItemStylePlain target:self action:@selector(menuback)];*/
     self.navigationItem.leftBarButtonItem = button;
 }
 

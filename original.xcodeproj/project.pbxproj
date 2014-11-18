@@ -60,6 +60,7 @@
 		0860A6381A176E230044E644 /* love4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0860A6371A176E230044E644 /* love4.png */; };
 		0860A63A1A176E340044E644 /* internet5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0860A6391A176E340044E644 /* internet5.png */; };
 		089DC82319DEAC0300B5D3C7 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 089DC82219DEAC0300B5D3C7 /* new.png */; };
+		089E6F821A1B967F003E3ACD /* button-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 089E6F811A1B967F003E3ACD /* button-menu.png */; };
 		089EB46519E8319100DB8F11 /* back-button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 089EB46419E8319100DB8F11 /* back-button1.png */; };
 		08A566F519930E8900574F21 /* REPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566ED19930E8900574F21 /* REPhotoCollectionController.m */; };
 		08A566F619930E8900574F21 /* REPhotoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566EF19930E8900574F21 /* REPhotoGroup.m */; };
@@ -201,6 +202,7 @@
 		0860A6371A176E230044E644 /* love4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love4.png; sourceTree = "<group>"; };
 		0860A6391A176E340044E644 /* internet5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = internet5.png; sourceTree = "<group>"; };
 		089DC82219DEAC0300B5D3C7 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
+		089E6F811A1B967F003E3ACD /* button-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu.png"; sourceTree = "<group>"; };
 		089EB46419E8319100DB8F11 /* back-button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button1.png"; sourceTree = "<group>"; };
 		08A566EC19930E8900574F21 /* REPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoCollectionController.h; sourceTree = "<group>"; };
 		08A566ED19930E8900574F21 /* REPhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPhotoCollectionController.m; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				089E6F811A1B967F003E3ACD /* button-menu.png */,
 				08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */,
 				08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */,
 				0860A6391A176E340044E644 /* internet5.png */,
@@ -628,6 +631,7 @@
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
 				0860A63A1A176E340044E644 /* internet5.png in Resources */,
 				080DD5EA195D887200D99D0A /* photo18.jpg in Resources */,
+				089E6F821A1B967F003E3ACD /* button-menu.png in Resources */,
 				080DD5F0195D887200D99D0A /* photo7.jpg in Resources */,
 				08E59AED195D73CE000A3FF4 /* InfoPlist.strings in Resources */,
 				08E59AF6195D73CE000A3FF4 /* Main.storyboard in Resources */,
