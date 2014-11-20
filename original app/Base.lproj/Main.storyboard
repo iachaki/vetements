@@ -235,7 +235,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAK-s2-gFf">
-                                <rect key="frame" x="60" y="80" width="200" height="274"/>
+                                <rect key="frame" x="66" y="87" width="200" height="274"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-Sq-yFX">
                                 <rect key="frame" x="14" y="377" width="293" height="94"/>
@@ -263,7 +263,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="t9z-0M-UEB"/>
+                    <navigationItem key="navigationItem" id="4hS-aI-WEA">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="cUz-jx-Ydr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="igY-wQ-ylp">
+                                <rect key="frame" x="-15" y="33" width="179" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="button-menu.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuback" destination="i3r-oe-ys9" eventType="touchUpInside" id="vA6-Ln-EVo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -279,6 +292,7 @@
     </scenes>
     <resources>
         <image name="back-button1.png" width="425" height="148"/>
+        <image name="button-menu.png" width="434" height="154"/>
         <image name="button.png" width="425" height="148"/>
         <image name="internet5.png" width="30" height="30"/>
         <image name="love4.png" width="30" height="30"/>

@@ -110,11 +110,12 @@
     imgView.image = image;
     
     
-    UIBarButtonItem *button = [[UIBarButtonItem alloc]
+    /*UIBarButtonItem *button = [[UIBarButtonItem alloc]
     initWithTitle:@"menu" style:UIBarButtonItemStylePlain target:self action:@selector(menuback)];
+    self.navigationItem.leftBarButtonItem = button;*/ //buttonをつける変わりに消す
+
     /*initWithImage:@"button-menu.png" style:UIBarButtonItemStylePlain target:self action:@selector(menuback)];*/
-    self.navigationItem.leftBarButtonItem = button;
-}
+    }
 
 -(IBAction)openurl{//urlをopenする
     
