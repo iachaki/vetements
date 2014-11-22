@@ -13,6 +13,7 @@
     NSString *selctedName;
     NSMutableArray *array;
     int editCount;
+    NSMutableArray *deleteArray;
 }
 
 @end
@@ -33,6 +34,7 @@
     
     // 複数選択を許可する
     self.collectionView.allowsMultipleSelection = YES;
+    deleteArray = [[NSMutableArray alloc]init];
 
 }
 
@@ -46,8 +48,15 @@ NSData *data = [ud objectForKey:@"dataArray"];
 array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 [self.collectionView reloadData];
     
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
-    self.navigationItem.rightBarButtonItem = dissmissButton;
+   UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
+  self.navigationItem.rightBarButtonItem = dissmissButton;
+    
+    /*UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"button-edit"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                             style:UIBarButtonSystemItemEdit
+                                                            target:self
+                                                            action:@selector(editThisView::)];
+    self.navigationItem.rightBarButtonItem = dissmissButton;*/
+    
 }
 
 // 当画面から別画面遷移時
@@ -115,6 +124,8 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 {
 
     if (editCount == 1) {
+        NSLog(@"selected %d",(int)indexPath.row);
+        [deleteArray addObject:[NSNumber numberWithInteger:(int)indexPath.row]];
         return;
         
     }
@@ -157,8 +168,29 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 - (void)editThisView:(id)sender
 {
     editCount = 1;
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(editThisView:)];
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteCollectionView:)];
     self.navigationItem.leftBarButtonItem = dissmissButton;
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneDeleteView:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+    
+}
+
+- (void)deleteCollectionView:(id)sender
+{
+    [self.collectionView reloadData];
+    for (int i = 0; i < deleteArray.count; i++) {
+        int deleteNumber = [[deleteArray objectAtIndex:i] intValue];
+        [array removeObjectAtIndex:deleteNumber];
+        [self.collectionView reloadData];
+        
+    }
+}
+
+- (void)doneDeleteView:(id)sender
+{
+    editCount = 0;
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
+    self.navigationItem.rightBarButtonItem = dissmissButton;
 }
 
 @end
