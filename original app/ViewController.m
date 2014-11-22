@@ -12,6 +12,7 @@
 @interface ViewController (){
     NSString *selctedName;
     NSMutableArray *array;
+    int editCount;
 }
 
 @end
@@ -70,10 +71,10 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     
     // 選択状態の UI を backgroundView に設定
     UIView *selectedView = [UIView new];
-    selectedView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.8 alpha:1.0];
+    selectedView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.7];
     cell.selectedBackgroundView = selectedView;
- 
-
+    
+    [cell bringSubviewToFront:selectedView];
     
     
 
@@ -103,10 +104,13 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
 
 
-- (void)collectionView:(UICollectionView *)collectionView
-didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
 
-   
+    if (editCount == 1) {
+        return;
+        
+    }
     
    NSLog(@"selected %d", (int)indexPath.row);
     selectedId = (int)indexPath.row;
@@ -142,6 +146,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 - (void)editThisView:(id)sender
 {
     editCount = 1;
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(editThisView:)];
+    self.navigationItem.leftBarButtonItem = dissmissButton;
 }
 
 @end
