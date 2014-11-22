@@ -234,17 +234,14 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAK-s2-gFf">
-                                <rect key="frame" x="66" y="87" width="200" height="274"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-Sq-yFX">
-                                <rect key="frame" x="14" y="377" width="293" height="94"/>
+                                <rect key="frame" x="14" y="402" width="293" height="94"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.64917890828060165" green="0.62595527478810564" blue="0.89618716032608692" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-zn-fvP">
-                                <rect key="frame" x="66" y="479" width="247" height="30"/>
+                                <rect key="frame" x="73" y="509" width="247" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.436172532" blue="0.48574821499999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -254,31 +251,30 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vétements-clothes-label.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrx-ky-tnK">
-                                <rect key="frame" x="0.0" y="344" width="128" height="57"/>
+                                <rect key="frame" x="0.0" y="369" width="128" height="57"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vétements-URL-label.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-C3-zXL">
-                                <rect key="frame" x="-21" y="469" width="103" height="49"/>
+                                <rect key="frame" x="-14" y="499" width="103" height="49"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soI-Ig-ba0">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="66"/>
+                                <state key="normal" title="Button" image="button-menu.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuback" destination="i3r-oe-ys9" eventType="touchUpInside" id="oMi-d2-yU8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAK-s2-gFf">
+                                <rect key="frame" x="58" y="71" width="205" height="290"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="4hS-aI-WEA">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="cUz-jx-Ydr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="igY-wQ-ylp">
-                                <rect key="frame" x="-15" y="33" width="179" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="button-menu.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="menuback" destination="i3r-oe-ys9" eventType="touchUpInside" id="vA6-Ln-EVo"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="4hS-aI-WEA"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imgView" destination="IAK-s2-gFf" id="Sou-xx-GiP"/>

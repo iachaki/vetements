@@ -78,6 +78,10 @@
     
     [super viewWillAppear:YES];
     
+    // NavigationBar 非表示
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    
 //    NSArray *result = [MyFashionData MR_findAll];
 //    MyFashionData *data = [result objectAtIndex:_entryId];
     
@@ -92,6 +96,7 @@
     
     [urlbtn setTitle:url forState:UIControlStateNormal];
     
+      
     
 
     //NSString *jpg64Str = [data picture];//pictureの情報を取得
@@ -148,6 +153,8 @@
 
 -(IBAction)menuback{//menuへ戻る
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
+
 
 @end

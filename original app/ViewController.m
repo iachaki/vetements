@@ -24,7 +24,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.collectionView.scrollEnabled = YES;
@@ -39,7 +38,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
-        
+    
 
 #pragma mark - yuma_fix
 NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
@@ -49,6 +48,14 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     
     UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
     self.navigationItem.rightBarButtonItem = dissmissButton;
+}
+
+// 当画面から別画面遷移時
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    // NavigationBar 表示
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -116,7 +123,11 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     selectedId = (int)indexPath.row;
     
     
+    //detailViewに
     detailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
+    
+    
+    
     
     WebItem *item = array[indexPath.row];
     detailVC.item = item;
