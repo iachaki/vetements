@@ -11,12 +11,19 @@
 #import "MyFashionData.h"
 #import "detailViewController.h"
 
+
+
 @interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 {
     NSArray *result;
     int selectedId;
 }
 
-@property IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+
+/*@interface CollectionViewController : UICollectionViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+ @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;*/
+
+
 
 @end
