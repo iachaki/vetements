@@ -56,6 +56,7 @@
 		0831090E1990A28F004EC7F3 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 083108F01990A28F004EC7F3 /* MagicalRecord.m */; };
 		08321CBE19E7FB7A00D027FE /* start-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 08321CBD19E7FB7A00D027FE /* start-background.png */; };
 		08321CC019E7FBC400D027FE /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 08321CBF19E7FBC400D027FE /* button.png */; };
+		0835F3B21A2227B200249651 /* apple20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0835F3B11A2227B200249651 /* apple20.png */; };
 		0845C0AE198F2E8C0065C298 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0845C0AD198F2E8C0065C298 /* detailViewController.m */; };
 		0860A6381A176E230044E644 /* love4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0860A6371A176E230044E644 /* love4.png */; };
 		0860A63A1A176E340044E644 /* internet5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0860A6391A176E340044E644 /* internet5.png */; };
@@ -199,6 +200,7 @@
 		083108F41990A28F004EC7F3 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		08321CBD19E7FB7A00D027FE /* start-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-background.png"; sourceTree = "<group>"; };
 		08321CBF19E7FBC400D027FE /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		0835F3B11A2227B200249651 /* apple20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple20.png; sourceTree = "<group>"; };
 		0845C096198F25940065C298 /* original app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "original app-Bridging-Header.h"; sourceTree = "<group>"; };
 		0845C0AC198F2E8C0065C298 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detailViewController.h; path = ../detailViewController.h; sourceTree = "<group>"; };
 		0845C0AD198F2E8C0065C298 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = detailViewController.m; path = ../detailViewController.m; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				0835F3B11A2227B200249651 /* apple20.png */,
 				08A2AE841A20A53700B03065 /* button-edit.png */,
 				08A2AE801A209D7500B03065 /* button-menu2.png */,
 				08A2AE7E1A209CE200B03065 /* button-menu.png */,
@@ -642,6 +645,7 @@
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
 				0860A63A1A176E340044E644 /* internet5.png in Resources */,
+				0835F3B21A2227B200249651 /* apple20.png in Resources */,
 				080DD5EA195D887200D99D0A /* photo18.jpg in Resources */,
 				080DD5F0195D887200D99D0A /* photo7.jpg in Resources */,
 				08E59AED195D73CE000A3FF4 /* InfoPlist.strings in Resources */,

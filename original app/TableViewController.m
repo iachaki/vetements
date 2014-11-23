@@ -37,6 +37,9 @@
 {
     [super viewDidLoad];
     
+    
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -108,6 +111,8 @@
     [super viewWillAppear:animated];//viewWillAppearは毎回必ず、何回でもよばれる。viewdidloadの次によばれる
     if (self.tabBarController.tabBar.hidden == YES) {//もしtabBarController.tabBar.hiddenがYESだったら
         self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
+      
+
     }
 }
 

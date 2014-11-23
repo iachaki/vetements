@@ -9,7 +9,7 @@
         <scene sceneID="7sn-Kj-vLE">
             <objects>
                 <navigationController id="pmi-Aj-L5a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="menu" image="love4.png" id="Qdb-dL-Xof"/>
+                    <tabBarItem key="tabBarItem" title="menu" image="apple20.png" id="Qdb-dL-Xof"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zHy-QW-cYm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -288,11 +288,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="apple20.png" width="30" height="30"/>
         <image name="back-button1.png" width="425" height="148"/>
         <image name="button-menu2.png" width="434" height="154"/>
         <image name="button.png" width="425" height="148"/>
         <image name="internet5.png" width="30" height="30"/>
-        <image name="love4.png" width="30" height="30"/>
         <image name="start-background.png" width="640" height="1136"/>
         <image name="vétements-URL-label.png" width="434" height="157"/>
         <image name="vétements-clothes-label.png" width="425" height="148"/>
