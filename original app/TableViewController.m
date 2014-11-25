@@ -105,6 +105,10 @@
     
     [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
                                              forState:UIControlStateNormal];
+    
+   NSUserDefaults *title =[NSUserDefaults standardUserDefaults];
+    [title synchronize];
+    [title stringForKey:@"yumaArray"];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -114,7 +118,8 @@
       
 
     }
-}
+    //保存 NSUserDefault
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults]; }
 
 -(IBAction)addLinkButtonTap{
     //アラートを表示す
@@ -149,6 +154,14 @@
         item.urlString = urlStr;
         [yumaArray addObject:item];
         [self.tableView reloadData];
+        
+        //保存 NSUserDefault
+        NSUserDefaults *title =[NSUserDefaults standardUserDefaults];
+        NSData *data = [title objectForKey:@"yumaArray "];
+       webArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        [self.tableView reloadData];
+        NSLog(@"%@",[[[NSUserDefaults standardUserDefaults]dictionaryRepresentation]allKeys]);
+
     }
 }
 
