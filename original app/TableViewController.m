@@ -17,6 +17,7 @@
 {
     NSMutableArray *yumaArray;
     NSArray *webArray;
+    //NSArray *array;
     
 }
 
@@ -38,15 +39,12 @@
     [super viewDidLoad];
     
     
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    //yumaArray = @[@"cookpad", @"hello", @"morning"];
+   
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSData *array = [userDefault dataForKey:@"webSite"];
+    yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
+    if (yumaArray.count <=7) {
+     
     
 #pragma mark yuma_fix
     yumaArray = [NSMutableArray array];
@@ -84,7 +82,12 @@
     item7.title = @"Foever 21";
     item7.urlString = @"http://www.forever21.co.jp/?gclid=CI2mjsOGr8ECFRBwvAodNV0AhA#";
     [yumaArray addObject:item7];
+        
+        NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:data forKey:@"webSite"];
 
+    }
     
     UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithTitle:@"add"
                                                                       style:UIBarButtonItemStylePlain
@@ -106,9 +109,10 @@
     [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
                                              forState:UIControlStateNormal];
     
-   NSUserDefaults *title =[NSUserDefaults standardUserDefaults];
-    [title synchronize];
-    [title stringForKey:@"yumaArray"];
+    
+    
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -118,9 +122,7 @@
       
 
     }
-    //保存 NSUserDefault
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults]; }
-
+    
 -(IBAction)addLinkButtonTap{
     //アラートを表示す
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
@@ -155,13 +157,13 @@
         [yumaArray addObject:item];
         [self.tableView reloadData];
         
-        //保存 NSUserDefault
-        NSUserDefaults *title =[NSUserDefaults standardUserDefaults];
-        NSData *data = [title objectForKey:@"yumaArray "];
-       webArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        [self.tableView reloadData];
-        NSLog(@"%@",[[[NSUserDefaults standardUserDefaults]dictionaryRepresentation]allKeys]);
-
+        NSData *data [NSKeyedArchiver archivDataWithRootObject:yumaArray];
+        NSUserDefaults *defaults  = [NSUserDefaults standarUserDefaults];
+        [defaults setObject:data forKey:@"webSite"];
+        
+        
+ 
+    
     }
 }
 
@@ -210,8 +212,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    // Configure the cell...
+       // Configure the cell...
     // cell.contentView.backgroundColor = [UIColor redColor];
     
 #pragma mark yuma_fix
@@ -302,3 +303,4 @@
  */
 
 @end
+                        
