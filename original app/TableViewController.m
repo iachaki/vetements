@@ -122,7 +122,8 @@
       
 
     }
-    
+}
+
 -(IBAction)addLinkButtonTap{
     //アラートを表示す
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
@@ -140,10 +141,9 @@
     
     [message show];
     
+}
     
-    
-       }
-
+       
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
