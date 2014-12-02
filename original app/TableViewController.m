@@ -143,7 +143,7 @@
     
 }
     
-       
+
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -157,8 +157,9 @@
         [yumaArray addObject:item];
         [self.tableView reloadData];
         
-        NSData *data [NSKeyedArchiver archivDataWithRootObject:yumaArray];
-        NSUserDefaults *defaults  = [NSUserDefaults standarUserDefaults];
+        NSData *data [NSKeyedArchiver archievedDataWithRootObject:yumaArray];
+        //NSData *data [NSKeyedArchived archievedDataWithRootObject:yumaArray];//archieved
+        NSUserDefaults *defaults  = [NSUserDefaults standardUserDefaults];
         [defaults setObject:data forKey:@"webSite"];
         
         
