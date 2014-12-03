@@ -157,7 +157,7 @@
         [yumaArray addObject:item];
         [self.tableView reloadData];
         
-        NSData *data [NSKeyedArchiver archievedDataWithRootObject:yumaArray];
+        NSData *data; [NSKeyedArchiver archivedDataWithRootObject:yumaArray];
         //NSData *data [NSKeyedArchived archievedDataWithRootObject:yumaArray];//archieved
         NSUserDefaults *defaults  = [NSUserDefaults standardUserDefaults];
         [defaults setObject:data forKey:@"webSite"];
