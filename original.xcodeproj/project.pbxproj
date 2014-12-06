@@ -66,6 +66,7 @@
 		08A2AE7F1A209CE200B03065 /* button-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE7E1A209CE200B03065 /* button-menu.png */; };
 		08A2AE811A209D7500B03065 /* button-menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE801A209D7500B03065 /* button-menu2.png */; };
 		08A2AE851A20A53700B03065 /* button-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE841A20A53700B03065 /* button-edit.png */; };
+		08A463A61A32F20B00570CF4 /* menu3.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A463A51A32F20B00570CF4 /* menu3.png */; };
 		08A566F519930E8900574F21 /* REPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566ED19930E8900574F21 /* REPhotoCollectionController.m */; };
 		08A566F619930E8900574F21 /* REPhotoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566EF19930E8900574F21 /* REPhotoGroup.m */; };
 		08A566F719930E8900574F21 /* REPhotoThumbnailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566F219930E8900574F21 /* REPhotoThumbnailsCell.m */; };
@@ -212,6 +213,7 @@
 		08A2AE7E1A209CE200B03065 /* button-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu.png"; sourceTree = "<group>"; };
 		08A2AE801A209D7500B03065 /* button-menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu2.png"; sourceTree = "<group>"; };
 		08A2AE841A20A53700B03065 /* button-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-edit.png"; sourceTree = "<group>"; };
+		08A463A51A32F20B00570CF4 /* menu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu3.png; sourceTree = "<group>"; };
 		08A566EC19930E8900574F21 /* REPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoCollectionController.h; sourceTree = "<group>"; };
 		08A566ED19930E8900574F21 /* REPhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPhotoCollectionController.m; sourceTree = "<group>"; };
 		08A566EE19930E8900574F21 /* REPhotoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoGroup.h; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				08A463A51A32F20B00570CF4 /* menu3.png */,
 				0835F3B11A2227B200249651 /* apple20.png */,
 				08A2AE841A20A53700B03065 /* button-edit.png */,
 				08A2AE801A209D7500B03065 /* button-menu2.png */,
@@ -624,6 +627,7 @@
 				080DD5E8195D887200D99D0A /* photo16.jpg in Resources */,
 				080DD5E3195D887200D99D0A /* photo11.jpg in Resources */,
 				080DD5E7195D887200D99D0A /* photo15.jpg in Resources */,
+				08A463A61A32F20B00570CF4 /* menu3.png in Resources */,
 				08A2AE731A1F8AD900B03065 /* add.png in Resources */,
 				080DD5E1195D887200D99D0A /* photo1.jpg in Resources */,
 				080DD5ED195D887200D99D0A /* photo4.jpg in Resources */,

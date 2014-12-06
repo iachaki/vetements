@@ -159,14 +159,15 @@
         [yumaArray addObject:item];
         [self.tableView reloadData];
         
-        NSData *data; [NSKeyedArchiver archivedDataWithRootObject:yumaArray];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:yumaArray];
         //NSData *data [NSKeyedArchived archievedDataWithRootObject:yumaArray];//archieved
         NSUserDefaults *defaults  = [NSUserDefaults standardUserDefaults];
         [defaults setObject:data forKey:@"webSite"];
+        [defaults synchronize]; // 即時保存(UserDefaultsは、すぐに保存されない)
+        
+        NSLog(@"%@", [defaults objectForKey:@"webSite"]);
         
         
- 
-    
     }
 }
 
