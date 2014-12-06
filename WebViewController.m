@@ -71,10 +71,20 @@
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
     
-    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] init];
-    gs.numberOfTapsRequired = 1;
-    gs.delegate = self;
-    [self.view addGestureRecognizer:gs];
+    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
+    
+    
+    //gs.delegate = self;
+    //gs.numberOfTapsRequired = 2;
+    
+    /* 長押し */
+    UILongPressGestureRecognizer *longPressGesture =
+    [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    longPressGesture.minimumPressDuration = 1.0; //長押しの時間設定
+    longPressGesture.allowableMovement = 10.0;//ロングタップ中に動いてもよいピクセル数
+    longPressGesture.delegate = self;
+    
+    [webView addGestureRecognizer:longPressGesture];
     
     
     //UIWebViewのインスタンス化
@@ -127,12 +137,31 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    NSLog(@"TAPPED");
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+
+- (void)longPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+        NSLog(@"TAPPED");
     //Touch gestures below top bar should not make the page turn.
     //EDITED Check for only Tap here instead.
-    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
-        CGPoint touchPoint = [touch locationInView:self.view];
+    
+    NSLog(@"double tapped == %@", gestureRecognizer);
+
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"UIGestureRecognizerStateEnded");
+        //Do Whatever You want on End of Gesture
+    }
+    else if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
+        NSLog(@"UIGestureRecognizerStateBegan.");
+        //Do Whatever You want on Began of Gesture
+
+
+    if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]) {
+        CGPoint touchPoint = [gestureRecognizer locationInView:self.view];
         
         NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
         bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
@@ -186,7 +215,8 @@
             
         }
     }
-    return YES;
+
+}
 }
 
 -(IBAction)push{
