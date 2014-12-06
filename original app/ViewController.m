@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "WebItem.h"
 
+#define KEY @"dataArray"
+
 @interface ViewController (){
     NSString *selctedName;
     NSMutableArray *array;
@@ -23,7 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -35,27 +37,29 @@
     // 複数選択を許可する
     self.collectionView.allowsMultipleSelection = YES;
     deleteArray = [[NSMutableArray alloc]init];
-
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     
     
-
-#pragma mark - yuma_fix
-NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-NSData *data = [ud objectForKey:@"dataArray"];
-array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-[self.collectionView reloadData];
     
-   UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
-  self.navigationItem.rightBarButtonItem = dissmissButton;
+#pragma mark - yuma_fix
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSData *data = [ud objectForKey:KEY];
+    array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    NSLog(@"array == %@", array);
+    [self.collectionView reloadData];
+    
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
+    self.navigationItem.rightBarButtonItem = dissmissButton;
     
     /*UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"button-edit"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                             style:UIBarButtonSystemItemEdit
-                                                            target:self
-                                                            action:@selector(editThisView::)];
-    self.navigationItem.rightBarButtonItem = dissmissButton;*/
+     style:UIBarButtonSystemItemEdit
+     target:self
+     action:@selector(editThisView::)];
+     self.navigationItem.rightBarButtonItem = dissmissButton;*/
     
 }
 
@@ -93,7 +97,7 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     [cell bringSubviewToFront:selectedView];
     
     
-
+    
     
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
     //NSString *img = [[result objectAtIndex:[indexPath row]] picture];
@@ -117,20 +121,19 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     
     return cell;
     
-    }
+}
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    //TODO:編集モード時に選択中かそうでないかを判定するコードを追加する必要あり
     if (editCount == 1) {
         NSLog(@"selected %d",(int)indexPath.row);
         [deleteArray addObject:[NSNumber numberWithInteger:(int)indexPath.row]];
         return;
-        
     }
     
-   NSLog(@"selected %d", (int)indexPath.row);
+    NSLog(@"selected %d", (int)indexPath.row);
     selectedId = (int)indexPath.row;
     
     
@@ -181,13 +184,26 @@ array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     for (int i = 0; i < deleteArray.count; i++) {
         int deleteNumber = [[deleteArray objectAtIndex:i] intValue];
         [array removeObjectAtIndex:deleteNumber];
-        [self.collectionView reloadData];
         
     }
+    
+    //UserDefaultも更新
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:array];
+    [ud setObject:data forKey:KEY];
+    [ud synchronize];//即時保存
+    
+    [self.collectionView reloadData];
+    deleteArray = nil;
+    deleteArray = [[NSMutableArray alloc] init];
 }
 
 - (void)doneDeleteView:(id)sender
 {
+    //MARK:DeleteArrayを空にしてあげないと
+    deleteArray = nil;
+    deleteArray = [[NSMutableArray alloc] init];
+    
     editCount = 0;
     UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
     self.navigationItem.rightBarButtonItem = dissmissButton;
