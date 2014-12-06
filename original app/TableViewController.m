@@ -171,6 +171,21 @@
     }
 }
 
+/*-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    //先にデータソースを削除する
+    [yumaArray removeObjectAtIndex:indexPath.row];
+    
+    NSArray *deleteArray = [NSArray arrayWithObject:indexPath];
+    //UITableViewの行を消去する
+    [tableView deleteRowsAtIndexPaths:deleteArray withRowAnimation:UITableViewRowAnimationAutomatic];
+
+}*/
+
+
+
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -178,11 +193,17 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [yumaArray removeObjectAtIndex:indexPath.row];
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:yumaArray];
+        //NSData *data [NSKeyedArchived archievedDataWithRootObject:yumaArray];//archieved
+        NSUserDefaults *defaults  = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:data forKey:@"webSite"];
+        [userDefaults synchronize]; // 即時保存(UserDefaultsは、すぐに保存されない)
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
