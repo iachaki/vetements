@@ -261,7 +261,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soI-Ig-ba0">
                                 <rect key="frame" x="-32" y="12" width="192" height="65"/>
-                                <state key="normal" title="Button" image="button-menu.png">
+                                <state key="normal" title="Button" image="menu3.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -290,9 +290,9 @@
     <resources>
         <image name="apple20.png" width="30" height="30"/>
         <image name="back-button1.png" width="425" height="148"/>
-        <image name="button-menu.png" width="434" height="154"/>
         <image name="button.png" width="425" height="148"/>
         <image name="internet5.png" width="30" height="30"/>
+        <image name="menu3.png" width="434" height="154"/>
         <image name="start-background.png" width="640" height="1136"/>
         <image name="vétements-URL-label.png" width="434" height="157"/>
         <image name="vétements-clothes-label.png" width="425" height="148"/>
