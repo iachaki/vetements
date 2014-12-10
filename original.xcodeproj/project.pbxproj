@@ -92,6 +92,7 @@
 		08E59B0E195D73CE000A3FF4 /* original_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E59B0D195D73CE000A3FF4 /* original_appTests.m */; };
 		08EA3CB819B9D55100DF55F3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA3CB719B9D55100DF55F3 /* TableViewController.m */; };
 		08F601631991B79800D7D088 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F601621991B79700D7D088 /* CustomIOS7AlertView.m */; };
+		08F66FA21A38841E00CD461D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 08F66FA11A38841E00CD461D /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +254,7 @@
 		08EA3CB719B9D55100DF55F3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		08F601611991B79700D7D088 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		08F601621991B79700D7D088 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		08F66FA11A38841E00CD461D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +412,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				08F66FA11A38841E00CD461D /* icon.png */,
 				08A463A51A32F20B00570CF4 /* menu3.png */,
 				0835F3B11A2227B200249651 /* apple20.png */,
 				08A2AE841A20A53700B03065 /* button-edit.png */,
@@ -640,6 +643,7 @@
 				08A2AE851A20A53700B03065 /* button-edit.png in Resources */,
 				08E59AFB195D73CE000A3FF4 /* Images.xcassets in Resources */,
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
+				08F66FA21A38841E00CD461D /* icon.png in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
 				0860A6381A176E230044E644 /* love4.png in Resources */,
