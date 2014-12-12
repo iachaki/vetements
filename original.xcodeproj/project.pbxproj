@@ -93,6 +93,7 @@
 		08EA3CB819B9D55100DF55F3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA3CB719B9D55100DF55F3 /* TableViewController.m */; };
 		08F601631991B79800D7D088 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F601621991B79700D7D088 /* CustomIOS7AlertView.m */; };
 		08F66FA21A38841E00CD461D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 08F66FA11A38841E00CD461D /* icon.png */; };
+		08F66FA41A3B14DA00CD461D /* back-ground-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 08F66FA31A3B14DA00CD461D /* back-ground-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +256,7 @@
 		08F601611991B79700D7D088 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		08F601621991B79700D7D088 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		08F66FA11A38841E00CD461D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		08F66FA31A3B14DA00CD461D /* back-ground-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-ground-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +414,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				08F66FA31A3B14DA00CD461D /* back-ground-1.png */,
 				08F66FA11A38841E00CD461D /* icon.png */,
 				08A463A51A32F20B00570CF4 /* menu3.png */,
 				0835F3B11A2227B200249651 /* apple20.png */,
@@ -649,6 +652,7 @@
 				0860A6381A176E230044E644 /* love4.png in Resources */,
 				08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
+				08F66FA41A3B14DA00CD461D /* back-ground-1.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
