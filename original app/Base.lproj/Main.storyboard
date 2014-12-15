@@ -132,7 +132,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back-ground-1.png" id="cdX-mu-u7x">
+                                <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="cdX-mu-u7x">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="568"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
@@ -289,7 +289,6 @@
     </scenes>
     <resources>
         <image name="back-button1.png" width="425" height="148"/>
-        <image name="back-ground-1.png" width="650" height="1156"/>
         <image name="button.png" width="425" height="148"/>
         <image name="internet5.png" width="30" height="30"/>
         <image name="love4.png" width="30" height="30"/>
