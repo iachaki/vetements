@@ -47,7 +47,7 @@
      
     
 #pragma mark yuma_fix
-    yumaArray = [NSMutableArray array];
+    /*yumaArray = [NSMutableArray array];
     WebItem *item1 = [[WebItem alloc] init];
     item1.title = @"DIHOLIC";
     item1.urlString = @"http://www.dholic.co.jp/Nshopping/Shopping_New.asp";
@@ -81,7 +81,7 @@
     WebItem *item7 = [[WebItem alloc] init];
     item7.title = @"Foever 21";
     item7.urlString = @"http://www.forever21.co.jp/?gclid=CI2mjsOGr8ECFRBwvAodNV0AhA#";
-    [yumaArray addObject:item7];
+    [yumaArray addObject:item7];*/
         
         NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
