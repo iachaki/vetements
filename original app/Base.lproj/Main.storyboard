@@ -9,7 +9,7 @@
         <scene sceneID="7sn-Kj-vLE">
             <objects>
                 <navigationController id="pmi-Aj-L5a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="menu" image="love4.png" id="Qdb-dL-Xof"/>
+                    <tabBarItem key="tabBarItem" title="menu" image="favorite21 .png" id="Qdb-dL-Xof"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zHy-QW-cYm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -95,7 +95,7 @@
         <scene sceneID="9PL-Td-L6e">
             <objects>
                 <navigationController id="7JY-un-vJA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="web site" image="internet5.png" id="h83-wv-WHJ">
+                    <tabBarItem key="tabBarItem" tag="1" title="web site" image="earth205.png" id="h83-wv-WHJ">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="-1875" y="198"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="z3H-xN-FCA">
             <objects>
-                <tabBarController id="APN-bE-Ony" sceneMemberID="viewController">
+                <tabBarController id="APN-bE-Ony" customClass="TabBarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SMO-wH-Xwh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -290,8 +290,8 @@
     <resources>
         <image name="back-button1.png" width="425" height="148"/>
         <image name="button.png" width="425" height="148"/>
-        <image name="internet5.png" width="30" height="30"/>
-        <image name="love4.png" width="25" height="25"/>
+        <image name="earth205.png" width="30" height="30"/>
+        <image name="favorite21 .png" width="30" height="30"/>
         <image name="menu3.png" width="434" height="154"/>
         <image name="start-background.png" width="640" height="1136"/>
         <image name="vétements-URL-label.png" width="434" height="157"/>

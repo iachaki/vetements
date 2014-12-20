@@ -61,6 +61,14 @@
 		0863063E1A45565800529BAF /* love4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0863063C1A45565800529BAF /* love4.png */; };
 		0863063F1A45565800529BAF /* love4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0863063D1A45565800529BAF /* love4@2x.png */; };
 		086306411A45582900529BAF /* love4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306401A45582900529BAF /* love4@3x.png */; };
+		086306D91A455FAB00529BAF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306D81A455FAB00529BAF /* icon.png */; };
+		086306DC1A4568DA00529BAF /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086306DB1A4568DA00529BAF /* TabBarViewController.m */; };
+		086306E01A4570BC00529BAF /* favorite21 @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306DD1A4570BC00529BAF /* favorite21 @2x.png */; };
+		086306E11A4570BC00529BAF /* favorite21 @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306DE1A4570BC00529BAF /* favorite21 @3x.png */; };
+		086306E21A4570BC00529BAF /* favorite21.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306DF1A4570BC00529BAF /* favorite21.png */; };
+		086306EC1A45726400529BAF /* earth205.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306E91A45726400529BAF /* earth205.png */; };
+		086306ED1A45726400529BAF /* earth205@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306EA1A45726400529BAF /* earth205@2x.png */; };
+		086306EE1A45726400529BAF /* earth205@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306EB1A45726400529BAF /* earth205@3x.png */; };
 		089DC82319DEAC0300B5D3C7 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 089DC82219DEAC0300B5D3C7 /* new.png */; };
 		089EB46519E8319100DB8F11 /* back-button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 089EB46419E8319100DB8F11 /* back-button1.png */; };
 		08A2AE731A1F8AD900B03065 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE721A1F8AD900B03065 /* add.png */; };
@@ -93,7 +101,6 @@
 		08E59B0E195D73CE000A3FF4 /* original_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E59B0D195D73CE000A3FF4 /* original_appTests.m */; };
 		08EA3CB819B9D55100DF55F3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA3CB719B9D55100DF55F3 /* TableViewController.m */; };
 		08F601631991B79800D7D088 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F601621991B79700D7D088 /* CustomIOS7AlertView.m */; };
-		08F66FA21A38841E00CD461D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 08F66FA11A38841E00CD461D /* icon.png */; };
 		08F66FA41A3B14DA00CD461D /* back-ground-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 08F66FA31A3B14DA00CD461D /* back-ground-1.png */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +218,15 @@
 		0863063C1A45565800529BAF /* love4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love4.png; sourceTree = "<group>"; };
 		0863063D1A45565800529BAF /* love4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "love4@2x.png"; sourceTree = "<group>"; };
 		086306401A45582900529BAF /* love4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "love4@3x.png"; sourceTree = "<group>"; };
+		086306D81A455FAB00529BAF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		086306DA1A4568DA00529BAF /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		086306DB1A4568DA00529BAF /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		086306DD1A4570BC00529BAF /* favorite21 @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite21 @2x.png"; sourceTree = "<group>"; };
+		086306DE1A4570BC00529BAF /* favorite21 @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite21 @3x.png"; sourceTree = "<group>"; };
+		086306DF1A4570BC00529BAF /* favorite21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite21.png; sourceTree = "<group>"; };
+		086306E91A45726400529BAF /* earth205.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth205.png; sourceTree = "<group>"; };
+		086306EA1A45726400529BAF /* earth205@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth205@2x.png"; sourceTree = "<group>"; };
+		086306EB1A45726400529BAF /* earth205@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth205@3x.png"; sourceTree = "<group>"; };
 		089DC82219DEAC0300B5D3C7 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		089EB46419E8319100DB8F11 /* back-button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button1.png"; sourceTree = "<group>"; };
 		08A2AE721A1F8AD900B03065 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
@@ -257,7 +273,6 @@
 		08EA3CB719B9D55100DF55F3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		08F601611991B79700D7D088 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		08F601621991B79700D7D088 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
-		08F66FA11A38841E00CD461D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		08F66FA31A3B14DA00CD461D /* back-ground-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-ground-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -416,11 +431,17 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				086306E91A45726400529BAF /* earth205.png */,
+				086306EA1A45726400529BAF /* earth205@2x.png */,
+				086306EB1A45726400529BAF /* earth205@3x.png */,
+				086306DD1A4570BC00529BAF /* favorite21 @2x.png */,
+				086306DE1A4570BC00529BAF /* favorite21 @3x.png */,
+				086306DF1A4570BC00529BAF /* favorite21.png */,
+				086306D81A455FAB00529BAF /* icon.png */,
 				0863063C1A45565800529BAF /* love4.png */,
 				086306401A45582900529BAF /* love4@3x.png */,
 				0863063D1A45565800529BAF /* love4@2x.png */,
 				08F66FA31A3B14DA00CD461D /* back-ground-1.png */,
-				08F66FA11A38841E00CD461D /* icon.png */,
 				08A463A51A32F20B00570CF4 /* menu3.png */,
 				08A2AE841A20A53700B03065 /* button-edit.png */,
 				08A2AE801A209D7500B03065 /* button-menu2.png */,
@@ -503,6 +524,8 @@
 				08E59AF4195D73CE000A3FF4 /* Main.storyboard */,
 				08E59AF1195D73CE000A3FF4 /* AppDelegate.h */,
 				08E59AF2195D73CE000A3FF4 /* AppDelegate.m */,
+				086306DA1A4568DA00529BAF /* TabBarViewController.h */,
+				086306DB1A4568DA00529BAF /* TabBarViewController.m */,
 				082C57B21966B78500585CE4 /* WebViewController.h */,
 				08A5A9951973C7AB0031F1FF /* WebViewController.m */,
 				08EA3CB619B9D55100DF55F3 /* TableViewController.h */,
@@ -629,9 +652,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086306EE1A45726400529BAF /* earth205@3x.png in Resources */,
 				080DD5EE195D887200D99D0A /* photo5.jpg in Resources */,
 				080DD5EC195D887200D99D0A /* photo3.jpg in Resources */,
 				080DD5E9195D887200D99D0A /* photo17.jpg in Resources */,
+				086306ED1A45726400529BAF /* earth205@2x.png in Resources */,
+				086306E11A4570BC00529BAF /* favorite21 @3x.png in Resources */,
 				0863063F1A45565800529BAF /* love4@2x.png in Resources */,
 				086306411A45582900529BAF /* love4@3x.png in Resources */,
 				080DD5E5195D887200D99D0A /* photo13.jpg in Resources */,
@@ -641,8 +667,11 @@
 				08A463A61A32F20B00570CF4 /* menu3.png in Resources */,
 				08A2AE731A1F8AD900B03065 /* add.png in Resources */,
 				080DD5E1195D887200D99D0A /* photo1.jpg in Resources */,
+				086306D91A455FAB00529BAF /* icon.png in Resources */,
 				080DD5ED195D887200D99D0A /* photo4.jpg in Resources */,
+				086306E21A4570BC00529BAF /* favorite21.png in Resources */,
 				08321CBE19E7FB7A00D027FE /* start-background.png in Resources */,
+				086306E01A4570BC00529BAF /* favorite21 @2x.png in Resources */,
 				080DD5F2195D887200D99D0A /* photo9.jpg in Resources */,
 				08321CC019E7FBC400D027FE /* button.png in Resources */,
 				080DD5EF195D887200D99D0A /* photo6.jpg in Resources */,
@@ -651,7 +680,6 @@
 				08A2AE851A20A53700B03065 /* button-edit.png in Resources */,
 				08E59AFB195D73CE000A3FF4 /* Images.xcassets in Resources */,
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
-				08F66FA21A38841E00CD461D /* icon.png in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0863063E1A45565800529BAF /* love4.png in Resources */,
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
@@ -664,6 +692,7 @@
 				0860A63A1A176E340044E644 /* internet5.png in Resources */,
 				080DD5EA195D887200D99D0A /* photo18.jpg in Resources */,
 				080DD5F0195D887200D99D0A /* photo7.jpg in Resources */,
+				086306EC1A45726400529BAF /* earth205.png in Resources */,
 				08E59AED195D73CE000A3FF4 /* InfoPlist.strings in Resources */,
 				08A2AE7F1A209CE200B03065 /* button-menu.png in Resources */,
 				08E59AF6195D73CE000A3FF4 /* Main.storyboard in Resources */,
@@ -705,6 +734,7 @@
 				083109091990A28F004EC7F3 /* MagicalRecord+ErrorHandling.m in Sources */,
 				0831090E1990A28F004EC7F3 /* MagicalRecord.m in Sources */,
 				08EA3CB819B9D55100DF55F3 /* TableViewController.m in Sources */,
+				086306DC1A4568DA00529BAF /* TabBarViewController.m in Sources */,
 				0831090B1990A28F004EC7F3 /* MagicalRecord+Options.m in Sources */,
 				08AE3AD319D583C00032B940 /* WebItem.m in Sources */,
 				083108B61990A131004EC7F3 /* MyFashionData.m in Sources */,
