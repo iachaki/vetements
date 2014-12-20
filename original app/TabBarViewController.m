@@ -27,7 +27,7 @@
 
     
     //[[self tabBar] setTintColor:[UIColor colorWithRed:241/255.0 green:206/255.0 blue:130/255.0 alpha:1.0f]];//文字の色
-    [[self tabBar] setSelectedImageTintColor:PINK_COLOR];//選択されてるときの色
+        [[self tabBar] setSelectedImageTintColor:PINK_COLOR];//選択されてるときの色
 }
 
 - (void)didReceiveMemoryWarning {
