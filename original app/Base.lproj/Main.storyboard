@@ -291,7 +291,7 @@
         <image name="back-button1.png" width="425" height="148"/>
         <image name="button.png" width="425" height="148"/>
         <image name="internet5.png" width="30" height="30"/>
-        <image name="love4.png" width="30" height="30"/>
+        <image name="love4.png" width="25" height="25"/>
         <image name="menu3.png" width="434" height="154"/>
         <image name="start-background.png" width="640" height="1136"/>
         <image name="vétements-URL-label.png" width="434" height="157"/>
