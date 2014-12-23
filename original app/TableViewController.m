@@ -90,10 +90,15 @@
 
     }
     
-    UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithTitle:@"add"
-                                                                      style:UIBarButtonItemStylePlain
-                                                                     target:self action:@selector(addLinkButtonTap)];
+    UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"add1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                             style:UIBarButtonItemStylePlain
+                                                            target:self
+                                                            action:@selector(addLinkButtonTap)];
     self.navigationItem.rightBarButtonItem = addLinkButton;
+    
+    
+    
+    
     
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
     //タブ選択時のフォントとカラー
