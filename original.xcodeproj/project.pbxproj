@@ -69,6 +69,9 @@
 		086306EC1A45726400529BAF /* earth205.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306E91A45726400529BAF /* earth205.png */; };
 		086306ED1A45726400529BAF /* earth205@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306EA1A45726400529BAF /* earth205@2x.png */; };
 		086306EE1A45726400529BAF /* earth205@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306EB1A45726400529BAF /* earth205@3x.png */; };
+		086306F11A458FF400529BAF /* RootNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086306F01A458FF400529BAF /* RootNaviViewController.m */; };
+		0889BED61A492F3900EF1862 /* vétements-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED51A492F3900EF1862 /* vétements-logo.png */; };
+		0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */; };
 		089DC82319DEAC0300B5D3C7 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 089DC82219DEAC0300B5D3C7 /* new.png */; };
 		089EB46519E8319100DB8F11 /* back-button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 089EB46419E8319100DB8F11 /* back-button1.png */; };
 		08A2AE731A1F8AD900B03065 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE721A1F8AD900B03065 /* add.png */; };
@@ -227,6 +230,10 @@
 		086306E91A45726400529BAF /* earth205.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth205.png; sourceTree = "<group>"; };
 		086306EA1A45726400529BAF /* earth205@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth205@2x.png"; sourceTree = "<group>"; };
 		086306EB1A45726400529BAF /* earth205@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth205@3x.png"; sourceTree = "<group>"; };
+		086306EF1A458FF400529BAF /* RootNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNaviViewController.h; sourceTree = "<group>"; };
+		086306F01A458FF400529BAF /* RootNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNaviViewController.m; sourceTree = "<group>"; };
+		0889BED51A492F3900EF1862 /* vétements-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo.png"; sourceTree = "<group>"; };
+		0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo@2x.png"; sourceTree = "<group>"; };
 		089DC82219DEAC0300B5D3C7 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		089EB46419E8319100DB8F11 /* back-button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button1.png"; sourceTree = "<group>"; };
 		08A2AE721A1F8AD900B03065 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
@@ -431,6 +438,8 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */,
+				0889BED51A492F3900EF1862 /* vétements-logo.png */,
 				086306E91A45726400529BAF /* earth205.png */,
 				086306EA1A45726400529BAF /* earth205@2x.png */,
 				086306EB1A45726400529BAF /* earth205@3x.png */,
@@ -524,6 +533,8 @@
 				08E59AF4195D73CE000A3FF4 /* Main.storyboard */,
 				08E59AF1195D73CE000A3FF4 /* AppDelegate.h */,
 				08E59AF2195D73CE000A3FF4 /* AppDelegate.m */,
+				086306EF1A458FF400529BAF /* RootNaviViewController.h */,
+				086306F01A458FF400529BAF /* RootNaviViewController.m */,
 				086306DA1A4568DA00529BAF /* TabBarViewController.h */,
 				086306DB1A4568DA00529BAF /* TabBarViewController.m */,
 				082C57B21966B78500585CE4 /* WebViewController.h */,
@@ -673,6 +684,7 @@
 				08321CBE19E7FB7A00D027FE /* start-background.png in Resources */,
 				086306E01A4570BC00529BAF /* favorite21 @2x.png in Resources */,
 				080DD5F2195D887200D99D0A /* photo9.jpg in Resources */,
+				0889BED61A492F3900EF1862 /* vétements-logo.png in Resources */,
 				08321CC019E7FBC400D027FE /* button.png in Resources */,
 				080DD5EF195D887200D99D0A /* photo6.jpg in Resources */,
 				080DD5E6195D887200D99D0A /* photo14.jpg in Resources */,
@@ -682,6 +694,7 @@
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0863063E1A45565800529BAF /* love4.png in Resources */,
+				0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */,
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
 				08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
@@ -746,6 +759,7 @@
 				083109051990A28F004EC7F3 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				08E59AEF195D73CE000A3FF4 /* main.m in Sources */,
 				08A566FE1993113500574F21 /* Photo.m in Sources */,
+				086306F11A458FF400529BAF /* RootNaviViewController.m in Sources */,
 				0845C0AE198F2E8C0065C298 /* detailViewController.m in Sources */,
 				083109021990A28F004EC7F3 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				08A5A9961973C7AB0031F1FF /* WebViewController.m in Sources */,

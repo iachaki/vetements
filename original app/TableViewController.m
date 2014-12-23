@@ -38,6 +38,7 @@
 {
     [super viewDidLoad];
     
+   [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
     
    
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
@@ -47,7 +48,7 @@
      
     
 #pragma mark yuma_fix
-    /*yumaArray = [NSMutableArray array];
+    yumaArray = [NSMutableArray array];
     WebItem *item1 = [[WebItem alloc] init];
     item1.title = @"DIHOLIC";
     item1.urlString = @"http://www.dholic.co.jp/Nshopping/Shopping_New.asp";
@@ -81,7 +82,7 @@
     WebItem *item7 = [[WebItem alloc] init];
     item7.title = @"Foever 21";
     item7.urlString = @"http://www.forever21.co.jp/?gclid=CI2mjsOGr8ECFRBwvAodNV0AhA#";
-    [yumaArray addObject:item7];*/
+    [yumaArray addObject:item7];
         
         NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -113,6 +114,16 @@
     
     
     
+}
+- (void)setNavigationBarTitleImage:(UIImage *)image
+{
+    UIImageView *titleImageView = [[UIImageView alloc] initWithImage:image];
+    // Adjust Image Size
+    titleImageView.frame = CGRectMake(0, 0, image.size.width * 0.5, image.size.height * 0.5);
+    
+    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(-image.size.width*0.5, 0, titleImageView.frame.size.width , titleImageView.frame.size.height)];
+    [titleView addSubview:titleImageView];
+    self.navigationItem.titleView = titleView;
 }
 
 - (void)viewWillAppear:(BOOL)animated{

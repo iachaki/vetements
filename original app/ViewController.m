@@ -38,7 +38,21 @@
     self.collectionView.allowsMultipleSelection = YES;
     deleteArray = [[NSMutableArray alloc]init];
     
+    
+    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
 }
+
+- (void)setNavigationBarTitleImage:(UIImage *)image
+{
+    UIImageView *titleImageView = [[UIImageView alloc] initWithImage:image];
+    // Adjust Image Size
+    titleImageView.frame = CGRectMake(0, 0, image.size.width * 0.5, image.size.height * 0.5);
+    
+    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(-image.size.width*0.5, 0, titleImageView.frame.size.width , titleImageView.frame.size.height)];
+    [titleView addSubview:titleImageView];
+    self.navigationItem.titleView = titleView;
+}
+
 
 -(void)viewWillAppear:(BOOL)animated {
     
@@ -170,7 +184,10 @@
 
 - (void)editThisView:(id)sender
 {
-    editCount = 1;
+    //画像を設定
+    //UIImage *NavigationBarImage = [UIImage imageNamed:@"button-edit.png"];
+
+       editCount = 1;
     UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteCollectionView:)];
     self.navigationItem.leftBarButtonItem = dissmissButton;
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneDeleteView:)];
