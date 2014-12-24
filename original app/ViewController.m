@@ -107,6 +107,7 @@
     
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
+    
     // 選択状態の UI を backgroundView に設定
     UIView *selectedView = [UIView new];
     selectedView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.7];
