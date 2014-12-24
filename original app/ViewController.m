@@ -106,7 +106,12 @@
     UICollectionViewCell *cell;
     
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
+    CGRect cellRect = cell.bounds;
+    UIScreen *mainScreen = [UIScreen mainScreen];
+    cellRect.size.width = 106;
+    cell.bounds = cellRect;
+    NSLog(@"Screen bounds: %@, Screen resolution: %@, scale: %f, nativeScale: %f",
+          NSStringFromCGRect(mainScreen.bounds), mainScreen.coordinateSpace, mainScreen.scale, mainScreen.nativeScale);
     
     // 選択状態の UI を backgroundView に設定
     UIView *selectedView = [UIView new];
@@ -119,6 +124,9 @@
     
     
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
+    CGRect imageRect = imageView.bounds;
+    imageRect.size.width = 106;
+    imageView.bounds = imageRect;
     //NSString *img = [[result objectAtIndex:[indexPath row]] picture];
 #pragma mark - yuma_fix
     WebItem *item = array[indexPath.row];
