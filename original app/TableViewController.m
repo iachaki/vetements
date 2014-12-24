@@ -38,9 +38,9 @@
 {
     [super viewDidLoad];
     
-   [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
     
-   
+    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
+    
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSData *array = [userDefault dataForKey:@"webSite"];
     yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
@@ -90,7 +90,7 @@
 
     }
     
-    UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"add1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"add3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                              style:UIBarButtonItemStylePlain
                                                             target:self
                                                             action:@selector(addLinkButtonTap)];
@@ -145,8 +145,8 @@
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
                                                       message:nil
                                                      delegate:self
-                                            cancelButtonTitle:@"Cancel"
-                                            otherButtonTitles:@"Add", nil];
+                                            cancelButtonTitle:@"Add"
+                                            otherButtonTitles:@"Cancel", nil];
     
     [message setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
     UITextField *fileDescription = [message textFieldAtIndex:0];

@@ -26,6 +26,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -40,6 +41,12 @@
     
     
     [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
+    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"edit@2x.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(doneDeleteView:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
 }
 
 - (void)setNavigationBarTitleImage:(UIImage *)image
@@ -66,14 +73,11 @@
     NSLog(@"array == %@", array);
     [self.collectionView reloadData];
     
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
-    self.navigationItem.rightBarButtonItem = dissmissButton;
-    
-    /*UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"button-edit"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-     style:UIBarButtonSystemItemEdit
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"edit1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+     style:UIBarButtonItemStylePlain
      target:self
-     action:@selector(editThisView::)];
-     self.navigationItem.rightBarButtonItem = dissmissButton;*/
+     action:@selector(editThisView:)];
+     self.navigationItem.rightBarButtonItem = dissmissButton;
     
 }
 
@@ -185,14 +189,22 @@
 - (void)editThisView:(id)sender
 {
     //画像を設定
-    //UIImage *NavigationBarImage = [UIImage imageNamed:@"button-edit.png"];
+   // UIImage *NavigationBarImage = [UIImage imageNamed:@"button-edit.png"];
 
        editCount = 1;
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteCollectionView:)];
-    self.navigationItem.leftBarButtonItem = dissmissButton;
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneDeleteView:)];
-    self.navigationItem.rightBarButtonItem = doneButton;
     
+    //MARK:左のBarbuttonItem
+   UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteCollectionView:)];
+    self.navigationItem.leftBarButtonItem = dissmissButton;
+    
+    
+    //MARK:右のBarbuttonItem(done)
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"done.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                                      style:UIBarButtonItemStylePlain
+                                                                     target:self
+                                                                     action:@selector(doneDeleteView:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+
 }
 
 - (void)deleteCollectionView:(id)sender
@@ -222,8 +234,15 @@
     deleteArray = [[NSMutableArray alloc] init];
     
     editCount = 0;
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editThisView:)];
+    
+    //MARK:右のBarbuttonItem
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"edit1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                                       style:UIBarButtonItemStylePlain
+                                                                      target:self
+                                                                      action:@selector(editThisView:)];
     self.navigationItem.rightBarButtonItem = dissmissButton;
+    
+    self.navigationItem.leftBarButtonItem = nil;
 }
 
 @end
