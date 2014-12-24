@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view.
     
     [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
+    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:244/255.0 green:162/255.0 blue:173/255.0 alpha:1.000];
 }
 
 - (void)setNavigationBarTitleImage:(UIImage *)image

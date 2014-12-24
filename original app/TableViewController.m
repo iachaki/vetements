@@ -90,7 +90,7 @@
 
     }
     
-    UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"add3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"add4.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                              style:UIBarButtonItemStylePlain
                                                             target:self
                                                             action:@selector(addLinkButtonTap)];
@@ -145,8 +145,8 @@
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
                                                       message:nil
                                                      delegate:self
-                                            cancelButtonTitle:@"Add"
-                                            otherButtonTitles:@"Cancel", nil];
+                                            cancelButtonTitle:@"Cancel"
+                                            otherButtonTitles:@"Add", nil];
     
     [message setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
     UITextField *fileDescription = [message textFieldAtIndex:0];
