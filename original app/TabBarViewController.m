@@ -20,6 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    [UITabBar appearance].barTintColor = [UIColor colorWithRed:244/255.0 green:162/255.0 blue:173/255.0 alpha:1.000];
+
+    
     [[UITabBarItem appearance] setTitleTextAttributes:@{ UITextAttributeTextColor : [UIColor colorWithRed:116/255.0 green:102/255.0 blue:172/255.0 alpha:1.0f] }
                                              forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{ UITextAttributeTextColor : [UIColor colorWithRed:232/255.0 green:64/255.0 blue:60/255.0 alpha:1.0f] }

@@ -94,7 +94,9 @@
 		08C1F1AC1A4A55820085D4FA /* edit1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1AA1A4A55820085D4FA /* edit1@2x.png */; };
 		08C1F1AE1A4A88B80085D4FA /* add4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1AD1A4A88B80085D4FA /* add4@2x.png */; };
 		08C1F1B21A4A94700085D4FA /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B11A4A94700085D4FA /* check@2x.png */; };
-		08C1F1B41A4A950C0085D4FA /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B31A4A950C0085D4FA /* done@2x.png */; };
+		08C1F1B61A4A9F890085D4FA /* check1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B51A4A9F890085D4FA /* check1@2x.png */; };
+		08C1F1B81A4AA05D0085D4FA /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B71A4AA05D0085D4FA /* done@2x.png */; };
+		08C1F1BC1A4AA53D0085D4FA /* check2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */; };
 		08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE2195D73CE000A3FF4 /* Foundation.framework */; };
 		08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */; };
 		08E59AE7195D73CE000A3FF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE6195D73CE000A3FF4 /* UIKit.framework */; };
@@ -270,7 +272,9 @@
 		08C1F1AA1A4A55820085D4FA /* edit1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit1@2x.png"; sourceTree = "<group>"; };
 		08C1F1AD1A4A88B80085D4FA /* add4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add4@2x.png"; sourceTree = "<group>"; };
 		08C1F1B11A4A94700085D4FA /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
-		08C1F1B31A4A950C0085D4FA /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
+		08C1F1B51A4A9F890085D4FA /* check1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check1@2x.png"; sourceTree = "<group>"; };
+		08C1F1B71A4AA05D0085D4FA /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
+		08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check2@2x.png"; sourceTree = "<group>"; };
 		08E59ADF195D73CE000A3FF4 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E59AE2195D73CE000A3FF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -452,7 +456,9 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				08C1F1B31A4A950C0085D4FA /* done@2x.png */,
+				08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */,
+				08C1F1B71A4AA05D0085D4FA /* done@2x.png */,
+				08C1F1B51A4A9F890085D4FA /* check1@2x.png */,
 				08C1F1B11A4A94700085D4FA /* check@2x.png */,
 				08C1F1AA1A4A55820085D4FA /* edit1@2x.png */,
 				08C1F1A31A4A525D0085D4FA /* edit@2x.png */,
@@ -692,7 +698,6 @@
 				08C1F1A41A4A525D0085D4FA /* edit@2x.png in Resources */,
 				086306E11A4570BC00529BAF /* favorite21 @3x.png in Resources */,
 				0863063F1A45565800529BAF /* love4@2x.png in Resources */,
-				08C1F1B41A4A950C0085D4FA /* done@2x.png in Resources */,
 				086306411A45582900529BAF /* love4@3x.png in Resources */,
 				0889BF0B1A49580900EF1862 /* add@2x.png in Resources */,
 				080DD5E5195D887200D99D0A /* photo13.jpg in Resources */,
@@ -719,12 +724,15 @@
 				089DC82319DEAC0300B5D3C7 /* new.png in Resources */,
 				08E59AFB195D73CE000A3FF4 /* Images.xcassets in Resources */,
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
+				08C1F1B81A4AA05D0085D4FA /* done@2x.png in Resources */,
+				08C1F1BC1A4AA53D0085D4FA /* check2@2x.png in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0863063E1A45565800529BAF /* love4.png in Resources */,
 				0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */,
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
 				08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */,
 				081902611A4A3DE7009D99FB /* add2@2x.png in Resources */,
+				08C1F1B61A4A9F890085D4FA /* check1@2x.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
 				08F66FA41A3B14DA00CD461D /* back-ground-1.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,

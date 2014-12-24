@@ -42,11 +42,13 @@
     
     [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
     
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"check.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"check2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                    style:UIBarButtonItemStylePlain
                                                                   target:self
                                                                   action:@selector(doneDeleteView:)];
     self.navigationItem.rightBarButtonItem = doneButton;
+    
+ 
 }
 
 - (void)setNavigationBarTitleImage:(UIImage *)image
@@ -73,7 +75,7 @@
     NSLog(@"array == %@", array);
     [self.collectionView reloadData];
     
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"check.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"check2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
      style:UIBarButtonItemStylePlain
      target:self
      action:@selector(editThisView:)];
@@ -231,6 +233,7 @@
     //MARK:左のBarbuttonItem
    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteCollectionView:)];
     self.navigationItem.leftBarButtonItem = dissmissButton;
+  dissmissButton.tintColor = [UIColor whiteColor];
     
     
     //MARK:右のBarbuttonItem(done)
@@ -239,6 +242,7 @@
                                                                      target:self
                                                                      action:@selector(doneDeleteView:)];
     self.navigationItem.rightBarButtonItem = doneButton;
+    doneButton.tintColor = [UIColor whiteColor];
 
 }
 
@@ -271,11 +275,12 @@
     editCount = 0;
     
     //MARK:右のBarbuttonItem
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"check.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"check2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                        style:UIBarButtonItemStylePlain
                                                                       target:self
                                                                       action:@selector(editThisView:)];
     self.navigationItem.rightBarButtonItem = dissmissButton;
+    
     
     self.navigationItem.leftBarButtonItem = nil;
 }
