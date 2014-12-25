@@ -176,6 +176,36 @@
             </objects>
             <point key="canvasLocation" x="-460" y="56"/>
         </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="A9g-Ug-pLe">
+            <objects>
+                <viewController storyboardIdentifier="TutorialVC" id="RT9-fY-cZb" customClass="TutorialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="css-2H-WT9"/>
+                        <viewControllerLayoutGuide type="bottom" id="UUi-Pa-5XY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xK2-5f-jYE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkQ-Ek-bqZ">
+                                <rect key="frame" x="137" y="278" width="34" height="30"/>
+                                <state key="normal" title="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back" destination="RT9-fY-cZb" eventType="touchUpInside" id="8TI-ki-WWV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZ8-SP-rUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1935" y="-470"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="UJY-bW-ldE">
             <objects>
