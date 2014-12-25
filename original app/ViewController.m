@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WebItem.h"
+#import "TutorialViewController.h"
 
 #define KEY @"dataArray"
 
@@ -16,16 +17,15 @@
     NSMutableArray *array;
     int editCount;
     NSMutableArray *deleteArray;
+    BOOL flag;
 }
 
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 
     
     self.collectionView.delegate = self;
@@ -48,7 +48,10 @@
                                                                   action:@selector(doneDeleteView:)];
     self.navigationItem.rightBarButtonItem = doneButton;
     
- 
+#pragma mark - omatty tutorialView
+//    UIView *subview = [[NSBundle mainBundle] loadNibNamed:@"TutorialView" owner:self options:nil][0];
+//    subview.frame = CGRectMake(100, 100, 100, 100);
+//    [self.view addSubview:subview];
 }
 
 - (void)setNavigationBarTitleImage:(UIImage *)image
@@ -63,10 +66,7 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated {
-    
-    
-    
+-(void)viewWillAppear:(BOOL)animated{
 #pragma mark - yuma_fix
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSData *data = [ud objectForKey:KEY];

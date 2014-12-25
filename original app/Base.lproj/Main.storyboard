@@ -166,7 +166,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="h8i-XS-7Wp"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="collectionView" destination="co8-Xq-0NL" id="gnr-UC-QIK"/>
                         <segue destination="i3r-oe-ys9" kind="push" identifier="cellcolection" id="yuF-ci-5QL"/>

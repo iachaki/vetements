@@ -14,9 +14,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    TutorialViewController *tvc = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"TutorialVC"];//TutorialVCはstoryboardで自分で設定したい文字列
-    [self.window makeKeyAndVisible];//見えるようにする
-    [self.window.rootViewController presentViewController:tvc animated:NO completion:NULL];//modalで移動する
+//    TutorialViewController *tvc = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"TutorialVC"];//TutorialVCはstoryboardで自分で設定したい文字列
+//    [self.window makeKeyAndVisible];//見えるようにする
+//    [self.window.rootViewController presentViewController:tvc animated:NO completion:NULL];//modalで移動する
     
     [MagicalRecord setupCoreDataStack];
     [self initRootController];

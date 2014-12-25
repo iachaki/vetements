@@ -7,6 +7,7 @@
 //
 
 #import "RootNaviViewController.h"
+#import "TutorialViewController.h"
 
 @interface RootNaviViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     
     [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
     

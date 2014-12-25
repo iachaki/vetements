@@ -7,6 +7,7 @@
 //
 
 #import "TabBarViewController.h"
+#import "TutorialViewController.h"
 
 #define PINK_COLOR [UIColor colorWithRed:231/255.0 green:101/255.0 blue:131/255.0 alpha:1.0f]
 
@@ -19,7 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    //YES -> modal
+    //    flag = [[NSUserDefaults standardUserDefaults] boolForKey:@"launchFlag"];
+    //    if (flag == NO) {
+    //        NSLog(@"//YES -> modal to TutorialVC");
+    //TODO: TutorialVCに移動する！
+    [super viewDidLoad];
+//    TutorialViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorialVC"];
+//    [self presentViewController:tvc animated:NO completion:nil];
+    //        [[NSUserDefaults standardUserDefaults] setObject:@YES forKey:@"launchFlag"];
+    //    }
+    //NO -> 移動しない
+    //        NSLog(@"%d",flag);
     
     [UITabBar appearance].barTintColor = [UIColor colorWithRed:244/255.0 green:162/255.0 blue:173/255.0 alpha:1.000];
 
