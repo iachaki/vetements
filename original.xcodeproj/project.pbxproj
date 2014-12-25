@@ -97,6 +97,8 @@
 		08C1F1B61A4A9F890085D4FA /* check1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B51A4A9F890085D4FA /* check1@2x.png */; };
 		08C1F1B81A4AA05D0085D4FA /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B71A4AA05D0085D4FA /* done@2x.png */; };
 		08C1F1BC1A4AA53D0085D4FA /* check2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */; };
+		08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */; };
+		08C1F1C81A4B91F40085D4FA /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C71A4B91F40085D4FA /* plus@2x.png */; };
 		08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE2195D73CE000A3FF4 /* Foundation.framework */; };
 		08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */; };
 		08E59AE7195D73CE000A3FF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE6195D73CE000A3FF4 /* UIKit.framework */; };
@@ -275,6 +277,8 @@
 		08C1F1B51A4A9F890085D4FA /* check1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check1@2x.png"; sourceTree = "<group>"; };
 		08C1F1B71A4AA05D0085D4FA /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
 		08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check2@2x.png"; sourceTree = "<group>"; };
+		08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox2@2x.png"; sourceTree = "<group>"; };
+		08C1F1C71A4B91F40085D4FA /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
 		08E59ADF195D73CE000A3FF4 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E59AE2195D73CE000A3FF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -456,6 +460,8 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				08C1F1C71A4B91F40085D4FA /* plus@2x.png */,
+				08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */,
 				08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */,
 				08C1F1B71A4AA05D0085D4FA /* done@2x.png */,
 				08C1F1B51A4A9F890085D4FA /* check1@2x.png */,
@@ -728,6 +734,7 @@
 				08C1F1BC1A4AA53D0085D4FA /* check2@2x.png in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0863063E1A45565800529BAF /* love4.png in Resources */,
+				08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */,
 				0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */,
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
 				08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */,
@@ -739,6 +746,7 @@
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
 				0860A63A1A176E340044E644 /* internet5.png in Resources */,
+				08C1F1C81A4B91F40085D4FA /* plus@2x.png in Resources */,
 				080DD5EA195D887200D99D0A /* photo18.jpg in Resources */,
 				080DD5F0195D887200D99D0A /* photo7.jpg in Resources */,
 				086306EC1A45726400529BAF /* earth205.png in Resources */,
