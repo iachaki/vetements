@@ -42,10 +42,10 @@
     deleteArray = [[NSMutableArray alloc]init];
     
     
-    //[self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
+    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
     //logoを消した
     
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                    style:UIBarButtonItemStylePlain
                                                                   target:self
                                                                   action:@selector(doneDeleteView:)];
@@ -78,7 +78,7 @@
     NSLog(@"array == %@", array);
     [self.collectionView reloadData];
     
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
      style:UIBarButtonItemStylePlain
      target:self
      action:@selector(editThisView:)];
@@ -276,7 +276,7 @@
     editCount = 0;
     
     //MARK:右のBarbuttonItem
-    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                        style:UIBarButtonItemStylePlain
                                                                       target:self
                                                                       action:@selector(editThisView:)];

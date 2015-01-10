@@ -95,12 +95,11 @@
 		08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */; };
 		08AE3AD319D583C00032B940 /* WebItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AE3AD219D583C00032B940 /* WebItem.m */; };
 		08B3919C1A611C290004CD66 /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B3919B1A611C290004CD66 /* done@2x.png */; };
+		08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B3919F1A613A920004CD66 /* checkbox@2x.png */; };
+		08B391A61A6141C30004CD66 /* vétements-logo2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B391A51A6141C30004CD66 /* vétements-logo2@2x.png */; };
 		08C1F1A41A4A525D0085D4FA /* edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1A31A4A525D0085D4FA /* edit@2x.png */; };
 		08C1F1AC1A4A55820085D4FA /* edit1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1AA1A4A55820085D4FA /* edit1@2x.png */; };
 		08C1F1AE1A4A88B80085D4FA /* add4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1AD1A4A88B80085D4FA /* add4@2x.png */; };
-		08C1F1B21A4A94700085D4FA /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B11A4A94700085D4FA /* check@2x.png */; };
-		08C1F1B61A4A9F890085D4FA /* check1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1B51A4A9F890085D4FA /* check1@2x.png */; };
-		08C1F1BC1A4AA53D0085D4FA /* check2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */; };
 		08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */; };
 		08C1F1C81A4B91F40085D4FA /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C71A4B91F40085D4FA /* plus@2x.png */; };
 		08C1F1CB1A4BACA00085D4FA /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C1F1CA1A4BACA00085D4FA /* TutorialViewController.m */; };
@@ -281,12 +280,11 @@
 		08AE3AD119D583C00032B940 /* WebItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebItem.h; sourceTree = "<group>"; };
 		08AE3AD219D583C00032B940 /* WebItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebItem.m; sourceTree = "<group>"; };
 		08B3919B1A611C290004CD66 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
+		08B3919F1A613A920004CD66 /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
+		08B391A51A6141C30004CD66 /* vétements-logo2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo2@2x.png"; sourceTree = "<group>"; };
 		08C1F1A31A4A525D0085D4FA /* edit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit@2x.png"; sourceTree = "<group>"; };
 		08C1F1AA1A4A55820085D4FA /* edit1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit1@2x.png"; sourceTree = "<group>"; };
 		08C1F1AD1A4A88B80085D4FA /* add4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add4@2x.png"; sourceTree = "<group>"; };
-		08C1F1B11A4A94700085D4FA /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
-		08C1F1B51A4A9F890085D4FA /* check1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check1@2x.png"; sourceTree = "<group>"; };
-		08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check2@2x.png"; sourceTree = "<group>"; };
 		08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox2@2x.png"; sourceTree = "<group>"; };
 		08C1F1C71A4B91F40085D4FA /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
 		08C1F1C91A4BACA00085D4FA /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
@@ -481,9 +479,7 @@
 				08272DC31A4CEC2700D51009 /* icon1.png */,
 				08C1F1C71A4B91F40085D4FA /* plus@2x.png */,
 				08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */,
-				08C1F1BB1A4AA53D0085D4FA /* check2@2x.png */,
-				08C1F1B51A4A9F890085D4FA /* check1@2x.png */,
-				08C1F1B11A4A94700085D4FA /* check@2x.png */,
+				08B3919F1A613A920004CD66 /* checkbox@2x.png */,
 				08B3919B1A611C290004CD66 /* done@2x.png */,
 				08C1F1AA1A4A55820085D4FA /* edit1@2x.png */,
 				08C1F1A31A4A525D0085D4FA /* edit@2x.png */,
@@ -493,6 +489,7 @@
 				0889BF0C1A495B1F00EF1862 /* add1@2x.png */,
 				0889BF0A1A49580900EF1862 /* add@2x.png */,
 				0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */,
+				08B391A51A6141C30004CD66 /* vétements-logo2@2x.png */,
 				0889BED51A492F3900EF1862 /* vétements-logo.png */,
 				086306E91A45726400529BAF /* earth205.png */,
 				086306EA1A45726400529BAF /* earth205@2x.png */,
@@ -744,7 +741,6 @@
 				08321CBE19E7FB7A00D027FE /* start-background.png in Resources */,
 				086306E01A4570BC00529BAF /* favorite21 @2x.png in Resources */,
 				081902651A4A4922009D99FB /* add3@2x.png in Resources */,
-				08C1F1B21A4A94700085D4FA /* check@2x.png in Resources */,
 				080DD5F2195D887200D99D0A /* photo9.jpg in Resources */,
 				0889BED61A492F3900EF1862 /* vétements-logo.png in Resources */,
 				08C1F1AE1A4A88B80085D4FA /* add4@2x.png in Resources */,
@@ -755,7 +751,6 @@
 				089DC82319DEAC0300B5D3C7 /* new.png in Resources */,
 				08E59AFB195D73CE000A3FF4 /* Images.xcassets in Resources */,
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
-				08C1F1BC1A4AA53D0085D4FA /* check2@2x.png in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0863063E1A45565800529BAF /* love4.png in Resources */,
 				08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */,
@@ -764,12 +759,13 @@
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
 				08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */,
 				081902611A4A3DE7009D99FB /* add2@2x.png in Resources */,
-				08C1F1B61A4A9F890085D4FA /* check1@2x.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
 				08F66FA41A3B14DA00CD461D /* back-ground-1.png in Resources */,
 				08D898F71A4BDDB200FFF6F0 /* TutorialView.xib in Resources */,
+				08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
+				08B391A61A6141C30004CD66 /* vétements-logo2@2x.png in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
 				0860A63A1A176E340044E644 /* internet5.png in Resources */,
 				08C1F1C81A4B91F40085D4FA /* plus@2x.png in Resources */,
