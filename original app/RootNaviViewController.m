@@ -19,12 +19,13 @@
     [super viewDidLoad];
 
     
-    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
     
-    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:244/255.0 green:162/255.0 blue:173/255.0 alpha:1.000];
+    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000];//上のバーを白く
+    //[UINavigationBar appearance].barTintColor = [UIColor colorWithRed:244/255.0 green:162/255.0 blue:173/255.0 alpha:1.000];
 }
 
-- (void)setNavigationBarTitleImage:(UIImage *)image
+/*- (void)setNavigationBarTitleImage:(UIImage *)image
 {
     UIImageView *titleImageView = [[UIImageView alloc] initWithImage:image];
     // Adjust Image Size
@@ -34,7 +35,7 @@
     [titleView addSubview:titleImageView];
     self.navigationItem.titleView = titleView;
     
-}
+}*/
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -39,7 +39,6 @@
     [super viewDidLoad];
     
     
-    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
     
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSData *array = [userDefault dataForKey:@"webSite"];

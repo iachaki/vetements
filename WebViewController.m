@@ -167,7 +167,7 @@
         bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
         NSLog(@"pageFlag tapbtnRight %d", pageFlag);
         
-        if(self.interfaceOrientation==UIInterfaceOrientationPortrait||self.interfaceOrientation==UIInterfaceOrientationPortraitUpsideDown) {
+    if(self.interfaceOrientation==UIInterfaceOrientationPortrait||self.interfaceOrientation==UIInterfaceOrientationPortraitUpsideDown) {
             NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
             NSString *urlToSave = [webView stringByEvaluatingJavaScriptFromString:imgURL];
             NSLog(@"urlToSave :%@",urlToSave);
@@ -182,7 +182,7 @@
             
             //NSLog(@"%@", jpg64Str);
             
-            if (![jpg64Str isEqualToString:@""]) {
+    if (![jpg64Str isEqualToString:@""]) {
                 
                 // Here we need to pass a full frame
                 CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];

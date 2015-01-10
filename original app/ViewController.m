@@ -11,6 +11,8 @@
 #import "TutorialViewController.h"
 
 #define KEY @"dataArray"
+#define PINK_COLOR [UIColor colorWithRed:231/255.0 green:101/255.0 blue:131/255.0 alpha:1.0f]
+
 
 @interface ViewController (){
     NSString *selctedName;
@@ -40,7 +42,8 @@
     deleteArray = [[NSMutableArray alloc]init];
     
     
-    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
+    //[self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
+    //logoを消した
     
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                    style:UIBarButtonItemStylePlain
@@ -233,7 +236,7 @@
     //MARK:左のBarbuttonItem
    UIBarButtonItem *dissmissButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteCollectionView:)];
     self.navigationItem.leftBarButtonItem = dissmissButton;
-  dissmissButton.tintColor = [UIColor whiteColor];
+    dissmissButton.tintColor = [UIColor colorWithRed:231/255.0 green:101/255.0 blue:131/255.0 alpha:1.0f];
     
     
     //MARK:右のBarbuttonItem(done)
@@ -242,8 +245,6 @@
                                                                      target:self
                                                                      action:@selector(doneDeleteView:)];
     self.navigationItem.rightBarButtonItem = doneButton;
-    doneButton.tintColor = [UIColor whiteColor];
-
 }
 
 - (void)deleteCollectionView:(id)sender

@@ -33,7 +33,9 @@
     //NO -> 移動しない
     //        NSLog(@"%d",flag);
     
-    [UITabBar appearance].barTintColor = [UIColor colorWithRed:244/255.0 green:162/255.0 blue:173/255.0 alpha:1.000];
+    
+    [UITabBar appearance].barTintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];//下のバーを白く
+    //[UITabBar appearance].barTintColor = [UIColor colorWithRed:244/255.0 green:162/255.0 blue:173/255.0 alpha:1.000];
 
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{ UITextAttributeTextColor : [UIColor colorWithRed:128/255.0 green:128/255.0 blue:128/255.0 alpha:1.0f] }
@@ -45,7 +47,7 @@
         [[self tabBar] setSelectedImageTintColor:PINK_COLOR];//選択されてるときの色
 }
 
-- (void)didReceiveMemoryWarning {
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
