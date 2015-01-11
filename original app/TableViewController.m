@@ -86,6 +86,9 @@
         NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:data forKey:@"webSite"];
+        
+        [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
+
 
     }
     

@@ -41,9 +41,9 @@
     self.collectionView.allowsMultipleSelection = YES;
     deleteArray = [[NSMutableArray alloc]init];
     
+    //MARK:logo
+ [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
     
-    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
-    //logoを消した
     
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"checkbox.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                    style:UIBarButtonItemStylePlain
