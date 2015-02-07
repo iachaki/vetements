@@ -9,12 +9,13 @@
 #import "ViewController.h"
 #import "WebItem.h"
 #import "TutorialViewController.h"
+#import "ClickHideView.h"
 
 #define KEY @"dataArray"
 #define PINK_COLOR [UIColor colorWithRed:231/255.0 green:101/255.0 blue:131/255.0 alpha:1.0f]
 
 
-@interface ViewController (){
+@interface ViewController ()<ClickHideViewDelegate>{
     NSString *selctedName;
     NSMutableArray *array;
     int editCount;
@@ -22,13 +23,15 @@
     BOOL flag;
 }
 
+@property (strong,nonatomic) ClickHideView*hideView;
+
 @end
 
 @implementation ViewController
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self initHideView];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -56,6 +59,41 @@
 //    subview.frame = CGRectMake(100, 100, 100, 100);
 //    [self.view addSubview:subview];
 }
+- (void)initHideView
+{
+    self.hideView = [[ClickHideView alloc]init];
+    self.hideView.delegate = self;
+    self.hideView.alpha = 0;
+    self.hideView.layer.cornerRadius = 5;
+    self.hideView.clipsToBounds = true;
+    
+    
+    CGRect tabFrame = self.hideView.frame;
+    tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
+    self.hideView.frame = tabFrame;
+    
+    [self.view addSubview:self.hideView];
+    
+    
+    [UIView animateWithDuration:2.5 animations:^{
+        self.hideView.alpha = 1;
+    } completion:^(BOOL finished) {
+        if (finished) {
+        }
+    }];
+}
+
+- (void)hideView:(ClickHideView *)view pushedClickButton:(id)sender{
+    [UIView animateWithDuration:2.5 animations:^{
+        self.hideView.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            self.hideView.hidden = YES;
+        }
+    }];
+}
+
+
 
 - (void)setNavigationBarTitleImage:(UIImage *)image
 {
@@ -198,9 +236,6 @@
     //detailViewに
     detailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
     
-    
-    
-    
     WebItem *item = array[indexPath.row];
     detailVC.item = item;
     
@@ -208,8 +243,6 @@
     [self presentViewController:nav animated:YES completion:nil];
     
 }
-
-
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

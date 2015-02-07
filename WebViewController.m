@@ -9,15 +9,18 @@
 
 #import "WebViewController.h"
 #import "WebItem.h"
+#import "UrlHideView.h"
+#import "SaveHideView.h"
 
 
-
-@interface WebViewController ()
+@interface WebViewController ()<UrlHideViewDelegate, SaveHideViewDelegate>
 {
     AppDelegate *delegate;
     NSMutableArray *array;
 }
 
+@property (strong, nonatomic) UrlHideView *hideView;
+@property (strong, nonatomic) SaveHideView *saveHideView;
 
 @end
 
@@ -35,6 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initSaveHideView];
     
     magicalContext=[NSManagedObjectContext MR_defaultContext];
     
@@ -65,9 +69,6 @@
         array = [NSMutableArray array];
     }
 
-    
-    
-    
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
     
@@ -109,6 +110,75 @@
     
     
 }
+
+- (void)initHideView
+{
+    self.hideView = [[UrlHideView alloc]init];
+    self.hideView.delegate = self;
+    self.hideView.alpha = 0;
+    self.hideView.layer.cornerRadius = 5;
+    self.hideView.clipsToBounds = true;
+    
+    
+    CGRect tabFrame = self.hideView.frame;
+    tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
+    self.hideView.frame = tabFrame;
+    
+    [self.view addSubview:self.hideView];
+    
+    
+    [UIView animateWithDuration:2.5 animations:^{
+        self.hideView.alpha = 1;
+    } completion:^(BOOL finished) {
+        if (finished) {
+        }
+    }];
+}
+
+- (void)hideView:(UrlHideView *)view pushedUrlButton:(id)sender{
+    [UIView animateWithDuration:2.5 animations:^{
+        self.hideView.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            self.hideView.hidden = YES;
+        }
+    }];
+}
+
+- (void)initSaveHideView
+{
+    self.saveHideView = [[SaveHideView alloc]init];
+    self.saveHideView.delegate = self;
+    self.saveHideView.alpha = 0;
+    self.saveHideView.layer.cornerRadius = 5;
+    self.saveHideView.clipsToBounds = true;
+    
+    
+    CGRect tabFrame = self.saveHideView.frame;
+    tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
+    self.saveHideView.frame = tabFrame;
+    
+    [self.view addSubview:self.saveHideView];
+    
+    
+    [UIView animateWithDuration:2.5 animations:^{
+        self.saveHideView.alpha = 1;
+    } completion:^(BOOL finished) {
+        if (finished) {
+        }
+    }];
+}
+
+- (void)hideView:(SaveHideView *)view pushedSaveButton:(id)sender{
+    [UIView animateWithDuration:2.5 animations:^{
+        self.saveHideView.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            self.saveHideView.hidden = YES;
+        }
+    }];
+}
+
 //Webページのロード時にインジケータを動かす
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
@@ -145,7 +215,7 @@
 
 - (void)longPress:(UILongPressGestureRecognizer *)gestureRecognizer
 {
-        NSLog(@"TAPPED");
+    NSLog(@"TAPPED");
     //Touch gestures below top bar should not make the page turn.
     //EDITED Check for only Tap here instead.
     
@@ -178,8 +248,7 @@
             
             NSData* jpgData = [[NSData alloc] initWithData:UIImageJPEGRepresentation(image, 1.0f)];
             jpg64Str = [jpgData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];//imageViewの画像を文字に変える
-            
-            
+        
             //NSLog(@"%@", jpg64Str);
             
     if (![jpg64Str isEqualToString:@""]) {
@@ -252,11 +321,9 @@
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:array];
         [ud setObject:data forKey:@"dataArray"];
         [ud synchronize];
-        
     }
-    
     [alertView close];
-    
+    [self initHideView];
 }
 
 

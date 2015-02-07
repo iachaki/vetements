@@ -153,7 +153,8 @@
         if (finished) {
             self.hideView.hidden = YES;
         }
-    }];}
+    }];
+}
 
 
 - (void)setNavigationBarTitleImage:(UIImage *)image
@@ -177,6 +178,8 @@
 }
 
 -(IBAction)addLinkButtonTap{
+    [self initHideView];
+
     //アラートを表示す
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
                                                       message:nil
@@ -201,6 +204,8 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    
+    
     if (buttonIndex == 1) {
         NSString *titleStr = [[alertView textFieldAtIndex:0] text];
         NSString *urlStr = [[alertView textFieldAtIndex:1] text];
