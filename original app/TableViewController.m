@@ -12,14 +12,16 @@
 #pragma mark - yuma_fix
 #import "WebItem.h"
 #import "AppDelegate.h"
+#import "TutorialView.h"
 
-@interface TableViewController ()
+@interface TableViewController ()<TutorialViewDelegate>
 {
     NSMutableArray *yumaArray;
     NSArray *webArray;
     //NSArray *array;
     
 }
+@property (strong, nonatomic) TutorialView *hideView;
 
 @end
 
@@ -118,12 +120,42 @@
     
     [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
                                              forState:UIControlStateNormal];
-    
-    
-    
-    
-    
+    [self initHideView];
 }
+- (void)initHideView
+{
+    self.hideView = [[TutorialView alloc]init];
+    self.hideView.delegate = self;
+    self.hideView.alpha = 0;
+    self.hideView.layer.cornerRadius = 5;
+    self.hideView.clipsToBounds = true;
+    
+    
+    CGRect tabFrame = self.hideView.frame;
+    tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
+    self.hideView.frame = tabFrame;
+    
+    [self.view addSubview:self.hideView];
+    
+    
+    [UIView animateWithDuration:2.5 animations:^{
+        self.hideView.alpha = 1;
+    } completion:^(BOOL finished) {
+        if (finished) {
+        }
+    }];
+}
+
+- (void)hideView:(TutorialView *)view pushedWebButton:(id)sender{
+    [UIView animateWithDuration:2.5 animations:^{
+        self.hideView.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            self.hideView.hidden = YES;
+        }
+    }];}
+
+
 - (void)setNavigationBarTitleImage:(UIImage *)image
 {
     UIImageView *titleImageView = [[UIImageView alloc] initWithImage:image];
