@@ -66,6 +66,7 @@
 		084A24E21A8626DC00C22546 /* UrlHideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084A24E11A8626DC00C22546 /* UrlHideView.xib */; };
 		084A24E71A862DB100C22546 /* SaveHideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084A24E61A862DB100C22546 /* SaveHideView.xib */; };
 		084A24EA1A862EF600C22546 /* SaveHideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A24E91A862EF600C22546 /* SaveHideView.m */; };
+		084A24EE1A8B60F300C22546 /* cross-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 084A24ED1A8B60F300C22546 /* cross-mark.png */; };
 		0860A63A1A176E340044E644 /* internet5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0860A6391A176E340044E644 /* internet5.png */; };
 		0863063E1A45565800529BAF /* love4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0863063C1A45565800529BAF /* love4.png */; };
 		0863063F1A45565800529BAF /* love4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0863063D1A45565800529BAF /* love4@2x.png */; };
@@ -247,6 +248,7 @@
 		084A24E61A862DB100C22546 /* SaveHideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveHideView.xib; sourceTree = "<group>"; };
 		084A24E81A862EF600C22546 /* SaveHideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveHideView.h; sourceTree = "<group>"; };
 		084A24E91A862EF600C22546 /* SaveHideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveHideView.m; sourceTree = "<group>"; };
+		084A24ED1A8B60F300C22546 /* cross-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross-mark.png"; sourceTree = "<group>"; };
 		0860A6391A176E340044E644 /* internet5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = internet5.png; sourceTree = "<group>"; };
 		0863063C1A45565800529BAF /* love4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love4.png; sourceTree = "<group>"; };
 		0863063D1A45565800529BAF /* love4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "love4@2x.png"; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				084A24ED1A8B60F300C22546 /* cross-mark.png */,
 				0860A6271A1763030044E644 /* Image */,
 				08A566EB19930E8900574F21 /* REPhotoCollectionController */,
 				08F601611991B79700D7D088 /* CustomIOS7AlertView.h */,
@@ -774,6 +777,7 @@
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
 				08F66FA41A3B14DA00CD461D /* back-ground-1.png in Resources */,
 				08D898F71A4BDDB200FFF6F0 /* TutorialView.xib in Resources */,
+				084A24EE1A8B60F300C22546 /* cross-mark.png in Resources */,
 				08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
