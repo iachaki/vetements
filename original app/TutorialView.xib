@@ -19,9 +19,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38b-ag-Dyg">
                     <rect key="frame" x="203" y="185" width="33" height="33"/>
-                    <state key="normal" image="cross-mark.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                    <state key="normal" image="cross-mark.png"/>
                     <connections>
                         <action selector="handleWebButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="xCu-xZ-Np2"/>
                     </connections>
