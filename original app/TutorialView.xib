@@ -11,6 +11,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial2.png" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-Rm-m3A">
+                    <rect key="frame" x="23" y="174" width="260" height="210"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38b-ag-Dyg">
                     <rect key="frame" x="242" y="194" width="33" height="33"/>
                     <state key="normal" image="cross-mark.png"/>
@@ -18,9 +21,6 @@
                         <action selector="handleWebButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="xCu-xZ-Np2"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial2.png" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-Rm-m3A">
-                    <rect key="frame" x="23" y="174" width="260" height="210"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
