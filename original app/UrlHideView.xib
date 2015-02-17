@@ -20,12 +20,9 @@
                         <action selector="handleUrlButton:" destination="M18-Hs-EYf" eventType="touchUpInside" id="ueg-zd-c3i"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="保存されているかmenuを確認しよう" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3j-Zp-hEz">
-                    <rect key="frame" x="20" y="250" width="281" height="57"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial4.png" translatesAutoresizingMaskIntoConstraints="NO" id="frI-ns-PWI">
+                    <rect key="frame" x="8" y="182" width="331" height="204"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -34,5 +31,6 @@
     </objects>
     <resources>
         <image name="cross-mark.png" width="90" height="90"/>
+        <image name="tutorial4.png" width="2480" height="1599"/>
     </resources>
 </document>
