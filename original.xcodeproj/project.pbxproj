@@ -95,6 +95,7 @@
 		08A566FE1993113500574F21 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566FD1993113500574F21 /* Photo.m */; };
 		08A5A9961973C7AB0031F1FF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A5A9951973C7AB0031F1FF /* WebViewController.m */; };
 		08A61C651A9216BE00FAB6BF /* tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A61C641A9216BE00FAB6BF /* tutorial1.png */; };
+		08A61C691A9332AF00FAB6BF /* tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A61C681A9332AF00FAB6BF /* tutorial2.png */; };
 		08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */; };
 		08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */; };
 		08AE3AD319D583C00032B940 /* WebItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AE3AD219D583C00032B940 /* WebItem.m */; };
@@ -286,6 +287,7 @@
 		08A566FD1993113500574F21 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		08A5A9951973C7AB0031F1FF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		08A61C641A9216BE00FAB6BF /* tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial1.png; sourceTree = "<group>"; };
+		08A61C681A9332AF00FAB6BF /* tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial2.png; sourceTree = "<group>"; };
 		08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-clothes-label.png"; sourceTree = "<group>"; };
 		08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-URL-label.png"; sourceTree = "<group>"; };
 		08AE3AD119D583C00032B940 /* WebItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebItem.h; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				08A61C681A9332AF00FAB6BF /* tutorial2.png */,
 				08A61C641A9216BE00FAB6BF /* tutorial1.png */,
 				084A24ED1A8B60F300C22546 /* cross-mark.png */,
 				0860A6271A1763030044E644 /* Image */,
@@ -772,6 +775,7 @@
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0863063E1A45565800529BAF /* love4.png in Resources */,
 				08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */,
+				08A61C691A9332AF00FAB6BF /* tutorial2.png in Resources */,
 				08272DCE1A4CF19700D51009 /* icon.png in Resources */,
 				0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */,
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
