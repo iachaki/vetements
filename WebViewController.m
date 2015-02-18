@@ -82,7 +82,7 @@
     UILongPressGestureRecognizer *longPressGesture =
     [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     longPressGesture.minimumPressDuration = 1.0; //長押しの時間設定
-    longPressGesture.allowableMovement = 10.0;//ロングタップ中に動いてもよいピクセル数
+    longPressGesture.allowableMovement = 10.0;//ロングタップ中に動いてもよいピクセル数,10秒
     longPressGesture.delegate = self;
     
     [webView addGestureRecognizer:longPressGesture];
