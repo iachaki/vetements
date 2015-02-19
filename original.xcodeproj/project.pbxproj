@@ -80,6 +80,7 @@
 		086306EE1A45726400529BAF /* earth205@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086306EB1A45726400529BAF /* earth205@3x.png */; };
 		086306F11A458FF400529BAF /* RootNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086306F01A458FF400529BAF /* RootNaviViewController.m */; };
 		0867E2861A947CD300039DCA /* tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0867E2851A947CD300039DCA /* tutorial4.png */; };
+		0867E2881A961ED600039DCA /* tutorial5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0867E2871A961ED600039DCA /* tutorial5.png */; };
 		0889BED61A492F3900EF1862 /* vétements-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED51A492F3900EF1862 /* vétements-logo.png */; };
 		0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */; };
 		0889BF0B1A49580900EF1862 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BF0A1A49580900EF1862 /* add@2x.png */; };
@@ -268,6 +269,7 @@
 		086306EF1A458FF400529BAF /* RootNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNaviViewController.h; sourceTree = "<group>"; };
 		086306F01A458FF400529BAF /* RootNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNaviViewController.m; sourceTree = "<group>"; };
 		0867E2851A947CD300039DCA /* tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial4.png; sourceTree = "<group>"; };
+		0867E2871A961ED600039DCA /* tutorial5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial5.png; sourceTree = "<group>"; };
 		0889BED51A492F3900EF1862 /* vétements-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo.png"; sourceTree = "<group>"; };
 		0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo@2x.png"; sourceTree = "<group>"; };
 		0889BF0A1A49580900EF1862 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				0867E2871A961ED600039DCA /* tutorial5.png */,
 				0867E2851A947CD300039DCA /* tutorial4.png */,
 				08A61C6A1A9333BC00FAB6BF /* tutorial3.png */,
 				08A61C681A9332AF00FAB6BF /* tutorial2.png */,
@@ -757,6 +760,7 @@
 				080DD5E8195D887200D99D0A /* photo16.jpg in Resources */,
 				08C1F1AC1A4A55820085D4FA /* edit1@2x.png in Resources */,
 				080DD5E3195D887200D99D0A /* photo11.jpg in Resources */,
+				0867E2881A961ED600039DCA /* tutorial5.png in Resources */,
 				080DD5E7195D887200D99D0A /* photo15.jpg in Resources */,
 				08A463A61A32F20B00570CF4 /* menu3.png in Resources */,
 				080DD5E1195D887200D99D0A /* photo1.jpg in Resources */,
