@@ -21,6 +21,9 @@
                         <action selector="handleWebButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="xCu-xZ-Np2"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yajirusi4.png" translatesAutoresizingMaskIntoConstraints="NO" id="v7C-cl-bxc">
+                    <rect key="frame" x="206" y="0.0" width="106" height="167"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -30,5 +33,6 @@
     <resources>
         <image name="cross-mark.png" width="90" height="90"/>
         <image name="tutorial2maru.png" width="1537" height="1537"/>
+        <image name="yajirusi4.png" width="952" height="1451"/>
     </resources>
 </document>

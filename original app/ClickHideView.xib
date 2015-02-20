@@ -23,6 +23,9 @@
                         <action selector="handleClickButton:" destination="xkd-Tu-PGB" eventType="touchUpInside" id="v9A-Gj-e2Q"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yajirusi3.png" translatesAutoresizingMaskIntoConstraints="NO" id="NED-qp-s82">
+                    <rect key="frame" x="218" y="343" width="122" height="168"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -32,5 +35,6 @@
     <resources>
         <image name="cross-mark.png" width="90" height="90"/>
         <image name="tutorial1maru.png" width="1561" height="1561"/>
+        <image name="yajirusi3.png" width="1175" height="1474"/>
     </resources>
 </document>
