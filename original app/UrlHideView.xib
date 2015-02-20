@@ -11,11 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frI-ns-PWI">
-                    <rect key="frame" x="0.0" y="182" width="331" height="204"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial3maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="frI-ns-PWI">
+                    <rect key="frame" x="60" y="150" width="200" height="200"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uK-a0-6vH">
-                    <rect key="frame" x="258" y="200" width="33" height="33"/>
+                    <rect key="frame" x="227" y="160" width="33" height="33"/>
                     <state key="normal" image="cross-mark.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -31,5 +31,6 @@
     </objects>
     <resources>
         <image name="cross-mark.png" width="90" height="90"/>
+        <image name="tutorial3maru.png" width="1537" height="1537"/>
     </resources>
 </document>

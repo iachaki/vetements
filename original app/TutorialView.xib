@@ -11,16 +11,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial2maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-Rm-m3A">
+                    <rect key="frame" x="60" y="210" width="200" height="200"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38b-ag-Dyg">
-                    <rect key="frame" x="263" y="203" width="33" height="33"/>
+                    <rect key="frame" x="234" y="228" width="33" height="33"/>
                     <state key="normal" image="cross-mark.png"/>
                     <connections>
                         <action selector="handleWebButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="xCu-xZ-Np2"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-Rm-m3A">
-                    <rect key="frame" x="27" y="184" width="241" height="200"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -29,5 +29,6 @@
     </objects>
     <resources>
         <image name="cross-mark.png" width="90" height="90"/>
+        <image name="tutorial2maru.png" width="1537" height="1537"/>
     </resources>
 </document>

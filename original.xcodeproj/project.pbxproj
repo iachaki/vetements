@@ -108,6 +108,10 @@
 		08C1F1CB1A4BACA00085D4FA /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C1F1CA1A4BACA00085D4FA /* TutorialViewController.m */; };
 		08D898F51A4BDD9F00FFF6F0 /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D898F41A4BDD9F00FFF6F0 /* TutorialView.m */; };
 		08D898F71A4BDDB200FFF6F0 /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D898F61A4BDDB200FFF6F0 /* TutorialView.xib */; };
+		08E3ADE51A9791EF00369D66 /* tutorial1maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE11A9791EF00369D66 /* tutorial1maru.png */; };
+		08E3ADE61A9791EF00369D66 /* tutorial2maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE21A9791EF00369D66 /* tutorial2maru.png */; };
+		08E3ADE71A9791EF00369D66 /* tutorial3maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE31A9791EF00369D66 /* tutorial3maru.png */; };
+		08E3ADE81A9791EF00369D66 /* tutorial4maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE41A9791EF00369D66 /* tutorial4maru.png */; };
 		08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE2195D73CE000A3FF4 /* Foundation.framework */; };
 		08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */; };
 		08E59AE7195D73CE000A3FF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE6195D73CE000A3FF4 /* UIKit.framework */; };
@@ -301,6 +305,10 @@
 		08D898F31A4BDD9F00FFF6F0 /* TutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialView.h; sourceTree = "<group>"; };
 		08D898F41A4BDD9F00FFF6F0 /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialView.m; sourceTree = "<group>"; };
 		08D898F61A4BDDB200FFF6F0 /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
+		08E3ADE11A9791EF00369D66 /* tutorial1maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial1maru.png; sourceTree = "<group>"; };
+		08E3ADE21A9791EF00369D66 /* tutorial2maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial2maru.png; sourceTree = "<group>"; };
+		08E3ADE31A9791EF00369D66 /* tutorial3maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial3maru.png; sourceTree = "<group>"; };
+		08E3ADE41A9791EF00369D66 /* tutorial4maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial4maru.png; sourceTree = "<group>"; };
 		08E59ADF195D73CE000A3FF4 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E59AE2195D73CE000A3FF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -488,8 +496,8 @@
 				08B3919B1A611C290004CD66 /* done@2x.png */,
 				08C1F1AA1A4A55820085D4FA /* edit1@2x.png */,
 				08C1F1A31A4A525D0085D4FA /* edit@2x.png */,
-				08C1F1AD1A4A88B80085D4FA /* add4@2x.png */,
 				081902641A4A4922009D99FB /* add3@2x.png */,
+				08C1F1AD1A4A88B80085D4FA /* add4@2x.png */,
 				081902601A4A3DE7009D99FB /* add2@2x.png */,
 				0889BF0C1A495B1F00EF1862 /* add1@2x.png */,
 				0889BF0A1A49580900EF1862 /* add@2x.png */,
@@ -539,6 +547,10 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				08E3ADE11A9791EF00369D66 /* tutorial1maru.png */,
+				08E3ADE21A9791EF00369D66 /* tutorial2maru.png */,
+				08E3ADE31A9791EF00369D66 /* tutorial3maru.png */,
+				08E3ADE41A9791EF00369D66 /* tutorial4maru.png */,
 				084A24ED1A8B60F300C22546 /* cross-mark.png */,
 				0860A6271A1763030044E644 /* Image */,
 				08A566EB19930E8900574F21 /* REPhotoCollectionController */,
@@ -605,12 +617,12 @@
 				0845C0AD198F2E8C0065C298 /* detailViewController.m */,
 				08E59AFA195D73CE000A3FF4 /* Images.xcassets */,
 				08E59AE9195D73CE000A3FF4 /* Supporting Files */,
-				08D898F31A4BDD9F00FFF6F0 /* TutorialView.h */,
-				08D898F41A4BDD9F00FFF6F0 /* TutorialView.m */,
-				08D898F61A4BDDB200FFF6F0 /* TutorialView.xib */,
 				084A24D91A86228F00C22546 /* ClickHideView.h */,
 				084A24DA1A86228F00C22546 /* ClickHideView.m */,
 				084A24DC1A8622B200C22546 /* ClickHideView.xib */,
+				08D898F31A4BDD9F00FFF6F0 /* TutorialView.h */,
+				08D898F41A4BDD9F00FFF6F0 /* TutorialView.m */,
+				08D898F61A4BDDB200FFF6F0 /* TutorialView.xib */,
 				084A24DE1A8626B100C22546 /* UrlHideView.h */,
 				084A24DF1A8626B100C22546 /* UrlHideView.m */,
 				084A24E11A8626DC00C22546 /* UrlHideView.xib */,
@@ -734,6 +746,7 @@
 				086306EE1A45726400529BAF /* earth205@3x.png in Resources */,
 				080DD5EE195D887200D99D0A /* photo5.jpg in Resources */,
 				080DD5EC195D887200D99D0A /* photo3.jpg in Resources */,
+				08E3ADE81A9791EF00369D66 /* tutorial4maru.png in Resources */,
 				080DD5E9195D887200D99D0A /* photo17.jpg in Resources */,
 				086306ED1A45726400529BAF /* earth205@2x.png in Resources */,
 				08C1F1A41A4A525D0085D4FA /* edit@2x.png in Resources */,
@@ -762,6 +775,7 @@
 				080DD5EF195D887200D99D0A /* photo6.jpg in Resources */,
 				080DD5E6195D887200D99D0A /* photo14.jpg in Resources */,
 				0889BF0D1A495B1F00EF1862 /* add1@2x.png in Resources */,
+				08E3ADE71A9791EF00369D66 /* tutorial3maru.png in Resources */,
 				089DC82319DEAC0300B5D3C7 /* new.png in Resources */,
 				084A24E71A862DB100C22546 /* SaveHideView.xib in Resources */,
 				08E59AFB195D73CE000A3FF4 /* Images.xcassets in Resources */,
@@ -776,11 +790,13 @@
 				081902611A4A3DE7009D99FB /* add2@2x.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
 				08F66FA41A3B14DA00CD461D /* back-ground-1.png in Resources */,
+				08E3ADE51A9791EF00369D66 /* tutorial1maru.png in Resources */,
 				08D898F71A4BDDB200FFF6F0 /* TutorialView.xib in Resources */,
 				084A24EE1A8B60F300C22546 /* cross-mark.png in Resources */,
 				08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
+				08E3ADE61A9791EF00369D66 /* tutorial2maru.png in Resources */,
 				08B391A61A6141C30004CD66 /* vétements-logo2@2x.png in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
 				0860A63A1A176E340044E644 /* internet5.png in Resources */,
