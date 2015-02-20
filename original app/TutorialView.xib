@@ -12,10 +12,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial2maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-Rm-m3A">
-                    <rect key="frame" x="60" y="210" width="200" height="200"/>
+                    <rect key="frame" x="60" y="146" width="200" height="200"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38b-ag-Dyg">
-                    <rect key="frame" x="234" y="228" width="33" height="33"/>
+                    <rect key="frame" x="233" y="164" width="33" height="33"/>
                     <state key="normal" image="cross-mark.png"/>
                     <connections>
                         <action selector="handleWebButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="xCu-xZ-Np2"/>

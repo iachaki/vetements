@@ -27,7 +27,6 @@
 		080DD5F2195D887200D99D0A /* photo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5E0195D887200D99D0A /* photo9.jpg */; };
 		081902611A4A3DE7009D99FB /* add2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 081902601A4A3DE7009D99FB /* add2@2x.png */; };
 		081902651A4A4922009D99FB /* add3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 081902641A4A4922009D99FB /* add3@2x.png */; };
-		08272DCE1A4CF19700D51009 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 08272DCD1A4CF19700D51009 /* icon.png */; };
 		083108B019909C6A004EC7F3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 083108AE19909C6A004EC7F3 /* Model.xcdatamodeld */; };
 		083108B51990A131004EC7F3 /* _MyFashionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 083108B21990A131004EC7F3 /* _MyFashionData.m */; };
 		083108B61990A131004EC7F3 /* MyFashionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 083108B41990A131004EC7F3 /* MyFashionData.m */; };
@@ -112,6 +111,8 @@
 		08E3ADE61A9791EF00369D66 /* tutorial2maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE21A9791EF00369D66 /* tutorial2maru.png */; };
 		08E3ADE71A9791EF00369D66 /* tutorial3maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE31A9791EF00369D66 /* tutorial3maru.png */; };
 		08E3ADE81A9791EF00369D66 /* tutorial4maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE41A9791EF00369D66 /* tutorial4maru.png */; };
+		08E3ADEC1A97946400369D66 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADEB1A97946400369D66 /* icon.png */; };
+		08E3ADEE1A97981600369D66 /* tutorial5maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADED1A97981600369D66 /* tutorial5maru.png */; };
 		08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE2195D73CE000A3FF4 /* Foundation.framework */; };
 		08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */; };
 		08E59AE7195D73CE000A3FF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE6195D73CE000A3FF4 /* UIKit.framework */; };
@@ -175,7 +176,6 @@
 		080DD5E0195D887200D99D0A /* photo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo9.jpg; sourceTree = "<group>"; };
 		081902601A4A3DE7009D99FB /* add2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add2@2x.png"; sourceTree = "<group>"; };
 		081902641A4A4922009D99FB /* add3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add3@2x.png"; sourceTree = "<group>"; };
-		08272DCD1A4CF19700D51009 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		082C57B21966B78500585CE4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		083108AF19909C6A004EC7F3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		083108B11990A131004EC7F3 /* _MyFashionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MyFashionData.h; sourceTree = "<group>"; };
@@ -309,6 +309,8 @@
 		08E3ADE21A9791EF00369D66 /* tutorial2maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial2maru.png; sourceTree = "<group>"; };
 		08E3ADE31A9791EF00369D66 /* tutorial3maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial3maru.png; sourceTree = "<group>"; };
 		08E3ADE41A9791EF00369D66 /* tutorial4maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial4maru.png; sourceTree = "<group>"; };
+		08E3ADEB1A97946400369D66 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		08E3ADED1A97981600369D66 /* tutorial5maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial5maru.png; sourceTree = "<group>"; };
 		08E59ADF195D73CE000A3FF4 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E59AE2195D73CE000A3FF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -489,7 +491,13 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				08272DCD1A4CF19700D51009 /* icon.png */,
+				08E3ADEB1A97946400369D66 /* icon.png */,
+				08E3ADE11A9791EF00369D66 /* tutorial1maru.png */,
+				08E3ADE21A9791EF00369D66 /* tutorial2maru.png */,
+				08E3ADE31A9791EF00369D66 /* tutorial3maru.png */,
+				08E3ADE41A9791EF00369D66 /* tutorial4maru.png */,
+				08E3ADED1A97981600369D66 /* tutorial5maru.png */,
+				084A24ED1A8B60F300C22546 /* cross-mark.png */,
 				08C1F1C71A4B91F40085D4FA /* plus@2x.png */,
 				08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */,
 				08B3919F1A613A920004CD66 /* checkbox@2x.png */,
@@ -547,11 +555,6 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
-				08E3ADE11A9791EF00369D66 /* tutorial1maru.png */,
-				08E3ADE21A9791EF00369D66 /* tutorial2maru.png */,
-				08E3ADE31A9791EF00369D66 /* tutorial3maru.png */,
-				08E3ADE41A9791EF00369D66 /* tutorial4maru.png */,
-				084A24ED1A8B60F300C22546 /* cross-mark.png */,
 				0860A6271A1763030044E644 /* Image */,
 				08A566EB19930E8900574F21 /* REPhotoCollectionController */,
 				08F601611991B79700D7D088 /* CustomIOS7AlertView.h */,
@@ -623,12 +626,12 @@
 				08D898F31A4BDD9F00FFF6F0 /* TutorialView.h */,
 				08D898F41A4BDD9F00FFF6F0 /* TutorialView.m */,
 				08D898F61A4BDDB200FFF6F0 /* TutorialView.xib */,
-				084A24DE1A8626B100C22546 /* UrlHideView.h */,
-				084A24DF1A8626B100C22546 /* UrlHideView.m */,
-				084A24E11A8626DC00C22546 /* UrlHideView.xib */,
 				084A24E81A862EF600C22546 /* SaveHideView.h */,
 				084A24E91A862EF600C22546 /* SaveHideView.m */,
 				084A24E61A862DB100C22546 /* SaveHideView.xib */,
+				084A24DE1A8626B100C22546 /* UrlHideView.h */,
+				084A24DF1A8626B100C22546 /* UrlHideView.m */,
+				084A24E11A8626DC00C22546 /* UrlHideView.xib */,
 			);
 			path = "original app";
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				080DD5E9195D887200D99D0A /* photo17.jpg in Resources */,
 				086306ED1A45726400529BAF /* earth205@2x.png in Resources */,
 				08C1F1A41A4A525D0085D4FA /* edit@2x.png in Resources */,
+				08E3ADEC1A97946400369D66 /* icon.png in Resources */,
 				086306E11A4570BC00529BAF /* favorite21 @3x.png in Resources */,
 				0863063F1A45565800529BAF /* love4@2x.png in Resources */,
 				086306411A45582900529BAF /* love4@3x.png in Resources */,
@@ -777,13 +781,13 @@
 				0889BF0D1A495B1F00EF1862 /* add1@2x.png in Resources */,
 				08E3ADE71A9791EF00369D66 /* tutorial3maru.png in Resources */,
 				089DC82319DEAC0300B5D3C7 /* new.png in Resources */,
+				08E3ADEE1A97981600369D66 /* tutorial5maru.png in Resources */,
 				084A24E71A862DB100C22546 /* SaveHideView.xib in Resources */,
 				08E59AFB195D73CE000A3FF4 /* Images.xcassets in Resources */,
 				080DD5E4195D887200D99D0A /* photo12.jpg in Resources */,
 				089EB46519E8319100DB8F11 /* back-button1.png in Resources */,
 				0863063E1A45565800529BAF /* love4.png in Resources */,
 				08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */,
-				08272DCE1A4CF19700D51009 /* icon.png in Resources */,
 				0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */,
 				08A2AE811A209D7500B03065 /* button-menu2.png in Resources */,
 				08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */,
