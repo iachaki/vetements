@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial4.png" translatesAutoresizingMaskIntoConstraints="NO" id="frI-ns-PWI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frI-ns-PWI">
                     <rect key="frame" x="0.0" y="182" width="331" height="204"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uK-a0-6vH">
@@ -31,6 +31,5 @@
     </objects>
     <resources>
         <image name="cross-mark.png" width="90" height="90"/>
-        <image name="tutorial4.png" width="2480" height="1599"/>
     </resources>
 </document>
