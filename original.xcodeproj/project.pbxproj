@@ -82,6 +82,7 @@
 		08714A081A979AAE005EB4CB /* yajirusi2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A071A979AAE005EB4CB /* yajirusi2.png */; };
 		08714A0A1A979B4A005EB4CB /* yajirusi3.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A091A979B4A005EB4CB /* yajirusi3.png */; };
 		08714A0C1A979C29005EB4CB /* yajirusi4.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A0B1A979C29005EB4CB /* yajirusi4.png */; };
+		08714A401A986EFD005EB4CB /* yajirusi5.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A3F1A986EFD005EB4CB /* yajirusi5.png */; };
 		0889BED61A492F3900EF1862 /* vétements-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED51A492F3900EF1862 /* vétements-logo.png */; };
 		0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */; };
 		0889BF0B1A49580900EF1862 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BF0A1A49580900EF1862 /* add@2x.png */; };
@@ -275,6 +276,7 @@
 		08714A071A979AAE005EB4CB /* yajirusi2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yajirusi2.png; sourceTree = "<group>"; };
 		08714A091A979B4A005EB4CB /* yajirusi3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yajirusi3.png; sourceTree = "<group>"; };
 		08714A0B1A979C29005EB4CB /* yajirusi4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yajirusi4.png; sourceTree = "<group>"; };
+		08714A3F1A986EFD005EB4CB /* yajirusi5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yajirusi5.png; sourceTree = "<group>"; };
 		0889BED51A492F3900EF1862 /* vétements-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo.png"; sourceTree = "<group>"; };
 		0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo@2x.png"; sourceTree = "<group>"; };
 		0889BF0A1A49580900EF1862 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -563,6 +565,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				08714A3F1A986EFD005EB4CB /* yajirusi5.png */,
 				08714A0B1A979C29005EB4CB /* yajirusi4.png */,
 				08714A091A979B4A005EB4CB /* yajirusi3.png */,
 				08714A071A979AAE005EB4CB /* yajirusi2.png */,
@@ -816,6 +819,7 @@
 				08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
+				08714A401A986EFD005EB4CB /* yajirusi5.png in Resources */,
 				08E3ADE61A9791EF00369D66 /* tutorial2maru.png in Resources */,
 				08B391A61A6141C30004CD66 /* vétements-logo2@2x.png in Resources */,
 				080DD5F1195D887200D99D0A /* photo8.jpg in Resources */,
