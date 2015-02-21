@@ -21,7 +21,8 @@
 
 @property (strong, nonatomic) UrlHideView *hideView;
 @property (strong, nonatomic) SaveHideView *saveHideView;
-@property  int firstCount;
+@property int saveCount;
+@property int urlCount;
 
 @end
 
@@ -41,14 +42,15 @@
     [super viewDidLoad];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.firstCount = [defaults integerForKey:@"Savecount"];
-    if (self.firstCount == 0) {
-        [self initHideView];
-        self.firstCount = 1;
-        [defaults setInteger:self.firstCount forKey:@"Savecount"];
+    self.saveCount = [defaults integerForKey:@"Savecount"];
+    if (self.saveCount == 0) {
+        [self initSaveHideView];
+        self.saveCount = 1;
+        [defaults setInteger:self.saveCount forKey:@"Savecount"];
     }
+    
 
-    [self initSaveHideView];
+
     
     magicalContext=[NSManagedObjectContext MR_defaultContext];
     
@@ -333,7 +335,14 @@
         [ud synchronize];
     }
     [alertView close];
-    [self initHideView];
+//    [self initHideView];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.urlCount = [defaults integerForKey:@"Urlcount"];
+    if (self.urlCount == 0) {
+        [self initHideView];
+        self.urlCount = 1;
+        [defaults setInteger:self.urlCount forKey:@"Urlcount"];
+    }
 }
 
 

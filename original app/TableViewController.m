@@ -39,83 +39,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
-//    yumaArray = [[NSMutableArray alloc]init];
     
-    yumaArray = [NSMutableArray array];
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.firstCount = [defaults integerForKey:@"Pluscount"];
-    if (self.firstCount == 0) {
-        [self initHideView];
-        self.firstCount = 1;
-        [defaults setInteger:self.firstCount forKey:@"Pluscount"];
-    }
-
-    
-    
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSData *array = [userDefault dataForKey:@"webSite"];
-    yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
-    
-    if (yumaArray.count <=7) {
-        
-        NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:data forKey:@"webSite"];
-        
-        //MARK:logo
-        [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
-
-    
-#pragma mark yuma_fix
-    /*yumaArray = [NSMutableArray array];
-    WebItem *item1 = [[WebItem alloc] init];
-    item1.title = @"DIHOLIC";
-    item1.urlString = @"http://www.dholic.co.jp/Nshopping/Shopping_New.asp";
-    [yumaArray addObject:item1];
-    
-    WebItem *item2 = [[WebItem alloc] init];
-    item2.title = @"Victoria's Secret";
-    item2.urlString = @"https://www.victoriassecret.com/";
-    [yumaArray addObject:item2];
-    
-    WebItem *item3 = [[WebItem alloc] init];
-    item3.title = @"ehyphen";
-    item3.urlString = @"http://www.ehyphen.jp/";
-    [yumaArray addObject:item3];
-    
-    WebItem *item4 = [[WebItem alloc] init];
-    item4.title = @"H&M";
-    item4.urlString = @"http://www.hm.com/jp/";
-    [yumaArray addObject:item4];
-    
-    WebItem *item5 = [[WebItem alloc] init];
-    item5.title = @"AMERICAN EAGLE";
-    item5.urlString = @"http://www.aeo.jp/top/CSfTop.jsp?gclid=COWQ5MGFr8ECFZYGvAodpm8AAA";
-    [yumaArray addObject:item5];
-    
-    WebItem *item6 = [[WebItem alloc] init];
-    item6.title = @"GAP";
-    item6.urlString = @"http://www.gap.co.jp/?tid=gjps009609";
-    [yumaArray addObject:item6];
-    
-    WebItem *item7 = [[WebItem alloc] init];
-    item7.title = @"Foever 21";
-    item7.urlString = @"http://www.forever21.co.jp/?gclid=CI2mjsOGr8ECFRBwvAodNV0AhA#";
-    [yumaArray addObject:item7];*/
-
-    }
+//    yumaArray = [NSMutableArray array];
     
     UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                              style:UIBarButtonItemStylePlain
                                                             target:self
                                                             action:@selector(addLinkButtonTap)];
     self.navigationItem.rightBarButtonItem = addLinkButton;
-    
-    
-    
-    
     
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
     //タブ選択時のフォントとカラー
@@ -132,6 +63,45 @@
     [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
                                              forState:UIControlStateNormal];
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if (self.tabBarController.tabBar.hidden == YES) {//もしtabBarController.tabBar.hiddenがYESだったら
+        self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
+    }
+    
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSData *array = [userDefault dataForKey:@"webSite"];
+    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
+        yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
+        NSLog(@"%@",array);
+    } else {
+        NSLog(@"%@",array);
+        
+    }
+    
+    if (yumaArray.count <=7) {
+        
+        NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:data forKey:@"webSite"];
+        
+        //MARK:logo
+        [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
+        
+    }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.firstCount = [defaults integerForKey:@"Pluscount"];
+    if (self.firstCount == 0) {
+        [self initHideView];
+        self.firstCount = 1;
+        [defaults setInteger:self.firstCount forKey:@"Pluscount"];
+    }
+
+}
+
 - (void)initHideView
 {
     self.hideView = [[TutorialView alloc]init];
@@ -178,17 +148,8 @@
     self.navigationItem.titleView = titleView;
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];//viewWillAppearは毎回必ず、何回でもよばれる。viewdidloadの次によばれる
-    if (self.tabBarController.tabBar.hidden == YES) {//もしtabBarController.tabBar.hiddenがYESだったら
-        self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
-      
-
-    }
-}
 
 -(IBAction)addLinkButtonTap{
-
     //アラートを表示す
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
                                                       message:nil
@@ -204,11 +165,7 @@
     fileName.placeholder=@"url";
     
     [message show];
-    
-    
-    
 }
-    
 
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -230,8 +187,6 @@
         [defaults synchronize]; // 即時保存(UserDefaultsは、すぐに保存されない)
         
         NSLog(@"%@", [defaults objectForKey:@"webSite"]);
-        
-        
     }
 }
 
