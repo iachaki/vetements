@@ -22,7 +22,7 @@
     
 }
 @property (strong, nonatomic) TutorialView *hideView;
-
+@property  int firstCount;
 @end
 
 @implementation TableViewController
@@ -39,14 +39,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+//    yumaArray = [[NSMutableArray alloc]init];
     
+    yumaArray = [NSMutableArray array];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.firstCount = [defaults integerForKey:@"Pluscount"];
+    if (self.firstCount == 0) {
+        [self initHideView];
+        self.firstCount = 1;
+        [defaults setInteger:self.firstCount forKey:@"Pluscount"];
+    }
+
     
     
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSData *array = [userDefault dataForKey:@"webSite"];
     yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
+    
     if (yumaArray.count <=7) {
-     
+        
+        NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:data forKey:@"webSite"];
+        
+        //MARK:logo
+        [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
+
     
 #pragma mark yuma_fix
     /*yumaArray = [NSMutableArray array];
@@ -84,15 +104,6 @@
     item7.title = @"Foever 21";
     item7.urlString = @"http://www.forever21.co.jp/?gclid=CI2mjsOGr8ECFRBwvAodNV0AhA#";
     [yumaArray addObject:item7];*/
-        
-        NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:data forKey:@"webSite"];
-        
-        
-    //MARK:logo
-    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
-
 
     }
     
@@ -120,7 +131,6 @@
     
     [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
                                              forState:UIControlStateNormal];
-    [self initHideView];
 }
 - (void)initHideView
 {
@@ -178,7 +188,6 @@
 }
 
 -(IBAction)addLinkButtonTap{
-    [self initHideView];
 
     //アラートを表示す
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
@@ -204,8 +213,6 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    
-    
     if (buttonIndex == 1) {
         NSString *titleStr = [[alertView textFieldAtIndex:0] text];
         NSString *urlStr = [[alertView textFieldAtIndex:1] text];

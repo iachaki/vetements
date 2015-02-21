@@ -23,15 +23,30 @@
     BOOL flag;
 }
 
-@property (strong,nonatomic) ClickHideView*hideView;
-
+@property (strong, nonatomic) ClickHideView*hideView;
+@property  int firstCount;
 @end
 
 @implementation ViewController
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initHideView];
+    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSInteger* test = [defaults objectForKey:0];
+//    if (test) {
+//            NSLog(@"%@", test);
+//    } else {
+//        NSLog(@"%@", @"データが存在しません。");
+//    }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.firstCount = [defaults integerForKey:@"Clickcount"];
+    if (self.firstCount == 0) {
+        [self initHideView];
+        self.firstCount = 1;
+        [defaults setInteger:self.firstCount forKey:@"Clickcount"];
+    }
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;

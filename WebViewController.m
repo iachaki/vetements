@@ -21,6 +21,7 @@
 
 @property (strong, nonatomic) UrlHideView *hideView;
 @property (strong, nonatomic) SaveHideView *saveHideView;
+@property  int firstCount;
 
 @end
 
@@ -38,6 +39,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.firstCount = [defaults integerForKey:@"Savecount"];
+    if (self.firstCount == 0) {
+        [self initHideView];
+        self.firstCount = 1;
+        [defaults setInteger:self.firstCount forKey:@"Savecount"];
+    }
+
     [self initSaveHideView];
     
     magicalContext=[NSManagedObjectContext MR_defaultContext];
