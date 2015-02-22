@@ -84,6 +84,7 @@
 		08714A0C1A979C29005EB4CB /* yajirusi4.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A0B1A979C29005EB4CB /* yajirusi4.png */; };
 		08714A401A986EFD005EB4CB /* yajirusi5.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A3F1A986EFD005EB4CB /* yajirusi5.png */; };
 		08714A441A98A168005EB4CB /* click.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A431A98A168005EB4CB /* click.png */; };
+		08714A461A99E659005EB4CB /* click2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08714A451A99E659005EB4CB /* click2.png */; };
 		0889BED61A492F3900EF1862 /* vétements-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED51A492F3900EF1862 /* vétements-logo.png */; };
 		0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */; };
 		0889BF0B1A49580900EF1862 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BF0A1A49580900EF1862 /* add@2x.png */; };
@@ -279,6 +280,7 @@
 		08714A0B1A979C29005EB4CB /* yajirusi4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yajirusi4.png; sourceTree = "<group>"; };
 		08714A3F1A986EFD005EB4CB /* yajirusi5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yajirusi5.png; sourceTree = "<group>"; };
 		08714A431A98A168005EB4CB /* click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = click.png; sourceTree = "<group>"; };
+		08714A451A99E659005EB4CB /* click2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = click2.png; sourceTree = "<group>"; };
 		0889BED51A492F3900EF1862 /* vétements-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo.png"; sourceTree = "<group>"; };
 		0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo@2x.png"; sourceTree = "<group>"; };
 		0889BF0A1A49580900EF1862 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				08714A451A99E659005EB4CB /* click2.png */,
 				08714A431A98A168005EB4CB /* click.png */,
 				08714A3F1A986EFD005EB4CB /* yajirusi5.png */,
 				08714A0B1A979C29005EB4CB /* yajirusi4.png */,
@@ -776,6 +779,7 @@
 				086306E11A4570BC00529BAF /* favorite21 @3x.png in Resources */,
 				0863063F1A45565800529BAF /* love4@2x.png in Resources */,
 				086306411A45582900529BAF /* love4@3x.png in Resources */,
+				08714A461A99E659005EB4CB /* click2.png in Resources */,
 				08714A061A979A40005EB4CB /* yajirusi.png in Resources */,
 				0889BF0B1A49580900EF1862 /* add@2x.png in Resources */,
 				080DD5E5195D887200D99D0A /* photo13.jpg in Resources */,
