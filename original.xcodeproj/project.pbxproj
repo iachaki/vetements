@@ -89,6 +89,7 @@
 		0889BED81A492F6F00EF1862 /* vétements-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */; };
 		0889BF0B1A49580900EF1862 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BF0A1A49580900EF1862 /* add@2x.png */; };
 		0889BF0D1A495B1F00EF1862 /* add1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BF0C1A495B1F00EF1862 /* add1@2x.png */; };
+		089D437F1A9D86B900896882 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 089D437E1A9D86B900896882 /* icon.png */; };
 		089DC82319DEAC0300B5D3C7 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 089DC82219DEAC0300B5D3C7 /* new.png */; };
 		089EB46519E8319100DB8F11 /* back-button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 089EB46419E8319100DB8F11 /* back-button1.png */; };
 		08A2AE7F1A209CE200B03065 /* button-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE7E1A209CE200B03065 /* button-menu.png */; };
@@ -118,7 +119,7 @@
 		08E3ADE61A9791EF00369D66 /* tutorial2maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE21A9791EF00369D66 /* tutorial2maru.png */; };
 		08E3ADE71A9791EF00369D66 /* tutorial3maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE31A9791EF00369D66 /* tutorial3maru.png */; };
 		08E3ADE81A9791EF00369D66 /* tutorial4maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE41A9791EF00369D66 /* tutorial4maru.png */; };
-		08E3ADEC1A97946400369D66 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADEB1A97946400369D66 /* icon.png */; };
+		08E3ADEC1A97946400369D66 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADEB1A97946400369D66 /* icon1.png */; };
 		08E3ADEE1A97981600369D66 /* tutorial5maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADED1A97981600369D66 /* tutorial5maru.png */; };
 		08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE2195D73CE000A3FF4 /* Foundation.framework */; };
 		08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */; };
@@ -285,6 +286,7 @@
 		0889BED71A492F6F00EF1862 /* vétements-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo@2x.png"; sourceTree = "<group>"; };
 		0889BF0A1A49580900EF1862 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		0889BF0C1A495B1F00EF1862 /* add1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add1@2x.png"; sourceTree = "<group>"; };
+		089D437E1A9D86B900896882 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		089DC82219DEAC0300B5D3C7 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		089EB46419E8319100DB8F11 /* back-button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button1.png"; sourceTree = "<group>"; };
 		08A2AE7E1A209CE200B03065 /* button-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu.png"; sourceTree = "<group>"; };
@@ -323,7 +325,7 @@
 		08E3ADE21A9791EF00369D66 /* tutorial2maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial2maru.png; sourceTree = "<group>"; };
 		08E3ADE31A9791EF00369D66 /* tutorial3maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial3maru.png; sourceTree = "<group>"; };
 		08E3ADE41A9791EF00369D66 /* tutorial4maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial4maru.png; sourceTree = "<group>"; };
-		08E3ADEB1A97946400369D66 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		08E3ADEB1A97946400369D66 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		08E3ADED1A97981600369D66 /* tutorial5maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial5maru.png; sourceTree = "<group>"; };
 		08E59ADF195D73CE000A3FF4 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E59AE2195D73CE000A3FF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -505,7 +507,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				08E3ADEB1A97946400369D66 /* icon.png */,
+				08E3ADEB1A97946400369D66 /* icon1.png */,
 				08E3ADE11A9791EF00369D66 /* tutorial1maru.png */,
 				08E3ADE21A9791EF00369D66 /* tutorial2maru.png */,
 				08E3ADE31A9791EF00369D66 /* tutorial3maru.png */,
@@ -569,6 +571,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				089D437E1A9D86B900896882 /* icon.png */,
 				082F74861A9C9DF8001A05A5 /* click2.png */,
 				08714A431A98A168005EB4CB /* click.png */,
 				08714A3F1A986EFD005EB4CB /* yajirusi5.png */,
@@ -775,7 +778,7 @@
 				08714A0C1A979C29005EB4CB /* yajirusi4.png in Resources */,
 				086306ED1A45726400529BAF /* earth205@2x.png in Resources */,
 				08C1F1A41A4A525D0085D4FA /* edit@2x.png in Resources */,
-				08E3ADEC1A97946400369D66 /* icon.png in Resources */,
+				08E3ADEC1A97946400369D66 /* icon1.png in Resources */,
 				086306E11A4570BC00529BAF /* favorite21 @3x.png in Resources */,
 				0863063F1A45565800529BAF /* love4@2x.png in Resources */,
 				086306411A45582900529BAF /* love4@3x.png in Resources */,
@@ -791,6 +794,7 @@
 				08A463A61A32F20B00570CF4 /* menu3.png in Resources */,
 				080DD5E1195D887200D99D0A /* photo1.jpg in Resources */,
 				080DD5ED195D887200D99D0A /* photo4.jpg in Resources */,
+				089D437F1A9D86B900896882 /* icon.png in Resources */,
 				086306E21A4570BC00529BAF /* favorite21.png in Resources */,
 				08321CBE19E7FB7A00D027FE /* start-background.png in Resources */,
 				084A24DD1A8622B200C22546 /* ClickHideView.xib in Resources */,
