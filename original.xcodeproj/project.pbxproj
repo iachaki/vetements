@@ -95,6 +95,7 @@
 		08A2AE7F1A209CE200B03065 /* button-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE7E1A209CE200B03065 /* button-menu.png */; };
 		08A2AE811A209D7500B03065 /* button-menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE801A209D7500B03065 /* button-menu2.png */; };
 		08A463A61A32F20B00570CF4 /* menu3.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A463A51A32F20B00570CF4 /* menu3.png */; };
+		08A50F611AA0BCC9007DC41C /* tutorial6maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A50F601AA0BCC9007DC41C /* tutorial6maru.png */; };
 		08A566F519930E8900574F21 /* REPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566ED19930E8900574F21 /* REPhotoCollectionController.m */; };
 		08A566F619930E8900574F21 /* REPhotoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566EF19930E8900574F21 /* REPhotoGroup.m */; };
 		08A566F719930E8900574F21 /* REPhotoThumbnailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566F219930E8900574F21 /* REPhotoThumbnailsCell.m */; };
@@ -292,6 +293,7 @@
 		08A2AE7E1A209CE200B03065 /* button-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu.png"; sourceTree = "<group>"; };
 		08A2AE801A209D7500B03065 /* button-menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu2.png"; sourceTree = "<group>"; };
 		08A463A51A32F20B00570CF4 /* menu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu3.png; sourceTree = "<group>"; };
+		08A50F601AA0BCC9007DC41C /* tutorial6maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial6maru.png; sourceTree = "<group>"; };
 		08A566EC19930E8900574F21 /* REPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoCollectionController.h; sourceTree = "<group>"; };
 		08A566ED19930E8900574F21 /* REPhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPhotoCollectionController.m; sourceTree = "<group>"; };
 		08A566EE19930E8900574F21 /* REPhotoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoGroup.h; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 				08E3ADE31A9791EF00369D66 /* tutorial3maru.png */,
 				08E3ADE41A9791EF00369D66 /* tutorial4maru.png */,
 				08E3ADED1A97981600369D66 /* tutorial5maru.png */,
+				08A50F601AA0BCC9007DC41C /* tutorial6maru.png */,
 				084A24ED1A8B60F300C22546 /* cross-mark.png */,
 				08C1F1C71A4B91F40085D4FA /* plus@2x.png */,
 				08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */,
@@ -843,6 +846,7 @@
 				08E59AED195D73CE000A3FF4 /* InfoPlist.strings in Resources */,
 				08A2AE7F1A209CE200B03065 /* button-menu.png in Resources */,
 				08E59AF6195D73CE000A3FF4 /* Main.storyboard in Resources */,
+				08A50F611AA0BCC9007DC41C /* tutorial6maru.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
