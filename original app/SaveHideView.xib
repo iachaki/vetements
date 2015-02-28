@@ -12,10 +12,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial3maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="zn9-bc-rlU">
-                    <rect key="frame" x="60" y="169" width="200" height="200"/>
+                    <rect key="frame" x="34" y="170" width="200" height="200"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWg-9f-yc9">
-                    <rect key="frame" x="227" y="182" width="33" height="33"/>
+                    <rect key="frame" x="201" y="179" width="33" height="33"/>
                     <state key="normal" image="cross-mark.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -23,11 +23,8 @@
                         <action selector="SaveButton:" destination="jBa-ff-1C2" eventType="touchUpInside" id="cIV-cl-gMh"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="click2.png" translatesAutoresizingMaskIntoConstraints="NO" id="GId-ig-Wbz">
-                    <rect key="frame" x="8" y="334" width="131" height="127"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="click.png" translatesAutoresizingMaskIntoConstraints="NO" id="HSr-re-ieB">
-                    <rect key="frame" x="218" y="357" width="94" height="132"/>
+                    <rect key="frame" x="140" y="318" width="87" height="122"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
@@ -37,7 +34,6 @@
     </objects>
     <resources>
         <image name="click.png" width="1095" height="1311"/>
-        <image name="click2.png" width="1578" height="1433"/>
         <image name="cross-mark.png" width="90" height="90"/>
         <image name="tutorial3maru.png" width="1537" height="1537"/>
     </resources>
