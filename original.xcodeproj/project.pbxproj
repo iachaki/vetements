@@ -94,6 +94,7 @@
 		089EB46519E8319100DB8F11 /* back-button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 089EB46419E8319100DB8F11 /* back-button1.png */; };
 		08A2AE7F1A209CE200B03065 /* button-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE7E1A209CE200B03065 /* button-menu.png */; };
 		08A2AE811A209D7500B03065 /* button-menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE801A209D7500B03065 /* button-menu2.png */; };
+		08A3548C1AA35DE300E3952C /* MenuHideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3548B1AA35DE300E3952C /* MenuHideView.m */; };
 		08A463A61A32F20B00570CF4 /* menu3.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A463A51A32F20B00570CF4 /* menu3.png */; };
 		08A50F611AA0BCC9007DC41C /* tutorial6maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A50F601AA0BCC9007DC41C /* tutorial6maru.png */; };
 		08A566F519930E8900574F21 /* REPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566ED19930E8900574F21 /* REPhotoCollectionController.m */; };
@@ -292,6 +293,8 @@
 		089EB46419E8319100DB8F11 /* back-button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button1.png"; sourceTree = "<group>"; };
 		08A2AE7E1A209CE200B03065 /* button-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu.png"; sourceTree = "<group>"; };
 		08A2AE801A209D7500B03065 /* button-menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu2.png"; sourceTree = "<group>"; };
+		08A3548A1AA35DE300E3952C /* MenuHideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHideView.h; sourceTree = "<group>"; };
+		08A3548B1AA35DE300E3952C /* MenuHideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHideView.m; sourceTree = "<group>"; };
 		08A463A51A32F20B00570CF4 /* menu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu3.png; sourceTree = "<group>"; };
 		08A50F601AA0BCC9007DC41C /* tutorial6maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial6maru.png; sourceTree = "<group>"; };
 		08A566EC19930E8900574F21 /* REPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoCollectionController.h; sourceTree = "<group>"; };
@@ -659,6 +662,8 @@
 				084A24DE1A8626B100C22546 /* UrlHideView.h */,
 				084A24DF1A8626B100C22546 /* UrlHideView.m */,
 				084A24E11A8626DC00C22546 /* UrlHideView.xib */,
+				08A3548A1AA35DE300E3952C /* MenuHideView.h */,
+				08A3548B1AA35DE300E3952C /* MenuHideView.m */,
 			);
 			path = "original app";
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 				08E59AF3195D73CE000A3FF4 /* AppDelegate.m in Sources */,
 				08C1F1CB1A4BACA00085D4FA /* TutorialViewController.m in Sources */,
 				083109051990A28F004EC7F3 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
+				08A3548C1AA35DE300E3952C /* MenuHideView.m in Sources */,
 				08E59AEF195D73CE000A3FF4 /* main.m in Sources */,
 				08A566FE1993113500574F21 /* Photo.m in Sources */,
 				086306F11A458FF400529BAF /* RootNaviViewController.m in Sources */,
