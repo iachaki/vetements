@@ -12,10 +12,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial3maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="zn9-bc-rlU">
-                    <rect key="frame" x="34" y="170" width="200" height="200"/>
+                    <rect key="frame" x="60" y="150" width="200" height="200"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWg-9f-yc9">
-                    <rect key="frame" x="201" y="179" width="33" height="33"/>
+                    <rect key="frame" x="227" y="159" width="33" height="33"/>
                     <state key="normal" image="cross-mark.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -24,7 +24,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="click.png" translatesAutoresizingMaskIntoConstraints="NO" id="HSr-re-ieB">
-                    <rect key="frame" x="140" y="318" width="87" height="122"/>
+                    <rect key="frame" x="173" y="295" width="87" height="122"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
