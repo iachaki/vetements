@@ -95,6 +95,7 @@
 		08A2AE7F1A209CE200B03065 /* button-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE7E1A209CE200B03065 /* button-menu.png */; };
 		08A2AE811A209D7500B03065 /* button-menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AE801A209D7500B03065 /* button-menu2.png */; };
 		08A3548C1AA35DE300E3952C /* MenuHideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3548B1AA35DE300E3952C /* MenuHideView.m */; };
+		08A44F0A1AB3FD9E00344FB5 /* UIView+Modal.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A44F091AB3FD9E00344FB5 /* UIView+Modal.m */; };
 		08A463A61A32F20B00570CF4 /* menu3.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A463A51A32F20B00570CF4 /* menu3.png */; };
 		08A50F611AA0BCC9007DC41C /* tutorial6maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A50F601AA0BCC9007DC41C /* tutorial6maru.png */; };
 		08A566F519930E8900574F21 /* REPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566ED19930E8900574F21 /* REPhotoCollectionController.m */; };
@@ -295,6 +296,8 @@
 		08A2AE801A209D7500B03065 /* button-menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu2.png"; sourceTree = "<group>"; };
 		08A3548A1AA35DE300E3952C /* MenuHideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHideView.h; sourceTree = "<group>"; };
 		08A3548B1AA35DE300E3952C /* MenuHideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHideView.m; sourceTree = "<group>"; };
+		08A44F081AB3FD9E00344FB5 /* UIView+Modal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Modal.h"; sourceTree = "<group>"; };
+		08A44F091AB3FD9E00344FB5 /* UIView+Modal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Modal.m"; sourceTree = "<group>"; };
 		08A463A51A32F20B00570CF4 /* menu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu3.png; sourceTree = "<group>"; };
 		08A50F601AA0BCC9007DC41C /* tutorial6maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial6maru.png; sourceTree = "<group>"; };
 		08A566EC19930E8900574F21 /* REPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPhotoCollectionController.h; sourceTree = "<group>"; };
@@ -627,6 +630,8 @@
 		08E59AE8195D73CE000A3FF4 /* original app */ = {
 			isa = PBXGroup;
 			children = (
+				08A44F081AB3FD9E00344FB5 /* UIView+Modal.h */,
+				08A44F091AB3FD9E00344FB5 /* UIView+Modal.m */,
 				08C1F1C91A4BACA00085D4FA /* TutorialViewController.h */,
 				08C1F1CA1A4BACA00085D4FA /* TutorialViewController.m */,
 				08E59AF7195D73CE000A3FF4 /* ViewController.h */,
@@ -890,6 +895,7 @@
 				083108F61990A28F004EC7F3 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				083109001990A28F004EC7F3 /* NSManagedObject+MagicalRequests.m in Sources */,
 				083109091990A28F004EC7F3 /* MagicalRecord+ErrorHandling.m in Sources */,
+				08A44F0A1AB3FD9E00344FB5 /* UIView+Modal.m in Sources */,
 				0831090E1990A28F004EC7F3 /* MagicalRecord.m in Sources */,
 				08EA3CB819B9D55100DF55F3 /* TableViewController.m in Sources */,
 				086306DC1A4568DA00529BAF /* TabBarViewController.m in Sources */,

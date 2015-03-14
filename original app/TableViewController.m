@@ -13,6 +13,8 @@
 #import "WebItem.h"
 #import "AppDelegate.h"
 #import "TutorialView.h"
+#import "UIView+Modal.h"//
+
 
 @interface TableViewController ()<TutorialViewDelegate>
 {
@@ -23,6 +25,7 @@
 }
 @property (strong, nonatomic) TutorialView *hideView;
 @property  int firstCount;
+@property (weak, nonatomic) UIView *overlayView;//
 @end
 
 @implementation TableViewController
@@ -73,7 +76,8 @@
     
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSData *array = [userDefault dataForKey:@"webSite"];
-    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
+//    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
+    if (array) {
         yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
         NSLog(@"%@",array);
     } else {
@@ -115,8 +119,11 @@
     tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
     self.hideView.frame = tabFrame;
     
-    [self.view addSubview:self.hideView];
+    UIView *overlayView = [[UIView alloc] overlayView];//
+    [[overlayView myWindow] addSubview:overlayView];//
+    self.overlayView = overlayView;//
     
+    [self.overlayView addSubview:self.hideView];//
     
     [UIView animateWithDuration:2.5 animations:^{
         self.hideView.alpha = 1;
@@ -129,9 +136,11 @@
 - (void)hideView:(TutorialView *)view pushedWebButton:(id)sender{
     [UIView animateWithDuration:2.5 animations:^{
         self.hideView.alpha = 0;
+        self.overlayView.alpha = 0;//
     } completion:^(BOOL finished) {
         if (finished) {
             self.hideView.hidden = YES;
+            self.overlayView.hidden = YES;//
         }
     }];
 }

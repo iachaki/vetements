@@ -11,6 +11,7 @@
 #import "WebItem.h"
 #import "UrlHideView.h"
 #import "SaveHideView.h"
+#import "UIView+Modal.h"
 
 
 @interface WebViewController ()<UrlHideViewDelegate, SaveHideViewDelegate>
@@ -21,6 +22,7 @@
 
 @property (strong, nonatomic) UrlHideView *hideView;
 @property (strong, nonatomic) SaveHideView *saveHideView;
+@property (weak, nonatomic) UIView *overlayView;
 @property int saveCount;
 @property int urlCount;
 
@@ -136,7 +138,12 @@
     tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
     self.hideView.frame = tabFrame;
     
-    [self.view addSubview:self.hideView];
+    UIView *overlayView = [[UIView alloc] overlayView];
+    [[overlayView myWindow] addSubview:overlayView];
+    self.overlayView = overlayView;
+    
+    [self.overlayView addSubview:self.hideView];
+ 
     
     
     [UIView animateWithDuration:2.5 animations:^{
@@ -150,9 +157,11 @@
 - (void)hideView:(UrlHideView *)view pushedUrlButton:(id)sender{
     [UIView animateWithDuration:2.5 animations:^{
         self.hideView.alpha = 0;
+        self.overlayView.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
             self.hideView.hidden = YES;
+            self.overlayView.hidden = YES;
         }
     }];
 }

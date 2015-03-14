@@ -10,6 +10,7 @@
 #import "WebItem.h"
 #import "TutorialViewController.h"
 #import "ClickHideView.h"
+#import "UIView+Modal.h"
 
 #define KEY @"dataArray"
 #define PINK_COLOR [UIColor colorWithRed:231/255.0 green:101/255.0 blue:131/255.0 alpha:1.0f]
@@ -25,6 +26,7 @@
 
 @property (strong, nonatomic) ClickHideView*hideView;
 @property  int firstCount;
+@property (weak, nonatomic) UIView *overlayView;
 @end
 
 @implementation ViewController
@@ -87,7 +89,11 @@
     tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
     self.hideView.frame = tabFrame;
     
-    [self.view addSubview:self.hideView];
+    UIView *overlayView = [[UIView alloc] overlayView];
+    [[overlayView myWindow] addSubview:overlayView];
+    self.overlayView = overlayView;
+    
+    [self.overlayView addSubview:self.hideView];
     
     
     [UIView animateWithDuration:2.5 animations:^{
@@ -101,9 +107,11 @@
 - (void)hideView:(ClickHideView *)view pushedClickButton:(id)sender{
     [UIView animateWithDuration:2.5 animations:^{
         self.hideView.alpha = 0;
+        self.overlayView.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
             self.hideView.hidden = YES;
+            self.overlayView.hidden = YES;
         }
     }];
 }
