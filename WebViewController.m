@@ -49,9 +49,25 @@
         [self initSaveHideView];
         self.saveCount = 1;
         [defaults setInteger:self.saveCount forKey:@"Savecount"];
+        
+//        UIImage *barBackBtnImg = [[UIImage imageNamed:@"button-menu.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 0)];
+//        
+//        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
+//                                                          forState:UIControlStateNormal
+//                                                        barMetrics:UIBarMetricsDefault];
+//        [[self navigationItem] setTitle:@" "];
+        
+
     }
     
 
+    UIButton *customView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 20)];
+//    [customView setBackgroundImage:[UIImage imageNamed:@"menu4.png"] forState:UIControlStateNormal];
+    [customView setImage:[UIImage imageNamed:@"menu4"] forState:UIControlStateNormal];
+    [customView addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* buttonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
+    
+    self.navigationItem.leftBarButtonItem = buttonItem;
 
     
     magicalContext=[NSManagedObjectContext MR_defaultContext];
@@ -124,6 +140,11 @@
     
     
 }
+
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 - (void)initHideView
 {

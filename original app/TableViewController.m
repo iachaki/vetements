@@ -43,7 +43,7 @@
 {
     [super viewDidLoad];
     
-//    yumaArray = [NSMutableArray array];
+    yumaArray = [NSMutableArray array];
     
     UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                              style:UIBarButtonItemStylePlain
