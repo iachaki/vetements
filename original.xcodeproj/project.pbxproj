@@ -68,6 +68,7 @@
 		084A24EA1A862EF600C22546 /* SaveHideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A24E91A862EF600C22546 /* SaveHideView.m */; };
 		084A24EE1A8B60F300C22546 /* cross-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 084A24ED1A8B60F300C22546 /* cross-mark.png */; };
 		085B723A1AB9CAE40043FB55 /* menu5.png in Resources */ = {isa = PBXBuildFile; fileRef = 085B72391AB9CAE40043FB55 /* menu5.png */; };
+		085B723C1ABB06FB0043FB55 /* menu6.png in Resources */ = {isa = PBXBuildFile; fileRef = 085B723B1ABB06FB0043FB55 /* menu6.png */; };
 		0860A63A1A176E340044E644 /* internet5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0860A6391A176E340044E644 /* internet5.png */; };
 		0863063E1A45565800529BAF /* love4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0863063C1A45565800529BAF /* love4.png */; };
 		0863063F1A45565800529BAF /* love4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0863063D1A45565800529BAF /* love4@2x.png */; };
@@ -268,6 +269,7 @@
 		084A24E91A862EF600C22546 /* SaveHideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveHideView.m; sourceTree = "<group>"; };
 		084A24ED1A8B60F300C22546 /* cross-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross-mark.png"; sourceTree = "<group>"; };
 		085B72391AB9CAE40043FB55 /* menu5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu5.png; sourceTree = "<group>"; };
+		085B723B1ABB06FB0043FB55 /* menu6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu6.png; sourceTree = "<group>"; };
 		0860A6391A176E340044E644 /* internet5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = internet5.png; sourceTree = "<group>"; };
 		0863063C1A45565800529BAF /* love4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love4.png; sourceTree = "<group>"; };
 		0863063D1A45565800529BAF /* love4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "love4@2x.png"; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				085B723B1ABB06FB0043FB55 /* menu6.png */,
 				085B72391AB9CAE40043FB55 /* menu5.png */,
 				086C97981AB419470078B00A /* menu4.png */,
 				089D437E1A9D86B900896882 /* icon.png */,
@@ -851,6 +854,7 @@
 				084A24EE1A8B60F300C22546 /* cross-mark.png in Resources */,
 				08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
+				085B723C1ABB06FB0043FB55 /* menu6.png in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
 				08714A401A986EFD005EB4CB /* yajirusi5.png in Resources */,
 				08E3ADE61A9791EF00369D66 /* tutorial2maru.png in Resources */,

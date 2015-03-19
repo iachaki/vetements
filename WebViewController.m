@@ -63,7 +63,7 @@
 
     UIButton *customView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 20)];
 //    [customView setBackgroundImage:[UIImage imageNamed:@"menu4.png"] forState:UIControlStateNormal];
-    [customView setImage:[UIImage imageNamed:@"menu5"] forState:UIControlStateNormal];
+    [customView setImage:[UIImage imageNamed:@"menu6"] forState:UIControlStateNormal];
     [customView addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* buttonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
     
