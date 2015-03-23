@@ -119,6 +119,8 @@
 		08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */; };
 		08C1F1C81A4B91F40085D4FA /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C71A4B91F40085D4FA /* plus@2x.png */; };
 		08C1F1CB1A4BACA00085D4FA /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C1F1CA1A4BACA00085D4FA /* TutorialViewController.m */; };
+		08D139591ABFFA020066AE23 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D139581ABFFA020066AE23 /* Reachability.m */; };
+		08D1395B1ABFFA430066AE23 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D1395A1ABFFA430066AE23 /* SystemConfiguration.framework */; };
 		08D898F51A4BDD9F00FFF6F0 /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D898F41A4BDD9F00FFF6F0 /* TutorialView.m */; };
 		08D898F71A4BDDB200FFF6F0 /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D898F61A4BDDB200FFF6F0 /* TutorialView.xib */; };
 		08E3ADE51A9791EF00369D66 /* tutorial1maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E3ADE11A9791EF00369D66 /* tutorial1maru.png */; };
@@ -332,6 +334,9 @@
 		08C1F1C71A4B91F40085D4FA /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
 		08C1F1C91A4BACA00085D4FA /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		08C1F1CA1A4BACA00085D4FA /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		08D139571ABFFA020066AE23 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		08D139581ABFFA020066AE23 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		08D1395A1ABFFA430066AE23 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		08D898F31A4BDD9F00FFF6F0 /* TutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialView.h; sourceTree = "<group>"; };
 		08D898F41A4BDD9F00FFF6F0 /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialView.m; sourceTree = "<group>"; };
 		08D898F61A4BDDB200FFF6F0 /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
@@ -371,6 +376,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D1395B1ABFFA430066AE23 /* SystemConfiguration.framework in Frameworks */,
 				08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */,
 				08E59AE7195D73CE000A3FF4 /* UIKit.framework in Frameworks */,
 				08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */,
@@ -586,6 +592,8 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				08D139571ABFFA020066AE23 /* Reachability.h */,
+				08D139581ABFFA020066AE23 /* Reachability.m */,
 				085B723B1ABB06FB0043FB55 /* menu6.png */,
 				085B72391AB9CAE40043FB55 /* menu5.png */,
 				086C97981AB419470078B00A /* menu4.png */,
@@ -628,6 +636,7 @@
 		08E59AE1195D73CE000A3FF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08D1395A1ABFFA430066AE23 /* SystemConfiguration.framework */,
 				08E59AE2195D73CE000A3FF4 /* Foundation.framework */,
 				08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */,
 				08E59AE6195D73CE000A3FF4 /* UIKit.framework */,
@@ -913,6 +922,7 @@
 				086306DC1A4568DA00529BAF /* TabBarViewController.m in Sources */,
 				0831090B1990A28F004EC7F3 /* MagicalRecord+Options.m in Sources */,
 				084A24EA1A862EF600C22546 /* SaveHideView.m in Sources */,
+				08D139591ABFFA020066AE23 /* Reachability.m in Sources */,
 				08AE3AD319D583C00032B940 /* WebItem.m in Sources */,
 				084A24DB1A86228F00C22546 /* ClickHideView.m in Sources */,
 				083108B61990A131004EC7F3 /* MyFashionData.m in Sources */,

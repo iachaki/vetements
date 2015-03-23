@@ -12,6 +12,7 @@
 #import "UrlHideView.h"
 #import "SaveHideView.h"
 #import "UIView+Modal.h"
+#import "Reachability.h"
 
 
 @interface WebViewController ()<UrlHideViewDelegate, SaveHideViewDelegate>
@@ -42,6 +43,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Reachability *curReach = [Reachability reachabilityForInternetConnection];
+    NetworkStatus netStatus = [curReach currentReachabilityStatus];
+    
+    
+    
+    if (netStatus == NotReachable) {
+        UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"vétements" message:@"接続状態が悪いそうです。時間をおいて開き直してください。"
+                                                      delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil];
+        [alert show];
+    }
+    
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.saveCount = [defaults integerForKey:@"Savecount"];
@@ -50,25 +62,25 @@
         self.saveCount = 1;
         [defaults setInteger:self.saveCount forKey:@"Savecount"];
         
-//        UIImage *barBackBtnImg = [[UIImage imageNamed:@"button-menu.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 0)];
-//        
-//        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
-//                                                          forState:UIControlStateNormal
-//                                                        barMetrics:UIBarMetricsDefault];
-//        [[self navigationItem] setTitle:@" "];
+        //        UIImage *barBackBtnImg = [[UIImage imageNamed:@"button-menu.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 0)];
+        //
+        //        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
+        //                                                          forState:UIControlStateNormal
+        //                                                        barMetrics:UIBarMetricsDefault];
+        //        [[self navigationItem] setTitle:@" "];
         
-
+        
     }
     
-
+    
     UIButton *customView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 20)];
-//    [customView setBackgroundImage:[UIImage imageNamed:@"menu4.png"] forState:UIControlStateNormal];
+    //    [customView setBackgroundImage:[UIImage imageNamed:@"menu4.png"] forState:UIControlStateNormal];
     [customView setImage:[UIImage imageNamed:@"menu6"] forState:UIControlStateNormal];
     [customView addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* buttonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
     
     self.navigationItem.leftBarButtonItem = buttonItem;
-
+    
     
     magicalContext=[NSManagedObjectContext MR_defaultContext];
     
@@ -98,7 +110,7 @@
     if (!array) {
         array = [NSMutableArray array];
     }
-
+    
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
     
@@ -164,7 +176,7 @@
     self.overlayView = overlayView;
     
     [self.overlayView addSubview:self.hideView];
- 
+    
     
     
     [UIView animateWithDuration:2.5 animations:^{
@@ -262,7 +274,7 @@
     //EDITED Check for only Tap here instead.
     
     NSLog(@"double tapped == %@", gestureRecognizer);
-
+    
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         NSLog(@"UIGestureRecognizerStateEnded");
         //Do Whatever You want on End of Gesture
@@ -270,64 +282,64 @@
     else if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
         NSLog(@"UIGestureRecognizerStateBegan.");
         //Do Whatever You want on Began of Gesture
-
-
-    if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]) {
-        CGPoint touchPoint = [gestureRecognizer locationInView:self.view];
         
-        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-        bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
-        NSLog(@"pageFlag tapbtnRight %d", pageFlag);
         
-    if(self.interfaceOrientation==UIInterfaceOrientationPortrait||self.interfaceOrientation==UIInterfaceOrientationPortraitUpsideDown) {
-            NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
-            NSString *urlToSave = [webView stringByEvaluatingJavaScriptFromString:imgURL];
-            NSLog(@"urlToSave :%@",urlToSave);
-            NSURL * imageURL = [NSURL URLWithString:urlToSave];
-            NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-            UIImage * image = [UIImage imageWithData:imageData];
-            imgView.image = image;
+        if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]) {
+            CGPoint touchPoint = [gestureRecognizer locationInView:self.view];
             
-            NSData* jpgData = [[NSData alloc] initWithData:UIImageJPEGRepresentation(image, 1.0f)];
-            jpg64Str = [jpgData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];//imageViewの画像を文字に変える
-        
-            //NSLog(@"%@", jpg64Str);
+            NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+            bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
+            NSLog(@"pageFlag tapbtnRight %d", pageFlag);
             
-    if (![jpg64Str isEqualToString:@""]) {
+            if(self.interfaceOrientation==UIInterfaceOrientationPortrait||self.interfaceOrientation==UIInterfaceOrientationPortraitUpsideDown) {
+                NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
+                NSString *urlToSave = [webView stringByEvaluatingJavaScriptFromString:imgURL];
+                NSLog(@"urlToSave :%@",urlToSave);
+                NSURL * imageURL = [NSURL URLWithString:urlToSave];
+                NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+                UIImage * image = [UIImage imageWithData:imageData];
+                imgView.image = image;
                 
-                // Here we need to pass a full frame
-                CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
-                // Add some custom content to the alert view
+                NSData* jpgData = [[NSData alloc] initWithData:UIImageJPEGRepresentation(image, 1.0f)];
+                jpg64Str = [jpgData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];//imageViewの画像を文字に変える
                 
-                UIView *picView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 230, 280)];
+                //NSLog(@"%@", jpg64Str);
                 
-                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 210,260 )];
-                
-                
-                
-                [imageView setImage:image];
-                [picView addSubview:imageView];
-                
-                [alertView setContainerView:picView];
-                
-                // Modify the parameters
-                [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"保存", @"キャンセル", nil]];
-                alertView.delegate = self;
-                NSLog(@"%p", self);
-                
-                [alertView setUseMotionEffects:true];
-                
-                // And launch the dialog
-                [alertView show];
+                if (![jpg64Str isEqualToString:@""]) {
+                    
+                    // Here we need to pass a full frame
+                    CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
+                    // Add some custom content to the alert view
+                    
+                    UIView *picView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 230, 280)];
+                    
+                    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 210,260 )];
+                    
+                    
+                    
+                    [imageView setImage:image];
+                    [picView addSubview:imageView];
+                    
+                    [alertView setContainerView:picView];
+                    
+                    // Modify the parameters
+                    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"保存", @"キャンセル", nil]];
+                    alertView.delegate = self;
+                    NSLog(@"%p", self);
+                    
+                    [alertView setUseMotionEffects:true];
+                    
+                    // And launch the dialog
+                    [alertView show];
+                    
+                    
+                }
                 
                 
             }
-            
-            
         }
+        
     }
-
-}
 }
 
 -(IBAction)push{
@@ -347,11 +359,11 @@
     if (buttonIndex == 0) {
         
         /*MyFashionData *md = [MyFashionData MR_createEntity];
-        md.timestampValue = 1;
-        md.name =[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-        md.picture = jpg64Str;
-        md.url=[webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
-        [magicalContext MR_saveOnlySelfAndWait];*/
+         md.timestampValue = 1;
+         md.name =[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+         md.picture = jpg64Str;
+         md.url=[webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
+         [magicalContext MR_saveOnlySelfAndWait];*/
         
         WebItem *item = [[WebItem alloc] init];
         item.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
@@ -365,7 +377,7 @@
         [ud synchronize];
     }
     [alertView close];
-//    [self initHideView];
+    //    [self initHideView];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.urlCount = [defaults integerForKey:@"Urlcount"];
     if (self.urlCount == 0) {
