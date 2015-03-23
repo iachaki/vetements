@@ -312,7 +312,11 @@
                                                                       style:UIBarButtonItemStylePlain
                                                                      target:self
                                                                      action:@selector(doneDeleteView:)];
+    //MARK:reloadData
+    [self.collectionView reloadData];
     self.navigationItem.rightBarButtonItem = doneButton;
+    
+    
 }
 
 - (void)deleteCollectionView:(id)sender
@@ -321,7 +325,6 @@
     for (int i = 0; i < deleteArray.count; i++) {
         int deleteNumber = [[deleteArray objectAtIndex:i] intValue];
         [array removeObjectAtIndex:deleteNumber];
-        
     }
     
     //UserDefaultも更新
@@ -352,6 +355,7 @@
     
     
     self.navigationItem.leftBarButtonItem = nil;
+      [self.collectionView reloadData];
 }
 
 @end
