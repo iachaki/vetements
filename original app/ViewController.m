@@ -76,6 +76,12 @@
 //    subview.frame = CGRectMake(100, 100, 100, 100);
 //    [self.view addSubview:subview];
 }
+
+
+
+
+
+
 - (void)initHideView
 {
     self.hideView = [[ClickHideView alloc]init];
