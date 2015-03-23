@@ -78,6 +78,12 @@
 }
 
 
+- (void)viewDidDisappear:(BOOL)animated {
+    //ビューが見えなくなったときに呼ばれる
+    [self.collectionView reloadData];
+    //uicollectionview 選択解除！！
+}
+
 
 
 
