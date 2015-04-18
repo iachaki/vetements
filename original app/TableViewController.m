@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "WebViewController.h"
+#import <Foundation/Foundation.h>
 
 #pragma mark - yuma_fix
 #import "WebItem.h"
@@ -28,7 +29,11 @@
 @property (weak, nonatomic) UIView *overlayView;//
 @end
 
-@implementation TableViewController
+@implementation TableViewController{
+    NSMutableArray *brandArray;
+    NSArray *lines;
+    UITableView *table;
+}
 
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -43,7 +48,69 @@
 {
     [super viewDidLoad];
     
+    //ブランド一覧を入れるための配列をつくる
     yumaArray = [NSMutableArray array];
+    
+    /* == ファッションブランド一覧のCSVをデータに直してNSArrayに順番付きで保存 == */
+    // UTF8 エンコードされた CSV ファイル
+    /* ここから
+    NSString *filePath = @"fashion brand.csv";
+    NSString *text = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    
+    ここまで */
+//    NSString *text = [[NSBundle mainBundle] pathForResource:csvFileName ofType:@"fashion brand.csv"];
+//    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
+//    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
+    NSString *csvFile = [[NSBundle mainBundle] pathForResource:@"fashionbrand.csv" ofType:@"csv"];
+    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
+    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
+    
+    // 改行文字で区切って配列に格納する
+    NSArray *lines = [csv componentsSeparatedByString:@"\n"];
+    if (!brandArray) {
+        brandArray = [NSMutableArray new];
+    }
+    for (NSString *row in lines) {
+        [brandArray addObject:row];
+    }
+    [table reloadData];
+}
+#pragma mark - TableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return brandArray.count;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.textLabel.text = brandArray[indexPath.row];
+    
+    return cell;
+}
+
+
+    //NSLog(@"csv == %@", csv);
+    
+    // 改行文字で区切って配列に格納する
+  
+    //NSLog(@"lines count: %ld", lines.count);    // 行数
+
+
+
+
+
+
+/*
+
     
     UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                              style:UIBarButtonItemStylePlain
@@ -74,6 +141,14 @@
         self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
     }
     
+    
+    
+    */
+    
+    
+    
+    
+    /*
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSData *array = [userDefault dataForKey:@"webSite"];
 //    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
@@ -103,8 +178,9 @@
         self.firstCount = 1;
         [defaults setInteger:self.firstCount forKey:@"Pluscount"];
     }
+ 
 
-}
+}*/
 
 - (void)initHideView
 {
@@ -157,7 +233,7 @@
     self.navigationItem.titleView = titleView;
 }
 
-
+/*
 -(IBAction)addLinkButtonTap{
     //アラートを表示す
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
@@ -175,7 +251,7 @@
     
     [message show];
 }
-
+*/
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -255,26 +331,7 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    //#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return yumaArray.count;//列の数
-}
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-       // Configure the cell...
-    // cell.contentView.backgroundColor = [UIColor redColor];
-    
-#pragma mark yuma_fix
-    WebItem *item = yumaArray[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", item.title];
-    
-    return cell;
-}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -288,6 +345,8 @@
     [self.navigationController pushViewController:vc animated:YES];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
 
 
 

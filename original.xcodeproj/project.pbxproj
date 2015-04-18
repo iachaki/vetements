@@ -59,6 +59,8 @@
 		0831090E1990A28F004EC7F3 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 083108F01990A28F004EC7F3 /* MagicalRecord.m */; };
 		08321CC019E7FBC400D027FE /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 08321CBF19E7FBC400D027FE /* button.png */; };
 		0841A5331AD032AC00B0A198 /* start-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0841A5321AD032AC00B0A198 /* start-background.png */; };
+		0841A53F1AE258B300B0A198 /* fashionbrand.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0841A53E1AE258B300B0A198 /* fashionbrand.csv */; };
+		0841A5421AE2729D00B0A198 /* BrandListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0841A5411AE2729D00B0A198 /* BrandListViewController.m */; };
 		0845C0AE198F2E8C0065C298 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0845C0AD198F2E8C0065C298 /* detailViewController.m */; };
 		084A24DB1A86228F00C22546 /* ClickHideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A24DA1A86228F00C22546 /* ClickHideView.m */; };
 		084A24DD1A8622B200C22546 /* ClickHideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084A24DC1A8622B200C22546 /* ClickHideView.xib */; };
@@ -277,6 +279,9 @@
 		083108F41990A28F004EC7F3 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		08321CBF19E7FBC400D027FE /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		0841A5321AD032AC00B0A198 /* start-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-background.png"; sourceTree = "<group>"; };
+		0841A53E1AE258B300B0A198 /* fashionbrand.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fashionbrand.csv; sourceTree = "<group>"; };
+		0841A5401AE2729D00B0A198 /* BrandListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandListViewController.h; sourceTree = "<group>"; };
+		0841A5411AE2729D00B0A198 /* BrandListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandListViewController.m; sourceTree = "<group>"; };
 		0845C096198F25940065C298 /* original app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "original app-Bridging-Header.h"; sourceTree = "<group>"; };
 		0845C0AC198F2E8C0065C298 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detailViewController.h; path = ../detailViewController.h; sourceTree = "<group>"; };
 		0845C0AD198F2E8C0065C298 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = detailViewController.m; path = ../detailViewController.m; sourceTree = "<group>"; };
@@ -667,6 +672,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				0841A53E1AE258B300B0A198 /* fashionbrand.csv */,
 				08D13A0B1AC3EA0B0066AE23 /* icon */,
 				08D139571ABFFA020066AE23 /* Reachability.h */,
 				08D139581ABFFA020066AE23 /* Reachability.m */,
@@ -741,6 +747,8 @@
 				086306DB1A4568DA00529BAF /* TabBarViewController.m */,
 				082C57B21966B78500585CE4 /* WebViewController.h */,
 				08A5A9951973C7AB0031F1FF /* WebViewController.m */,
+				0841A5401AE2729D00B0A198 /* BrandListViewController.h */,
+				0841A5411AE2729D00B0A198 /* BrandListViewController.m */,
 				08EA3CB619B9D55100DF55F3 /* TableViewController.h */,
 				08EA3CB719B9D55100DF55F3 /* TableViewController.m */,
 				08AE3AD119D583C00032B940 /* WebItem.h */,
@@ -921,6 +929,7 @@
 				0889BF0D1A495B1F00EF1862 /* add1@2x.png in Resources */,
 				08E3ADE71A9791EF00369D66 /* tutorial3maru.png in Resources */,
 				08E3ADEE1A97981600369D66 /* tutorial5maru.png in Resources */,
+				0841A53F1AE258B300B0A198 /* fashionbrand.csv in Resources */,
 				08714A081A979AAE005EB4CB /* yajirusi2.png in Resources */,
 				08D13A221AC3EA280066AE23 /* Contents.json in Resources */,
 				08D13A251AC3EA280066AE23 /* Icon-40@3x.png in Resources */,
@@ -1007,6 +1016,7 @@
 				083109041990A28F004EC7F3 /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				083108F91990A28F004EC7F3 /* NSObject+MagicalDataImport.m in Sources */,
 				083109011990A28F004EC7F3 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
+				0841A5421AE2729D00B0A198 /* BrandListViewController.m in Sources */,
 				0831090D1990A28F004EC7F3 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				084A24E01A8626B100C22546 /* UrlHideView.m in Sources */,
 				083108F61990A28F004EC7F3 /* NSAttributeDescription+MagicalDataImport.m in Sources */,

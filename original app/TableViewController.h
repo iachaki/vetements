@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 
 @interface TableViewController : UITableViewController
+
 <UIAlertViewDelegate, UITextFieldDelegate>
 
 @end
