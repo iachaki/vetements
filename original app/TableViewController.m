@@ -23,8 +23,7 @@
     NSArray *webArray;
     //NSArray *array;
     NSMutableArray *brandnameArray;
-
-    
+    NSString *url;
 }
 @property (strong, nonatomic) TutorialView *hideView;
 @property  int firstCount;
@@ -135,6 +134,12 @@
     cell.textLabel.text = brandnameArray[indexPath.row];
     
     return cell;
+}
+
+//例えばボタンを押したとき
+- (void)btnDidPush
+{
+
 }
 //
 //UISearchBar *sb = [[[UISearchBar alloc] init] autorelease];
@@ -395,10 +400,14 @@
     
     //画面遷移をする
     
+    WebViewController *urlVC;
+    urlVC = [[WebViewController alloc] initWithNibName:nil bundle:nil];
+    // 遷移前のクラスの変数であるscoreの値を、
+    // 遷移後のクラス(SecondViewController)の変数であるscoreに渡す
+    urlVC.urlString = url;
     
     
-    
-    
+
     WebViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WebController"];
     
     

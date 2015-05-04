@@ -26,10 +26,12 @@
 @property (weak, nonatomic) UIView *overlayView;
 @property int saveCount;
 @property int urlCount;
+@property NSString *url;
 
 @end
 
 @implementation WebViewController
+@synthesize url;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +49,7 @@
     NetworkStatus netStatus = [curReach currentReachabilityStatus];
     
     
+    NSLog(@"urlは%@!!!",_urlString);
     
     if (netStatus == NotReachable) {
         UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"vétements" message:@"接続状態が悪いそうです。時間をおいて開き直してください。"

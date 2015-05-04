@@ -92,6 +92,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Oix-Or-hcw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="Y59-gd-Vfr" kind="modal" identifier="WebController" id="3Za-f5-ff6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEd-ri-BXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
