@@ -111,6 +111,7 @@
 		08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */; };
 		08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */; };
 		08AE3AD319D583C00032B940 /* WebItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AE3AD219D583C00032B940 /* WebItem.m */; };
+		08B01A431AF72C3E0081A7DE /* fashionbrand1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 08B01A421AF72C3E0081A7DE /* fashionbrand1.csv */; };
 		08B3919C1A611C290004CD66 /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B3919B1A611C290004CD66 /* done@2x.png */; };
 		08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B3919F1A613A920004CD66 /* checkbox@2x.png */; };
 		08B391A61A6141C30004CD66 /* vétements-logo2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B391A51A6141C30004CD66 /* vétements-logo2@2x.png */; };
@@ -348,6 +349,7 @@
 		08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-URL-label.png"; sourceTree = "<group>"; };
 		08AE3AD119D583C00032B940 /* WebItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebItem.h; sourceTree = "<group>"; };
 		08AE3AD219D583C00032B940 /* WebItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebItem.m; sourceTree = "<group>"; };
+		08B01A421AF72C3E0081A7DE /* fashionbrand1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fashionbrand1.csv; sourceTree = "<group>"; };
 		08B3919B1A611C290004CD66 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
 		08B3919F1A613A920004CD66 /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
 		08B391A51A6141C30004CD66 /* vétements-logo2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo2@2x.png"; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				08B01A421AF72C3E0081A7DE /* fashionbrand1.csv */,
 				0841A53E1AE258B300B0A198 /* fashionbrand.csv */,
 				08D13A0B1AC3EA0B0066AE23 /* icon */,
 				08D139571ABFFA020066AE23 /* Reachability.h */,
@@ -963,6 +966,7 @@
 				08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */,
 				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
 				085B723C1ABB06FB0043FB55 /* menu6.png in Resources */,
+				08B01A431AF72C3E0081A7DE /* fashionbrand1.csv in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
 				08714A401A986EFD005EB4CB /* yajirusi5.png in Resources */,
 				08E3ADE61A9791EF00369D66 /* tutorial2maru.png in Resources */,

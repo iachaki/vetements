@@ -22,6 +22,8 @@
     NSMutableArray *yumaArray;
     NSArray *webArray;
     //NSArray *array;
+    NSMutableArray *brandnameArray;
+
     
 }
 @property (strong, nonatomic) TutorialView *hideView;
@@ -31,8 +33,9 @@
 
 @implementation TableViewController{
     NSMutableArray *brandArray;
+//    NSMutableArray *brandnameArray;
     NSArray *lines;
-    UITableView *table;
+     UITableView *table;
 }
 
 - (instancetype)initWithStyle:(UITableViewStyle)style
@@ -48,8 +51,14 @@
 {
     [super viewDidLoad];
     
+    table.dataSource = self;
+    
+    table.delegate = self;
+    
+    brandnameArray = [NSMutableArray array];
+    
     //ブランド一覧を入れるための配列をつくる
-    yumaArray = [NSMutableArray array];
+//    yumaArray = [NSMutableArray array];
     
     /* == ファッションブランド一覧のCSVをデータに直してNSArrayに順番付きで保存 == */
     // UTF8 エンコードされた CSV ファイル
@@ -61,25 +70,56 @@
 //    NSString *text = [[NSBundle mainBundle] pathForResource:csvFileName ofType:@"fashion brand.csv"];
 //    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
 //    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
-    NSString *csvFile = [[NSBundle mainBundle] pathForResource:@"fashionbrand.csv" ofType:@"csv"];
-    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
-    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
+    NSString *csvFile2 = [[NSBundle mainBundle] pathForResource:@"fashionbrand1" ofType:@"csv"];
+    NSData *csvData2 = [NSData dataWithContentsOfFile:csvFile2];
+    NSString *csv2 = [[NSString alloc] initWithData:csvData2 encoding:NSUTF8StringEncoding];
     
     // 改行文字で区切って配列に格納する
-    NSArray *lines = [csv componentsSeparatedByString:@"\n"];
-    if (!brandArray) {
-        brandArray = [NSMutableArray new];
+    NSArray *lines = [csv2 componentsSeparatedByString:@"\n"];
+    NSLog(@"Count = %d",[lines count]);
+    NSString *obj;
+    NSArray *items;
+    NSMutableArray *matrics; // 保管する配列
+    matrics = [[NSMutableArray alloc]initWithCapacity:1];
+    for(obj in lines){
+        items =[obj componentsSeparatedByString:@","]; //コンマごとに区切る
+        [matrics addObject:items]; // matrics に入れる。
+        
+        
     }
-    for (NSString *row in lines) {
-        [brandArray addObject:row];
+//    if (!brandnameArray) {
+//        brandnameArray = [NSMutableArray new];
+//    }
+
+    for (int i = 0; i < [matrics count]; i++) {
+        NSArray *temp = [matrics objectAtIndex:i];//matricsのi番目を取り出す
+        NSArray *data =[NSArray arrayWithArray:temp];//i番目を配列にする
+        NSLog(@" brand = %@", [data objectAtIndex:0]);// 0番目の方(floatの方)を全部出力
+        NSLog(@" url = %@", [data objectAtIndex:1]);
+        
+        NSString *text = [data objectAtIndex:0] ;
+        
+        //brandnamearrrayにうまくはいっていない
+        [brandnameArray addObject:text]; //[data objectAtIndex:0]];
+        NSLog(@"ぶらんどかぞえると = %lu",(unsigned long)[brandnameArray count]);
+        
     }
-    [table reloadData];
+    
+    for (int i = 0; i < brandnameArray.count; i++) {
+        NSLog(@"なかみはああああああ%@",brandnameArray[i]);
+    }
+    
+    [brandnameArray addObject:@"hello"];
+  
+    
+    
+//    [table reloadData];
 }
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return brandArray.count;
+    return brandnameArray.count;
 }
 
 
@@ -92,10 +132,14 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = brandArray[indexPath.row];
+    cell.textLabel.text = brandnameArray[indexPath.row];
     
     return cell;
 }
+//
+//UISearchBar *sb = [[[UISearchBar alloc] init] autorelease];
+//sb.delegate = self;
+//sb.showsCancelButton = YES;
 
 
     //NSLog(@"csv == %@", csv);
@@ -275,7 +319,11 @@
     }
 }
 
-/*-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+
+
+
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -286,7 +334,11 @@
     //UITableViewの行を消去する
     [tableView deleteRowsAtIndexPaths:deleteArray withRowAnimation:UITableViewRowAnimationAutomatic];
 
-}*/
+}
+
+
+
+
 
 
 
@@ -335,7 +387,20 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    //選択されたURLを画面遷移先に送る
+    
+    
+    
+    //画面遷移をする
+    
+    
+    
+    
+    
     WebViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WebController"];
+    
     
 #pragma mark yuma_fix
     WebItem *item = yumaArray[indexPath.row];
@@ -344,6 +409,7 @@
     self.tabBarController.tabBar.hidden= YES;
     [self.navigationController pushViewController:vc animated:YES];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 

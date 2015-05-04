@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BrandListViewController : UIViewController
+@interface BrandListViewController : UIViewController{
+
+    IBOutlet UITableView *table;
+
+}
 
 @end
