@@ -152,7 +152,7 @@
                     <navigationItem key="navigationItem" id="Vw1-Oc-H5Z"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="webView" destination="4rt-gT-T13" id="Lz1-2D-aMQ"/>
+                        <outlet property="webView" destination="4rt-gT-T13" id="atJ-9d-8ah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHv-9s-E3X" userLabel="First Responder" sceneMemberID="firstResponder"/>

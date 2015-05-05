@@ -22,6 +22,8 @@
     [self initRootController];
     // window初期化
 
+    
+    
     return YES;
 }
 

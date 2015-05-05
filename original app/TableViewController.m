@@ -27,9 +27,9 @@
     NSString *url;
     
     NSMutableArray *searchResults;
-
     
-  
+    
+    
     
 }
 @property (strong, nonatomic) TutorialView *hideView;
@@ -70,7 +70,7 @@
     table.delegate = self;
     
     searchResults = [[NSMutableArray alloc]init ];
-   
+    
     
     //MARK:logo
     [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
@@ -137,7 +137,13 @@
     
 }
 
-//    [table reloadData];
+- (void)viewWillAppear:(BOOL)animated {
+    
+    if (self.tabBarController.tabBar.hidden == YES) {
+        self.tabBarController.tabBar.hidden = NO;
+    }
+}
+
 
 #pragma mark - TableView DataSource
 
@@ -201,10 +207,10 @@
 
 
 
-/*
- 
- 
- UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+
+
+
+/*UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
  style:UIBarButtonItemStylePlain
  target:self
  action:@selector(addLinkButtonTap)];
@@ -235,12 +241,12 @@
  
  
  
- */
-
-
-
-
-/*
+ 
+ 
+ 
+ 
+ 
+ /*
  NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
  NSData *array = [userDefault dataForKey:@"webSite"];
  //    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
@@ -440,7 +446,7 @@
     
     
     //画面遷移をする
-//    url = @"はろはおr−";
+    //    url = @"はろはおr−";
     WebViewController* urlVC;
     urlVC = [[WebViewController alloc] initWithNibName:nil bundle:nil];
     // 遷移前のクラスの変数であるurlの値を、
@@ -464,7 +470,7 @@
     self.tabBarController.tabBar.hidden= YES;
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-
+    
     appDelegate.globalURL = brandurlArray[indexPath.row];
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -486,7 +492,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchString scope:(NSString*)scope {
     [searchResults removeAllObjects];
- 
+    
     
     for(NSString *label in brandnameArray) {
         NSRange range = [label rangeOfString:searchString
@@ -494,27 +500,27 @@
         if(range.length > 0)
             [searchResults addObject:label];
     }
-
+    
 }
 
 - (void)filterContainsWithSearchText:(NSString *)searchText scope:(NSString*)scope
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@",searchText];
     searchResults = [brandnameArray filteredArrayUsingPredicate:predicate];
- 
+    
 }
 
 /*
-- (BOOL)searchDisplayController:controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    // 検索バーに入力された文字列を引数に、絞り込みをかけます
-    [self filterContainsWithSearchText:searchString];
-    
-    // YESを返すとテーブルビューがリロードされます。
-    // リロードすることでdataSourceSearchResultsiPhoneとdataSourceSearchResultsAndroidからテーブルビューを表示します
-    return YES;
-}
-//[self.tableView reloadData]
+ - (BOOL)searchDisplayController:controller shouldReloadTableForSearchString:(NSString *)searchString
+ {
+ // 検索バーに入力された文字列を引数に、絞り込みをかけます
+ [self filterContainsWithSearchText:searchString];
+ 
+ // YESを返すとテーブルビューがリロードされます。
+ // リロードすることでdataSourceSearchResultsiPhoneとdataSourceSearchResultsAndroidからテーブルビューを表示します
+ return YES;
+ }
+ //[self.tableView reloadData]
  */
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString

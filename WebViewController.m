@@ -93,8 +93,7 @@
     
     
     imgView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap
-    = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(push)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(push)];
     [imgView  addGestureRecognizer:tap];
     
     
@@ -108,6 +107,8 @@
     
     NSURL *url = [NSURL URLWithString:appDelegate.globalURL];
     
+    NSLog(@"これは%@",url);
+    
     //    delegate = [UIApplication sharedApplication].delegate;
     //    if (!delegate.dataArray) {
     //        delegate.dataArray = [NSMutableArray array];
@@ -120,6 +121,7 @@
     }
     
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
     [webView loadRequest:req];
     
 //    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
@@ -174,10 +176,11 @@
     self.hideView.layer.cornerRadius = 5;
     self.hideView.clipsToBounds = true;
     
-    
+    /*
     CGRect tabFrame = self.hideView.frame;
     tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
     self.hideView.frame = tabFrame;
+     */
     
     UIView *overlayView = [[UIView alloc] overlayView];
     [[overlayView myWindow] addSubview:overlayView];
@@ -193,6 +196,14 @@
         if (finished) {
         }
     }];
+}
+
+
+
+- (void)viewDidDisappear:(BOOL)animated {
+    if (self.tabBarController.tabBar.hidden == YES) {
+        self.tabBarController.tabBar.hidden = NO;
+    }
 }
 
 - (void)hideView:(UrlHideView *)view pushedUrlButton:(id)sender{
