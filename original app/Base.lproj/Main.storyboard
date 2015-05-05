@@ -93,7 +93,7 @@
                     <navigationItem key="navigationItem" id="Oix-Or-hcw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="Y59-gd-Vfr" kind="modal" identifier="WebController" id="3Za-f5-ff6"/>
+                        <segue destination="Y59-gd-Vfr" kind="modal" identifier="websegue" id="WO5-XL-ZKt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEd-ri-BXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,7 +103,7 @@
         <!--Web View Controller-->
         <scene sceneID="qn8-d1-g2r">
             <objects>
-                <viewController storyboardIdentifier="WebController" id="Y59-gd-Vfr" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y59-gd-Vfr" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WK8-WE-2Qe"/>
                         <viewControllerLayoutGuide type="bottom" id="JSd-JK-cMj"/>

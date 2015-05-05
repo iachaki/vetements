@@ -31,7 +31,7 @@
 @end
 
 @implementation WebViewController
-@synthesize url;
+@synthesize urlString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,7 +49,8 @@
     NetworkStatus netStatus = [curReach currentReachabilityStatus];
     
     
-    NSLog(@"urlは%@!!!",_urlString);
+    NSLog(@"urlは%@!!!",urlString);
+        NSLog(@"urlはあああ%@!!!",self.urlString);
     
     if (netStatus == NotReachable) {
         UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"vétements" message:@"接続状態が悪いそうです。時間をおいて開き直してください。"
@@ -101,6 +102,7 @@
     if (!self.urlString) {
         self.urlString = @"http://cookpad.com/";
     }
+    
     NSURL *url = [NSURL URLWithString:self.urlString];
     
     //    delegate = [UIApplication sharedApplication].delegate;
@@ -117,7 +119,7 @@
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
     
-    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
+//    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
     
     
     //gs.delegate = self;

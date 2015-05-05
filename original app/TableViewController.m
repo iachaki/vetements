@@ -23,6 +23,7 @@
     NSArray *webArray;
     //NSArray *array;
     NSMutableArray *brandnameArray;
+    NSMutableArray *brandurlArray;
     NSString *url;
 }
 @property (strong, nonatomic) TutorialView *hideView;
@@ -55,6 +56,7 @@
     table.delegate = self;
     
     brandnameArray = [NSMutableArray array];
+    brandurlArray = [NSMutableArray array];
     
     //ブランド一覧を入れるための配列をつくる
 //    yumaArray = [NSMutableArray array];
@@ -101,19 +103,21 @@
         //brandnamearrrayにうまくはいっていない
         [brandnameArray addObject:text]; //[data objectAtIndex:0]];
         NSLog(@"ぶらんどかぞえると = %lu",(unsigned long)[brandnameArray count]);
-        
+        [brandurlArray addObject:[data objectAtIndex:1]]; //[data objectAtIndex:0]];
     }
     
-    for (int i = 0; i < brandnameArray.count; i++) {
+    for (int i = 0; i < brandnameArray.count; i++){
         NSLog(@"なかみはああああああ%@",brandnameArray[i]);
+         NSLog(@"URLLLLLL%@",brandurlArray[i]);
     }
-    
-    [brandnameArray addObject:@"hello"];
+
+
+    //ex) [brandnameArray addObject:@"hello"];
   
-    
-    
-//    [table reloadData];
 }
+
+//    [table reloadData];
+
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -136,11 +140,7 @@
     return cell;
 }
 
-//例えばボタンを押したとき
-- (void)btnDidPush
-{
 
-}
 //
 //UISearchBar *sb = [[[UISearchBar alloc] init] autorelease];
 //sb.delegate = self;
@@ -395,33 +395,47 @@
     
     
     //選択されたURLを画面遷移先に送る
-    
+    NSLog(@"%d番目を選択したよ",indexPath.row);
     
     
     //画面遷移をする
-    
-    WebViewController *urlVC;
+    url = @"はろはおr−";
+    WebViewController* urlVC;
     urlVC = [[WebViewController alloc] initWithNibName:nil bundle:nil];
-    // 遷移前のクラスの変数であるscoreの値を、
-    // 遷移後のクラス(SecondViewController)の変数であるscoreに渡す
-    urlVC.urlString = url;
+    // 遷移前のクラスの変数であるurlの値を、
+    // 遷移後のクラス(SecondViewController)の変数であるurlに渡す
+    urlVC.urlString = brandurlArray[indexPath.row];
     
-    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 
-    WebViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WebController"];
+//    UINavigationController *webvc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
+    
+    WebViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
     
     
 #pragma mark yuma_fix
-    WebItem *item = yumaArray[indexPath.row];
-    vc.urlString = item.urlString;
+//    WebItem *item = yumaArray[indexPath.row];
+//    vc.urlString = item.urlString;
+
     
     self.tabBarController.tabBar.hidden= YES;
-    [self.navigationController pushViewController:vc animated:YES];
+
+    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self performSegueWithIdentifier:@"websegue" sender:self];
+    
+//        [self.navigationController pushViewController:webvc animated:YES];
     
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"websegue"]) {
+        WebViewController *vcntl = [segue destinationViewController];    // <- 1
+        vcntl.urlString = brandurlArray[self.tableView.indexPathForSelectedRow.row];    // <- 2
+    }
+}
 
 
 
