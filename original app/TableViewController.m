@@ -26,18 +26,30 @@
     NSMutableArray *brandurlArray;
     NSString *url;
     
+    NSMutableArray *searchResults;
+    
+  
+    
 }
 @property (strong, nonatomic) TutorialView *hideView;
 @property  int firstCount;
 @property (weak, nonatomic) UIView *overlayView;//
+@property (nonatomic, strong) NSArray *dataSourceSearchResultsiPhone;
+
+
+
 @end
+
+
 
 @implementation TableViewController{
     NSMutableArray *brandArray;
-//    NSMutableArray *brandnameArray;
+    //    NSMutableArray *brandnameArray;
     NSArray *lines;
-     UITableView *table;
+    UITableView *table;
 }
+
+
 
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -56,28 +68,29 @@
     
     table.delegate = self;
     
+    searchResults = [[NSMutableArray alloc]init ];
     
     //MARK:logo
     [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
     
-
+    
     
     brandnameArray = [NSMutableArray array];
     brandurlArray = [NSMutableArray array];
     
     //ブランド一覧を入れるための配列をつくる
-//    yumaArray = [NSMutableArray array];
+    //    yumaArray = [NSMutableArray array];
     
     /* == ファッションブランド一覧のCSVをデータに直してNSArrayに順番付きで保存 == */
     // UTF8 エンコードされた CSV ファイル
     /* ここから
-    NSString *filePath = @"fashion brand.csv";
-    NSString *text = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    
-    ここまで */
-//    NSString *text = [[NSBundle mainBundle] pathForResource:csvFileName ofType:@"fashion brand.csv"];
-//    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
-//    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
+     NSString *filePath = @"fashion brand.csv";
+     NSString *text = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+     
+     ここまで */
+    //    NSString *text = [[NSBundle mainBundle] pathForResource:csvFileName ofType:@"fashion brand.csv"];
+    //    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
+    //    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
     NSString *csvFile2 = [[NSBundle mainBundle] pathForResource:@"fashionbrand1" ofType:@"csv"];
     NSData *csvData2 = [NSData dataWithContentsOfFile:csvFile2];
     NSString *csv2 = [[NSString alloc] initWithData:csvData2 encoding:NSUTF8StringEncoding];
@@ -95,10 +108,10 @@
         
         
     }
-//    if (!brandnameArray) {
-//        brandnameArray = [NSMutableArray new];
-//    }
-
+    //    if (!brandnameArray) {
+    //        brandnameArray = [NSMutableArray new];
+    //    }
+    
     for (int i = 0; i < [matrics count]; i++) {
         NSArray *temp = [matrics objectAtIndex:i];//matricsのi番目を取り出す
         NSArray *data =[NSArray arrayWithArray:temp];//i番目を配列にする
@@ -115,12 +128,12 @@
     
     for (int i = 0; i < brandnameArray.count; i++){
         NSLog(@"なかみはああああああ%@",brandnameArray[i]);
-         NSLog(@"URLLLLLL%@",brandurlArray[i]);
+        NSLog(@"URLLLLLL%@",brandurlArray[i]);
     }
-
-
+    
+    
     //ex) [brandnameArray addObject:@"hello"];
-  
+    
 }
 
 //    [table reloadData];
@@ -129,12 +142,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return brandnameArray.count;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        
+        return [searchResults count];
+        
+    } else {
+        
+        return brandnameArray.count;
+        
+    }
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
@@ -142,7 +164,19 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = brandnameArray[indexPath.row];
+    // Display recipe in the table cell
+    
+    
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        
+        cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        cell.textLabel.text = [brandnameArray objectAtIndex:indexPath.row];
+    }
+    
+    
+    
     
     return cell;
 }
@@ -155,11 +189,11 @@
 //sb.showsCancelButton = YES;
 
 
-    //NSLog(@"csv == %@", csv);
-    
-    // 改行文字で区切って配列に格納する
-  
-    //NSLog(@"lines count: %ld", lines.count);    // 行数
+//NSLog(@"csv == %@", csv);
+
+// 改行文字で区切って配列に格納する
+
+//NSLog(@"lines count: %ld", lines.count);    // 行数
 
 
 
@@ -167,75 +201,75 @@
 
 
 /*
-
-    
-    UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                             style:UIBarButtonItemStylePlain
-                                                            target:self
-                                                            action:@selector(addLinkButtonTap)];
-    self.navigationItem.rightBarButtonItem = addLinkButton;
-    
-    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
-    //タブ選択時のフォントとカラー
-    NSDictionary *selectedAttributes = @{NSFontAttributeName : font,
-                                         NSForegroundColorAttributeName : [UIColor redColor]};
-    
-    [[UITabBarItem appearance] setTitleTextAttributes:selectedAttributes
-                                             forState:UIControlStateSelected];
-    
-    //通常時のフォントとカラー
-    NSDictionary *attributesNormal = @{NSFontAttributeName : font,
-                                       NSForegroundColorAttributeName : [UIColor blueColor]};
-    
-    [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
-                                             forState:UIControlStateNormal];
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    if (self.tabBarController.tabBar.hidden == YES) {//もしtabBarController.tabBar.hiddenがYESだったら
-        self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
-    }
-    
-    
-    
-    */
-    
-    
-    
-    
-    /*
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSData *array = [userDefault dataForKey:@"webSite"];
-//    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
-    if (array) {
-        yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
-        NSLog(@"%@",array);
-    } else {
-        NSLog(@"%@",array);
-        
-    }
-    
-    if (yumaArray.count <=7) {
-        
-        NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:data forKey:@"webSite"];
-        
-     
-    }
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.firstCount = [defaults integerForKey:@"Pluscount"];
-    if (self.firstCount == 0) {
-        [self initHideView];
-        self.firstCount = 1;
-        [defaults setInteger:self.firstCount forKey:@"Pluscount"];
-    }
  
+ 
+ UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+ style:UIBarButtonItemStylePlain
+ target:self
+ action:@selector(addLinkButtonTap)];
+ self.navigationItem.rightBarButtonItem = addLinkButton;
+ 
+ UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
+ //タブ選択時のフォントとカラー
+ NSDictionary *selectedAttributes = @{NSFontAttributeName : font,
+ NSForegroundColorAttributeName : [UIColor redColor]};
+ 
+ [[UITabBarItem appearance] setTitleTextAttributes:selectedAttributes
+ forState:UIControlStateSelected];
+ 
+ //通常時のフォントとカラー
+ NSDictionary *attributesNormal = @{NSFontAttributeName : font,
+ NSForegroundColorAttributeName : [UIColor blueColor]};
+ 
+ [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
+ forState:UIControlStateNormal];
+ }
+ 
+ - (void)viewWillAppear:(BOOL)animated{
+ [super viewWillAppear:animated];
+ 
+ if (self.tabBarController.tabBar.hidden == YES) {//もしtabBarController.tabBar.hiddenがYESだったら
+ self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
+ }
+ 
+ 
+ 
+ */
 
-}*/
+
+
+
+/*
+ NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+ NSData *array = [userDefault dataForKey:@"webSite"];
+ //    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
+ if (array) {
+ yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
+ NSLog(@"%@",array);
+ } else {
+ NSLog(@"%@",array);
+ 
+ }
+ 
+ if (yumaArray.count <=7) {
+ 
+ NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
+ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+ [defaults setObject:data forKey:@"webSite"];
+ 
+ 
+ }
+ 
+ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+ self.firstCount = [defaults integerForKey:@"Pluscount"];
+ if (self.firstCount == 0) {
+ [self initHideView];
+ self.firstCount = 1;
+ [defaults setInteger:self.firstCount forKey:@"Pluscount"];
+ }
+ 
+ 
+ }*/
 
 - (void)initHideView
 {
@@ -289,24 +323,24 @@
 }
 
 /*
--(IBAction)addLinkButtonTap{
-    //アラートを表示す
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
-                                                      message:nil
-                                                     delegate:self
-                                            cancelButtonTitle:@"Cancel"
-                                            otherButtonTitles:@"Add", nil];
-    
-    [message setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
-    UITextField *fileDescription = [message textFieldAtIndex:0];
-    fileDescription.placeholder=@"title";
-    [[message textFieldAtIndex:1]setSecureTextEntry:NO];
-    UITextField *fileName= [message textFieldAtIndex:1];
-    fileName.placeholder=@"url";
-    
-    [message show];
-}
-*/
+ -(IBAction)addLinkButtonTap{
+ //アラートを表示す
+ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enter File Details"
+ message:nil
+ delegate:self
+ cancelButtonTitle:@"Cancel"
+ otherButtonTitles:@"Add", nil];
+ 
+ [message setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
+ UITextField *fileDescription = [message textFieldAtIndex:0];
+ fileDescription.placeholder=@"title";
+ [[message textFieldAtIndex:1]setSecureTextEntry:NO];
+ UITextField *fileName= [message textFieldAtIndex:1];
+ fileName.placeholder=@"url";
+ 
+ [message show];
+ }
+ */
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -344,7 +378,7 @@
     NSArray *deleteArray = [NSArray arrayWithObject:indexPath];
     //UITableViewの行を消去する
     [tableView deleteRowsAtIndexPaths:deleteArray withRowAnimation:UITableViewRowAnimationAutomatic];
-
+    
 }
 
 
@@ -405,7 +439,7 @@
     
     
     //画面遷移をする
-    url = @"はろはおr−";
+//    url = @"はろはおr−";
     WebViewController* urlVC;
     urlVC = [[WebViewController alloc] initWithNibName:nil bundle:nil];
     // 遷移前のクラスの変数であるurlの値を、
@@ -413,25 +447,25 @@
     urlVC.urlString = brandurlArray[indexPath.row];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-
-//    UINavigationController *webvc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
+    
+    //    UINavigationController *webvc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
     
     WebViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
     
     
 #pragma mark yuma_fix
-//    WebItem *item = yumaArray[indexPath.row];
-//    vc.urlString = item.urlString;
-
+    //    WebItem *item = yumaArray[indexPath.row];
+    //    vc.urlString = item.urlString;
+    
     
     self.tabBarController.tabBar.hidden= YES;
-
+    
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self performSegueWithIdentifier:@"websegue" sender:self];
     
-//        [self.navigationController pushViewController:webvc animated:YES];
+    //        [self.navigationController pushViewController:webvc animated:YES];
     
 }
 
@@ -444,21 +478,49 @@
     }
 }
 
-- (void) searchItem:(NSString *) searchText {
-    // 検索処理
-}
-
-- (void) searchBarSearchButtonClicked: (UISearchBar *) searchBar {
-    [searchBar resignFirstResponder];
-    [self searchItem:searchBar.text];
-}
-
-- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *) searchText {
-    NSLog(@"serch text=%@", searchText);
-    if ([searchText length]!=0) {
-        // インクリメンタル検索など
+- (void)filterContentForSearchText:(NSString*)searchString scope:(NSString*)scope {
+    [searchResults removeAllObjects];
+    
+    for(NSString *label in brandnameArray) {
+        NSRange range = [label rangeOfString:searchString
+                                     options:NSCaseInsensitiveSearch];
+        if(range.length > 0)
+            [searchResults addObject:label];
     }
 }
+
+- (void)filterContainsWithSearchText:(NSString *)searchText scope:(NSString*)scope
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@",searchText];
+    searchResults = [brandnameArray filteredArrayUsingPredicate:predicate];
+ 
+}
+
+/*
+- (BOOL)searchDisplayController:controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    // 検索バーに入力された文字列を引数に、絞り込みをかけます
+    [self filterContainsWithSearchText:searchString];
+    
+    // YESを返すとテーブルビューがリロードされます。
+    // リロードすることでdataSourceSearchResultsiPhoneとdataSourceSearchResultsAndroidからテーブルビューを表示します
+    return YES;
+}
+//[self.tableView reloadData]
+ */
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    
+    [self filterContainsWithSearchText:searchString
+                                 scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                        objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
+    
+}
+
+
+
 
 
 /*
@@ -511,4 +573,4 @@
  */
 
 @end
-                        
+

@@ -12,6 +12,10 @@
 
 @interface TableViewController : UITableViewController
 
-<UIAlertViewDelegate, UITextFieldDelegate,UISearchBarDelegate>
+<UIAlertViewDelegate, UITextFieldDelegate,UISearchBarDelegate, UISearchDisplayDelegate>
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@property (nonatomic, strong) NSArray *dataSourceiPhone;
 
 @end
