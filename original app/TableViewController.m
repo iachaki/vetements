@@ -25,6 +25,7 @@
     NSMutableArray *brandnameArray;
     NSMutableArray *brandurlArray;
     NSString *url;
+    
 }
 @property (strong, nonatomic) TutorialView *hideView;
 @property  int firstCount;
@@ -54,6 +55,12 @@
     table.dataSource = self;
     
     table.delegate = self;
+    
+    
+    //MARK:logo
+    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
+    
+
     
     brandnameArray = [NSMutableArray array];
     brandurlArray = [NSMutableArray array];
@@ -141,6 +148,7 @@
 }
 
 
+
 //
 //UISearchBar *sb = [[[UISearchBar alloc] init] autorelease];
 //sb.delegate = self;
@@ -215,9 +223,7 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:data forKey:@"webSite"];
         
-        //MARK:logo
-        [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
-        
+     
     }
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -434,25 +440,25 @@
     if ([[segue identifier] isEqualToString:@"websegue"]) {
         WebViewController *vcntl = [segue destinationViewController];    // <- 1
         vcntl.urlString = brandurlArray[self.tableView.indexPathForSelectedRow.row];    // <- 2
+        //http://kikuchy.hatenablog.com/entry/2013/11/04/Segueで画面遷移するときにパラメーターを渡してみ
     }
 }
 
+- (void) searchItem:(NSString *) searchText {
+    // 検索処理
+}
 
+- (void) searchBarSearchButtonClicked: (UISearchBar *) searchBar {
+    [searchBar resignFirstResponder];
+    [self searchItem:searchBar.text];
+}
 
-
-
-/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- //セル選択状態の解除
- [tableView deselectRowAtIndexPath:indexPath animated:YES];
- //ここにやりたいことを書く
- NSURL *url = [NSURL URLWithString:@"http://cookpad.com/"];
- }
- */
-
-
-
-
-
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *) searchText {
+    NSLog(@"serch text=%@", searchText);
+    if ([searchText length]!=0) {
+        // インクリメンタル検索など
+    }
+}
 
 
 /*

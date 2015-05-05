@@ -12,6 +12,6 @@
 
 @interface TableViewController : UITableViewController
 
-<UIAlertViewDelegate, UITextFieldDelegate>
+<UIAlertViewDelegate, UITextFieldDelegate,UISearchBarDelegate>
 
 @end

@@ -66,12 +66,12 @@
         self.saveCount = 1;
         [defaults setInteger:self.saveCount forKey:@"Savecount"];
         
-        //        UIImage *barBackBtnImg = [[UIImage imageNamed:@"button-menu.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 0)];
-        //
-        //        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
-        //                                                          forState:UIControlStateNormal
-        //                                                        barMetrics:UIBarMetricsDefault];
-        //        [[self navigationItem] setTitle:@" "];
+//       UIImage *barBackBtnImg = [[UIImage imageNamed:@"button-menu.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 0)];
+//       
+//           [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
+//                                                           forState:UIControlStateNormal
+//                                                        barMetrics:UIBarMetricsDefault];
+//    [[self navigationItem] setTitle:@" "];
         
         
     }
@@ -345,17 +345,6 @@
         }
         
     }
-}
-
--(IBAction)push{
-    // 1数行で書くタイプ（複数ボタンタイプ）
-    
-    UIAlertView *alert =
-    [[UIAlertView alloc] initWithTitle:@"保存しますか？" message:@"確認"
-                              delegate:self cancelButtonTitle:@"NO!" otherButtonTitles:@"YES!", nil];
-    [alert show];
-    
-    
 }
 
 -(void)customIOS7dialogButtonTouchUpInside:(id)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

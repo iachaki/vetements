@@ -109,9 +109,9 @@
 		08A566FE1993113500574F21 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A566FD1993113500574F21 /* Photo.m */; };
 		08A5A9961973C7AB0031F1FF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A5A9951973C7AB0031F1FF /* WebViewController.m */; };
 		08A690DA1A1A058B003EBD71 /* vétements-clothes-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */; };
-		08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */; };
 		08AE3AD319D583C00032B940 /* WebItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AE3AD219D583C00032B940 /* WebItem.m */; };
 		08B01A431AF72C3E0081A7DE /* fashionbrand1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 08B01A421AF72C3E0081A7DE /* fashionbrand1.csv */; };
+		08B01A481AF8644A0081A7DE /* vétements-URL-label.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B01A471AF8644A0081A7DE /* vétements-URL-label.png */; };
 		08B3919C1A611C290004CD66 /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B3919B1A611C290004CD66 /* done@2x.png */; };
 		08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B3919F1A613A920004CD66 /* checkbox@2x.png */; };
 		08B391A61A6141C30004CD66 /* vétements-logo2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08B391A51A6141C30004CD66 /* vétements-logo2@2x.png */; };
@@ -346,10 +346,10 @@
 		08A566FD1993113500574F21 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		08A5A9951973C7AB0031F1FF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-clothes-label.png"; sourceTree = "<group>"; };
-		08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-URL-label.png"; sourceTree = "<group>"; };
 		08AE3AD119D583C00032B940 /* WebItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebItem.h; sourceTree = "<group>"; };
 		08AE3AD219D583C00032B940 /* WebItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebItem.m; sourceTree = "<group>"; };
 		08B01A421AF72C3E0081A7DE /* fashionbrand1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fashionbrand1.csv; sourceTree = "<group>"; };
+		08B01A471AF8644A0081A7DE /* vétements-URL-label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-URL-label.png"; sourceTree = "<group>"; };
 		08B3919B1A611C290004CD66 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
 		08B3919F1A613A920004CD66 /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
 		08B391A51A6141C30004CD66 /* vétements-logo2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo2@2x.png"; sourceTree = "<group>"; };
@@ -574,6 +574,7 @@
 		0860A6271A1763030044E644 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				08B01A471AF8644A0081A7DE /* vétements-URL-label.png */,
 				08E3ADEB1A97946400369D66 /* icon1.png */,
 				08E3ADE11A9791EF00369D66 /* tutorial1maru.png */,
 				08E3ADE21A9791EF00369D66 /* tutorial2maru.png */,
@@ -608,7 +609,6 @@
 				08F66FA31A3B14DA00CD461D /* back-ground-1.png */,
 				08A463A51A32F20B00570CF4 /* menu3.png */,
 				08A2AE7E1A209CE200B03065 /* button-menu.png */,
-				08A690DB1A1A0A0B003EBD71 /* vétements-URL-label.png */,
 				08A690D91A1A058B003EBD71 /* vétements-clothes-label.png */,
 				0860A6391A176E340044E644 /* internet5.png */,
 				089EB46419E8319100DB8F11 /* back-button1.png */,
@@ -954,6 +954,7 @@
 				08D13A351AC3EA280066AE23 /* iTunesArtwork@2x.png in Resources */,
 				08D13A2E1AC3EA280066AE23 /* Icon-72.png in Resources */,
 				081902611A4A3DE7009D99FB /* add2@2x.png in Resources */,
+				08B01A481AF8644A0081A7DE /* vétements-URL-label.png in Resources */,
 				08D13A291AC3EA280066AE23 /* Icon-76@2x.png in Resources */,
 				080DD5EB195D887200D99D0A /* photo2.jpg in Resources */,
 				08D13A321AC3EA280066AE23 /* Icon.png in Resources */,
@@ -964,7 +965,6 @@
 				08D898F71A4BDDB200FFF6F0 /* TutorialView.xib in Resources */,
 				084A24EE1A8B60F300C22546 /* cross-mark.png in Resources */,
 				08B391A01A613A920004CD66 /* checkbox@2x.png in Resources */,
-				08A690DC1A1A0A0B003EBD71 /* vétements-URL-label.png in Resources */,
 				085B723C1ABB06FB0043FB55 /* menu6.png in Resources */,
 				08B01A431AF72C3E0081A7DE /* fashionbrand1.csv in Resources */,
 				080DD5E2195D887200D99D0A /* photo10.jpg in Resources */,
