@@ -20,5 +20,6 @@
 #pragma mark - yuma_fix
 @property (nonatomic) NSMutableArray *dataArray;
 
+@property (strong, nonatomic) NSString *globalURL;
 
 @end

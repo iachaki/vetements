@@ -103,7 +103,10 @@
         self.urlString = @"http://cookpad.com/";
     }
     
-    NSURL *url = [NSURL URLWithString:self.urlString];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    
+    NSURL *url = [NSURL URLWithString:appDelegate.globalURL];
     
     //    delegate = [UIApplication sharedApplication].delegate;
     //    if (!delegate.dataArray) {
@@ -384,7 +387,9 @@
 
 - (IBAction)tapToTopButton:(id)sender {
     //[self dismissViewControllerAnimated:YES completion:nil];
+    self.urlString=nil;
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 

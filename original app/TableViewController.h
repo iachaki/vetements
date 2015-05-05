@@ -12,7 +12,9 @@
 
 @interface TableViewController : UITableViewController
 
-<UIAlertViewDelegate, UITextFieldDelegate,UISearchBarDelegate, UISearchDisplayDelegate>
+<UIAlertViewDelegate, UITextFieldDelegate,UISearchBarDelegate, UISearchDisplayDelegate>{
+    
+}
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 

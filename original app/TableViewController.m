@@ -27,6 +27,7 @@
     NSString *url;
     
     NSMutableArray *searchResults;
+
     
   
     
@@ -69,10 +70,10 @@
     table.delegate = self;
     
     searchResults = [[NSMutableArray alloc]init ];
+   
     
     //MARK:logo
     [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
-    
     
     
     brandnameArray = [NSMutableArray array];
@@ -445,6 +446,8 @@
     // 遷移前のクラスの変数であるurlの値を、
     // 遷移後のクラス(SecondViewController)の変数であるurlに渡す
     urlVC.urlString = brandurlArray[indexPath.row];
+    NSLog(@"%@番目のURL",brandurlArray[indexPath.row]);
+    
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
@@ -460,6 +463,9 @@
     
     self.tabBarController.tabBar.hidden= YES;
     
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+
+    appDelegate.globalURL = brandurlArray[indexPath.row];
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -480,6 +486,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchString scope:(NSString*)scope {
     [searchResults removeAllObjects];
+ 
     
     for(NSString *label in brandnameArray) {
         NSRange range = [label rangeOfString:searchString
@@ -487,6 +494,7 @@
         if(range.length > 0)
             [searchResults addObject:label];
     }
+
 }
 
 - (void)filterContainsWithSearchText:(NSString *)searchText scope:(NSString*)scope
