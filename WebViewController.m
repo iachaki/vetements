@@ -50,7 +50,7 @@
     
     
     NSLog(@"urlは%@!!!",urlString);
-        NSLog(@"urlはあああ%@!!!",self.urlString);
+    NSLog(@"urlはあああ%@!!!",self.urlString);
     
     if (netStatus == NotReachable) {
         UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"vétements" message:@"接続状態が悪いそうです。時間をおいて開き直してください。"
@@ -66,12 +66,12 @@
         self.saveCount = 1;
         [defaults setInteger:self.saveCount forKey:@"Savecount"];
         
-//       UIImage *barBackBtnImg = [[UIImage imageNamed:@"button-menu.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 0)];
-//       
-//           [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
-//                                                           forState:UIControlStateNormal
-//                                                        barMetrics:UIBarMetricsDefault];
-//    [[self navigationItem] setTitle:@" "];
+        //       UIImage *barBackBtnImg = [[UIImage imageNamed:@"button-menu.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 0)];
+        //
+        //           [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
+        //                                                           forState:UIControlStateNormal
+        //                                                        barMetrics:UIBarMetricsDefault];
+        //    [[self navigationItem] setTitle:@" "];
         
         
     }
@@ -93,7 +93,7 @@
     
     
     imgView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(push)];
+    UITapGestureRecognizer *tap= [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(push)];
     [imgView  addGestureRecognizer:tap];
     
     
@@ -107,8 +107,6 @@
     
     NSURL *url = [NSURL URLWithString:appDelegate.globalURL];
     
-    NSLog(@"これは%@",url);
-    
     //    delegate = [UIApplication sharedApplication].delegate;
     //    if (!delegate.dataArray) {
     //        delegate.dataArray = [NSMutableArray array];
@@ -121,10 +119,9 @@
     }
     
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
-    
     [webView loadRequest:req];
     
-//    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
+    //    UITapGestureRecognizer *gs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
     
     
     //gs.delegate = self;
@@ -176,11 +173,10 @@
     self.hideView.layer.cornerRadius = 5;
     self.hideView.clipsToBounds = true;
     
-    /*
+    
     CGRect tabFrame = self.hideView.frame;
     tabFrame.origin.y = CGRectGetHeight(self.view.frame) - tabFrame.size.height;
     self.hideView.frame = tabFrame;
-     */
     
     UIView *overlayView = [[UIView alloc] overlayView];
     [[overlayView myWindow] addSubview:overlayView];
@@ -196,14 +192,6 @@
         if (finished) {
         }
     }];
-}
-
-
-
-- (void)viewDidDisappear:(BOOL)animated {
-    if (self.tabBarController.tabBar.hidden == YES) {
-        self.tabBarController.tabBar.hidden = NO;
-    }
 }
 
 - (void)hideView:(UrlHideView *)view pushedUrlButton:(id)sender{

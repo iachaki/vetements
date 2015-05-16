@@ -119,7 +119,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-828" y="914"/>
+            <point key="canvasLocation" x="-828" y="913"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="qn8-d1-g2r">

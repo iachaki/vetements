@@ -24,9 +24,12 @@
     //NSArray *array;
     NSMutableArray *brandnameArray;
     NSMutableArray *brandurlArray;
+    
     NSString *url;
     
     NSMutableArray *searchResults;
+    
+    NSDictionary *brandDic;
     
     
     
@@ -121,10 +124,15 @@
         
         NSString *text = [data objectAtIndex:0] ;
         
-        //brandnamearrrayにうまくはいっていない
-        [brandnameArray addObject:text]; //[data objectAtIndex:0]];
-        NSLog(@"ぶらんどかぞえると = %lu",(unsigned long)[brandnameArray count]);
-        [brandurlArray addObject:[data objectAtIndex:1]]; //[data objectAtIndex:0]];
+        
+        [brandnameArray addObject:[temp objectAtIndex:0]];
+        [brandurlArray addObject:[temp objectAtIndex:1]]; //[data objectAtIndex:0]];
+        
+        //これらをNSDictionaryに入れる
+        brandDic = [NSDictionary dictionaryWithObjects:brandurlArray forKeys:brandnameArray];
+        
+        //例) nsdictionaryから要素を取り出す方法
+        NSLog(@"これは%@",[brandDic objectForKey:brandnameArray[0]]);
     }
     
     for (int i = 0; i < brandnameArray.count; i++){
@@ -137,13 +145,7 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    if (self.tabBarController.tabBar.hidden == YES) {
-        self.tabBarController.tabBar.hidden = NO;
-    }
-}
-
+//    [table reloadData];
 
 #pragma mark - TableView DataSource
 
@@ -207,10 +209,10 @@
 
 
 
-
-
-
-/*UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+/*
+ 
+ 
+ UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
  style:UIBarButtonItemStylePlain
  target:self
  action:@selector(addLinkButtonTap)];
@@ -241,12 +243,12 @@
  
  
  
- 
- 
- 
- 
- 
- /*
+ */
+
+
+
+
+/*
  NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
  NSData *array = [userDefault dataForKey:@"webSite"];
  //    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
@@ -436,6 +438,14 @@
 }
 
 
+#pragma mark - tabelViewで選択されたときの処理
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    if (self.tabBarController.tabBar.hidden == YES) {
+        self.tabBarController.tabBar.hidden = NO;
+    }
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -451,7 +461,7 @@
     urlVC = [[WebViewController alloc] initWithNibName:nil bundle:nil];
     // 遷移前のクラスの変数であるurlの値を、
     // 遷移後のクラス(SecondViewController)の変数であるurlに渡す
-    urlVC.urlString = brandurlArray[indexPath.row];
+    //    urlVC.urlString = brandurlArray[indexPath.row];
     NSLog(@"%@番目のURL",brandurlArray[indexPath.row]);
     
     
@@ -459,7 +469,7 @@
     
     //    UINavigationController *webvc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
     
-    WebViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
+    //    WebViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"WebController"];
     
     
 #pragma mark yuma_fix
@@ -471,7 +481,16 @@
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
-    appDelegate.globalURL = brandurlArray[indexPath.row];
+    
+    //下のコードだとURLが上手く変更されない
+    //appDelegate.globalURL = brandurlArray[indexPath.row];
+    
+    
+    if (searchResults.count == 0){
+        appDelegate.globalURL = brandurlArray[indexPath.row];
+    }else{
+        appDelegate.globalURL = [brandDic objectForKey:searchResults[indexPath.row]];
+    }
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     

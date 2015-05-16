@@ -1196,6 +1196,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Eiko Kawasaki (JRKR87VUG4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eiko Kawasaki (JRKR87VUG4)";
+				COPY_PHASE_STRIP = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "original app/original-Prefix.pch";
 				INFOPLIST_FILE = "original app/original-Info.plist";
@@ -1216,6 +1218,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Eiko Kawasaki (JRKR87VUG4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eiko Kawasaki (JRKR87VUG4)";
+				COPY_PHASE_STRIP = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "original app/original-Prefix.pch";
 				INFOPLIST_FILE = "original app/original-Info.plist";
