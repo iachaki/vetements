@@ -25,6 +25,7 @@
 		080DD5F0195D887200D99D0A /* photo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5DE195D887200D99D0A /* photo7.jpg */; };
 		080DD5F1195D887200D99D0A /* photo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5DF195D887200D99D0A /* photo8.jpg */; };
 		080DD5F2195D887200D99D0A /* photo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5E0195D887200D99D0A /* photo9.jpg */; };
+		0818A4D51B0A35120036F3EF /* fashionbrand2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0818A4D41B0A35120036F3EF /* fashionbrand2.csv */; };
 		081902611A4A3DE7009D99FB /* add2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 081902601A4A3DE7009D99FB /* add2@2x.png */; };
 		081902651A4A4922009D99FB /* add3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 081902641A4A4922009D99FB /* add3@2x.png */; };
 		082F74871A9C9DF8001A05A5 /* click2.png in Resources */ = {isa = PBXBuildFile; fileRef = 082F74861A9C9DF8001A05A5 /* click2.png */; };
@@ -213,6 +214,7 @@
 		080DD5DE195D887200D99D0A /* photo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo7.jpg; sourceTree = "<group>"; };
 		080DD5DF195D887200D99D0A /* photo8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8.jpg; sourceTree = "<group>"; };
 		080DD5E0195D887200D99D0A /* photo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo9.jpg; sourceTree = "<group>"; };
+		0818A4D41B0A35120036F3EF /* fashionbrand2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fashionbrand2.csv; sourceTree = "<group>"; };
 		081902601A4A3DE7009D99FB /* add2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add2@2x.png"; sourceTree = "<group>"; };
 		081902641A4A4922009D99FB /* add3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add3@2x.png"; sourceTree = "<group>"; };
 		082C57B21966B78500585CE4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				0818A4D41B0A35120036F3EF /* fashionbrand2.csv */,
 				08B01A421AF72C3E0081A7DE /* fashionbrand1.csv */,
 				0841A53E1AE258B300B0A198 /* fashionbrand.csv */,
 				08D13A0B1AC3EA0B0066AE23 /* icon */,
@@ -907,6 +910,7 @@
 				0889BF0B1A49580900EF1862 /* add@2x.png in Resources */,
 				080DD5E5195D887200D99D0A /* photo13.jpg in Resources */,
 				080DD5E8195D887200D99D0A /* photo16.jpg in Resources */,
+				0818A4D51B0A35120036F3EF /* fashionbrand2.csv in Resources */,
 				08C1F1AC1A4A55820085D4FA /* edit1@2x.png in Resources */,
 				08D13A2B1AC3EA280066AE23 /* Icon-Small@2x.png in Resources */,
 				08714A441A98A168005EB4CB /* click.png in Resources */,
