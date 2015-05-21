@@ -123,6 +123,7 @@
 		08C1F1C61A4B906C0085D4FA /* checkbox2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C51A4B906C0085D4FA /* checkbox2@2x.png */; };
 		08C1F1C81A4B91F40085D4FA /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C1F1C71A4B91F40085D4FA /* plus@2x.png */; };
 		08C1F1CB1A4BACA00085D4FA /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C1F1CA1A4BACA00085D4FA /* TutorialViewController.m */; };
+		08C7CEED1B0E13D40086C1FE /* BrandList - シート1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 08C7CEEC1B0E13D40086C1FE /* BrandList - シート1.csv */; };
 		08D139591ABFFA020066AE23 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D139581ABFFA020066AE23 /* Reachability.m */; };
 		08D1395B1ABFFA430066AE23 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D1395A1ABFFA430066AE23 /* SystemConfiguration.framework */; };
 		08D13A221AC3EA280066AE23 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 08D13A0D1AC3EA280066AE23 /* Contents.json */; };
@@ -363,6 +364,7 @@
 		08C1F1C71A4B91F40085D4FA /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
 		08C1F1C91A4BACA00085D4FA /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		08C1F1CA1A4BACA00085D4FA /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		08C7CEEC1B0E13D40086C1FE /* BrandList - シート1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "BrandList - シート1.csv"; sourceTree = "<group>"; };
 		08D139571ABFFA020066AE23 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		08D139581ABFFA020066AE23 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		08D1395A1ABFFA430066AE23 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -676,6 +678,7 @@
 		08E59AD6195D73CE000A3FF4 = {
 			isa = PBXGroup;
 			children = (
+				08C7CEEC1B0E13D40086C1FE /* BrandList - シート1.csv */,
 				0818A4D41B0A35120036F3EF /* fashionbrand2.csv */,
 				08B01A421AF72C3E0081A7DE /* fashionbrand1.csv */,
 				0841A53E1AE258B300B0A198 /* fashionbrand.csv */,
@@ -911,6 +914,7 @@
 				080DD5E5195D887200D99D0A /* photo13.jpg in Resources */,
 				080DD5E8195D887200D99D0A /* photo16.jpg in Resources */,
 				0818A4D51B0A35120036F3EF /* fashionbrand2.csv in Resources */,
+				08C7CEED1B0E13D40086C1FE /* BrandList - シート1.csv in Resources */,
 				08C1F1AC1A4A55820085D4FA /* edit1@2x.png in Resources */,
 				08D13A2B1AC3EA280066AE23 /* Icon-Small@2x.png in Resources */,
 				08714A441A98A168005EB4CB /* click.png in Resources */,
