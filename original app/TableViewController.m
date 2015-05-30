@@ -494,7 +494,7 @@
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self performSegueWithIdentifier:@"websegue" sender:self];
+    [self performSegueWithIdentifier:@"moveweb" sender:self];
     
     //        [self.navigationController pushViewController:webvc animated:YES];
     
@@ -502,7 +502,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"websegue"]) {
+    if ([[segue identifier] isEqualToString:@"moveweb"]) {
         WebViewController *vcntl = [segue destinationViewController];    // <- 1
         vcntl.urlString = brandurlArray[self.tableView.indexPathForSelectedRow.row];    // <- 2
         //http://kikuchy.hatenablog.com/entry/2013/11/04/Segueで画面遷移するときにパラメーターを渡してみ
