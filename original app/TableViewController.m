@@ -76,7 +76,7 @@
     
     
     //MARK:logo
-    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo2.png"]];
+    [self setNavigationBarTitleImage:[UIImage imageNamed:@"vétements-logo.png"]];
     
     
     brandnameArray = [NSMutableArray array];
