@@ -10,10 +10,11 @@
 
 #import "MyFashionData.h"
 #import "detailViewController.h"
+#import "GAI.h"
 
 
 
-@interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface ViewController : GAITrackedViewController <UICollectionViewDataSource,UICollectionViewDelegate>
 {
     NSArray *result;
     int selectedId;

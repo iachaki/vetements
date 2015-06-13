@@ -11,6 +11,8 @@
 #import "TutorialViewController.h"
 #import "ClickHideView.h"
 #import "UIView+Modal.h"
+#import "TrackingManager.h"
+#import <Parse/Parse.h>
 
 #define KEY @"dataArray"
 #define PINK_COLOR [UIColor colorWithRed:231/255.0 green:101/255.0 blue:131/255.0 alpha:1.0f]
@@ -33,6 +35,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    // "トップ画面"が開かれたときのトラッキング情報を送る
+    //[TrackingManager sendScreenTracking:@"トップ画面"];
+    [TrackingManager sendScreenTracking:@"Top"];
+    
     
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    NSInteger* test = [defaults objectForKey:0];
@@ -357,5 +365,8 @@
     self.navigationItem.leftBarButtonItem = nil;
       [self.collectionView reloadData];
 }
+
+
+
 
 @end

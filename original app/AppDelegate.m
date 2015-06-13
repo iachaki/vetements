@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "TutorialViewController.h"
+#import "GAI.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -17,17 +19,37 @@
 //    TutorialViewController *tvc = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"TutorialVC"];//TutorialVCはstoryboardで自分で設定したい文字列
 //    [self.window makeKeyAndVisible];//見えるようにする
 //    [self.window.rootViewController presentViewController:tvc animated:NO completion:NULL];//modalで移動する
+    // Google Analyticsの初期化
+
+
     
     [MagicalRecord setupCoreDataStack];
     [self initRootController];
     // window初期化
 
+    // Google Analyticsの初期化
+    [self initializeGoogleAnalytics];
+
+    [Parse setApplicationId:@"ZwAtI84EsxxJRW5P0kqB1eRot2hR8axQF6mla9Yw"
+                  clientKey:@"V7Koq4LiTwup5PCJnqpqgydURjvhVPDVPIidmoSl"];
     
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     
     return YES;
 }
 
 #pragma mark - Init Window
+
+- (void)initializeGoogleAnalytics
+{
+    // トラッキングIDを設定
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-64072548-1"];
+    
+    // 例外を Google Analytics に送る
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    
+}
 
 // window初期化
 - (void)initWindow
