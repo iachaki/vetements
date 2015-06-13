@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "MyFashionData.h"
 #import "CustomIOS7AlertView.h"
+#import "SVProgressHUD.h"
 
 @interface WebViewController : UIViewController<UIGestureRecognizerDelegate, CustomIOS7AlertViewDelegate>
 {

@@ -15,7 +15,7 @@
 #import "Reachability.h"
 
 
-@interface WebViewController ()<UrlHideViewDelegate, SaveHideViewDelegate>
+@interface WebViewController ()<UrlHideViewDelegate, SaveHideViewDelegate, UIWebViewDelegate>
 {
     AppDelegate *delegate;
     NSMutableArray *array;
@@ -47,6 +47,10 @@
     [super viewDidLoad];
     Reachability *curReach = [Reachability reachabilityForInternetConnection];
     NetworkStatus netStatus = [curReach currentReachabilityStatus];
+    
+    webView.delegate = self;
+    //webviewがselfに処理を任せる(delegate)
+    
     
     
     NSLog(@"urlは%@!!!",urlString);
@@ -160,6 +164,14 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    //Webページを開いた時にインジケータを動かす
+    //[SVProgressHUD showInfoWithStatus:@"Loading..."];
+    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
+    
+
+}
+
 - (void)back {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -243,12 +255,14 @@
 //Webページのロード時にインジケータを動かす
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
 //Webページのロード完了時にインジケータを非表示にする
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    [SVProgressHUD dismiss];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 

@@ -93,6 +93,11 @@
 		0888A8991AF8978C00823C97 /* tutorial2maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 0888A8981AF8978C00823C97 /* tutorial2maru.png */; };
 		0889BF0B1A49580900EF1862 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BF0A1A49580900EF1862 /* add@2x.png */; };
 		0889BF0D1A495B1F00EF1862 /* add1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0889BF0C1A495B1F00EF1862 /* add1@2x.png */; };
+		0896350C1B2BFB5100065B43 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0896350B1B2BFB5100065B43 /* QuartzCore.framework */; };
+		089635171B2C00C500065B43 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089635161B2C00C500065B43 /* CoreImage.framework */; };
+		089635211B2C028700065B43 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0896351C1B2C028700065B43 /* SVIndefiniteAnimatedView.m */; };
+		089635221B2C028700065B43 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0896351E1B2C028700065B43 /* SVProgressHUD.bundle */; };
+		089635231B2C028700065B43 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 089635201B2C028700065B43 /* SVProgressHUD.m */; };
 		089A48A51B198B9C00CF4755 /* BrandList (60).csv in Resources */ = {isa = PBXBuildFile; fileRef = 089A48A41B198B9C00CF4755 /* BrandList (60).csv */; };
 		089A48A91B19CE4400CF4755 /* start-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 089A48A81B19CE4400CF4755 /* start-background.png */; };
 		089A48AB1B19CF4400CF4755 /* vétements-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 089A48AA1B19CF4400CF4755 /* vétements-logo.png */; };
@@ -325,6 +330,14 @@
 		0888A8981AF8978C00823C97 /* tutorial2maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial2maru.png; sourceTree = "<group>"; };
 		0889BF0A1A49580900EF1862 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		0889BF0C1A495B1F00EF1862 /* add1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add1@2x.png"; sourceTree = "<group>"; };
+		0896350B1B2BFB5100065B43 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		089635161B2C00C500065B43 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		0896351B1B2C028700065B43 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		0896351C1B2C028700065B43 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		0896351D1B2C028700065B43 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		0896351E1B2C028700065B43 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		0896351F1B2C028700065B43 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		089635201B2C028700065B43 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		089A48A41B198B9C00CF4755 /* BrandList (60).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "BrandList (60).csv"; sourceTree = "<group>"; };
 		089A48A81B19CE4400CF4755 /* start-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-background.png"; sourceTree = "<group>"; };
 		089A48AA1B19CF4400CF4755 /* vétements-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vétements-logo.png"; sourceTree = "<group>"; };
@@ -429,8 +442,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08D1395B1ABFFA430066AE23 /* SystemConfiguration.framework in Frameworks */,
+				089635171B2C00C500065B43 /* CoreImage.framework in Frameworks */,
 				08E59AE5195D73CE000A3FF4 /* CoreGraphics.framework in Frameworks */,
+				0896350C1B2BFB5100065B43 /* QuartzCore.framework in Frameworks */,
+				08D1395B1ABFFA430066AE23 /* SystemConfiguration.framework in Frameworks */,
 				08E59AE7195D73CE000A3FF4 /* UIKit.framework in Frameworks */,
 				08E59AE3195D73CE000A3FF4 /* Foundation.framework in Frameworks */,
 			);
@@ -625,6 +640,19 @@
 			name = Image;
 			sourceTree = "<group>";
 		};
+		0896351A1B2C028700065B43 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0896351B1B2C028700065B43 /* SVIndefiniteAnimatedView.h */,
+				0896351C1B2C028700065B43 /* SVIndefiniteAnimatedView.m */,
+				0896351D1B2C028700065B43 /* SVProgressHUD-Prefix.pch */,
+				0896351E1B2C028700065B43 /* SVProgressHUD.bundle */,
+				0896351F1B2C028700065B43 /* SVProgressHUD.h */,
+				089635201B2C028700065B43 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		08A566EB19930E8900574F21 /* REPhotoCollectionController */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,6 +758,8 @@
 		08E59AE1195D73CE000A3FF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				089635161B2C00C500065B43 /* CoreImage.framework */,
+				0896350B1B2BFB5100065B43 /* QuartzCore.framework */,
 				08D1395A1ABFFA430066AE23 /* SystemConfiguration.framework */,
 				08E59AE2195D73CE000A3FF4 /* Foundation.framework */,
 				08E59AE4195D73CE000A3FF4 /* CoreGraphics.framework */,
@@ -742,6 +772,7 @@
 		08E59AE8195D73CE000A3FF4 /* original app */ = {
 			isa = PBXGroup;
 			children = (
+				0896351A1B2C028700065B43 /* SVProgressHUD */,
 				08A44F081AB3FD9E00344FB5 /* UIView+Modal.h */,
 				08A44F091AB3FD9E00344FB5 /* UIView+Modal.m */,
 				08C1F1C91A4BACA00085D4FA /* TutorialViewController.h */,
@@ -906,6 +937,7 @@
 				08714A0C1A979C29005EB4CB /* yajirusi4.png in Resources */,
 				086306ED1A45726400529BAF /* earth205@2x.png in Resources */,
 				08C1F1A41A4A525D0085D4FA /* edit@2x.png in Resources */,
+				089635221B2C028700065B43 /* SVProgressHUD.bundle in Resources */,
 				08E3ADEC1A97946400369D66 /* icon1.png in Resources */,
 				086306E11A4570BC00529BAF /* favorite21 @3x.png in Resources */,
 				08D13A281AC3EA280066AE23 /* Icon-76.png in Resources */,
@@ -1033,9 +1065,11 @@
 				083108F91990A28F004EC7F3 /* NSObject+MagicalDataImport.m in Sources */,
 				083109011990A28F004EC7F3 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				0841A5421AE2729D00B0A198 /* BrandListViewController.m in Sources */,
+				089635231B2C028700065B43 /* SVProgressHUD.m in Sources */,
 				0831090D1990A28F004EC7F3 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				084A24E01A8626B100C22546 /* UrlHideView.m in Sources */,
 				083108F61990A28F004EC7F3 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
+				089635211B2C028700065B43 /* SVIndefiniteAnimatedView.m in Sources */,
 				083109001990A28F004EC7F3 /* NSManagedObject+MagicalRequests.m in Sources */,
 				083109091990A28F004EC7F3 /* MagicalRecord+ErrorHandling.m in Sources */,
 				08A44F0A1AB3FD9E00344FB5 /* UIView+Modal.m in Sources */,
