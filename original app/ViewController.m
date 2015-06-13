@@ -108,7 +108,7 @@
     [self.overlayView addSubview:self.hideView];
     
     
-    [UIView animateWithDuration:2.5 animations:^{
+    [UIView animateWithDuration:0.8 animations:^{
         self.hideView.alpha = 1;
     } completion:^(BOOL finished) {
         if (finished) {
@@ -117,7 +117,7 @@
 }
 
 - (void)hideView:(ClickHideView *)view pushedClickButton:(id)sender{
-    [UIView animateWithDuration:2.5 animations:^{
+    [UIView animateWithDuration:0.6 animations:^{
         self.hideView.alpha = 0;
         self.overlayView.alpha = 0;
     } completion:^(BOOL finished) {
