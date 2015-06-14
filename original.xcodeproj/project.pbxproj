@@ -1313,7 +1313,7 @@
 				INFOPLIST_FILE = "original app/original-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = original;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dca6bd4b-fcbf-4065-bcee-e1286c2d7c4c";
 				SWIFT_OBJC_BRIDGING_HEADER = "original app-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -1336,7 +1336,7 @@
 				INFOPLIST_FILE = "original app/original-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = original;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dca6bd4b-fcbf-4065-bcee-e1286c2d7c4c";
 				SWIFT_OBJC_BRIDGING_HEADER = "original app-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};

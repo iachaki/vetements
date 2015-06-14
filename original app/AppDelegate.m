@@ -20,6 +20,28 @@
 //    [self.window makeKeyAndVisible];//見えるようにする
 //    [self.window.rootViewController presentViewController:tvc animated:NO completion:NULL];//modalで移動する
     // Google Analyticsの初期化
+    
+#pragma mark - code for iOS8
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    {
+        // iOS 8 Notifications
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
+        [application registerForRemoteNotifications];
+#endif
+    }else{
+        // iOS < 8 Notifications
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|                                                UIRemoteNotificationTypeAlert|                                              UIRemoteNotificationTypeSound];
+    }NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    
+    if (userInfo != nil) {
+        application = [UIApplication sharedApplication];
+        application.applicationIconBadgeNumber++;
+    }
+    
+    application.applicationIconBadgeNumber = 0;
+
 
 
     
@@ -39,6 +61,7 @@
     return YES;
 }
 
+//Push通知！
 #pragma mark - Init Window
 
 - (void)initializeGoogleAnalytics
@@ -150,6 +173,75 @@
     NSArray *a = [osversion componentsSeparatedByString:@"."];
     return ([(NSString*)[a objectAtIndex:0] intValue] >= 7);
 }
+
+#pragma mark - Register Parse
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"didRegisterForRemoteNotification");
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        if (succeeded) {
+            [PFPush storeDeviceToken:deviceToken];
+        }else{
+            NSLog(@"%@の理由でデバイストークンの保存に失敗", error);
+        }
+    }];
+    
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    if (userInfo) {
+        
+        NSLog(@"userInfo == %@", userInfo);
+        
+        NSString *alertString = [[userInfo objectForKey:@"aps"] valueForKey:@"alert"];
+        
+        if (application.applicationState == UIApplicationStateActive)
+        {
+            //TODO:調整してね
+            application = [UIApplication sharedApplication];
+            application.applicationIconBadgeNumber++;
+        }
+        
+        if (application.applicationState == UIApplicationStateInactive)
+        {
+            //TODO:調整してね
+            application = [UIApplication sharedApplication];
+            application.applicationIconBadgeNumber++;
+        }
+        
+        
+        
+        // =========== Notification =========== //
+        
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        if(localNotification == nil) {
+            return;
+        }
+        
+        localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:1.5];
+        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        //localTimeZone → defaultTimeZone
+        
+        localNotification.alertAction = @"vêtements";
+        localNotification.alertBody = alertString;
+        
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        
+        
+        // ========= Foreground Notification ========
+        //
+        //「handlePush」を使うとフォアグラウンド時にアラートが表示される
+        //[PFPush handlePush:userInfo];
+        
+    }
+    
+}
+
 
 
 @end
