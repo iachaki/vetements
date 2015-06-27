@@ -20,6 +20,7 @@
 @interface TableViewController ()<TutorialViewDelegate>
 {
     
+    
     NSMutableArray *yumaArray;
     NSArray *webArray;
     //NSArray *array;
