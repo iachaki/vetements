@@ -185,102 +185,17 @@
     } else {
         cell.textLabel.text = [brandnameArray objectAtIndex:indexPath.row];
     }
-    
-    
-    
-    
     return cell;
 }
 
 
 
-//
-//UISearchBar *sb = [[[UISearchBar alloc] init] autorelease];
-//sb.delegate = self;
-//sb.showsCancelButton = YES;
-
-
-//NSLog(@"csv == %@", csv);
-
-// 改行文字で区切って配列に格納する
-
-//NSLog(@"lines count: %ld", lines.count);    // 行数
 
 
 
 
 
 
-/*
- 
- 
- UIBarButtonItem *addLinkButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"plus.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
- style:UIBarButtonItemStylePlain
- target:self
- action:@selector(addLinkButtonTap)];
- self.navigationItem.rightBarButtonItem = addLinkButton;
- 
- UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
- //タブ選択時のフォントとカラー
- NSDictionary *selectedAttributes = @{NSFontAttributeName : font,
- NSForegroundColorAttributeName : [UIColor redColor]};
- 
- [[UITabBarItem appearance] setTitleTextAttributes:selectedAttributes
- forState:UIControlStateSelected];
- 
- //通常時のフォントとカラー
- NSDictionary *attributesNormal = @{NSFontAttributeName : font,
- NSForegroundColorAttributeName : [UIColor blueColor]};
- 
- [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal
- forState:UIControlStateNormal];
- }
- 
- - (void)viewWillAppear:(BOOL)animated{
- [super viewWillAppear:animated];
- 
- if (self.tabBarController.tabBar.hidden == YES) {//もしtabBarController.tabBar.hiddenがYESだったら
- self.tabBarController.tabBar.hidden = NO;//tabBarController.tabBar.hiddenをNOにする
- }
- 
- 
- 
- */
-
-
-
-
-/*
- NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
- NSData *array = [userDefault dataForKey:@"webSite"];
- //    if ([[NSString alloc] initWithData:array encoding:NSUTF8StringEncoding]) {
- if (array) {
- yumaArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
- NSLog(@"%@",array);
- } else {
- NSLog(@"%@",array);
- 
- }
- 
- if (yumaArray.count <=7) {
- 
- NSData *data =[NSKeyedArchiver archivedDataWithRootObject:yumaArray];
- NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
- [defaults setObject:data forKey:@"webSite"];
- 
- 
- }
- 
- NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
- self.firstCount = [defaults integerForKey:@"Pluscount"];
- if (self.firstCount == 0) {
- [self initHideView];
- self.firstCount = 1;
- [defaults setInteger:self.firstCount forKey:@"Pluscount"];
- }
- 
- 
- }*/
 
 - (void)initHideView
 {

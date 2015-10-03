@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6ECCE9F3-10CC-4388-B2FB-663642402CFE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>original</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6598BE8FF7F1D49FCA8D7C4BBF8BFF2A3CE70AE2</key>
+		<string>https://github.com/iachaki/vetements.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>original.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6598BE8FF7F1D49FCA8D7C4BBF8BFF2A3CE70AE2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iachaki/vetements.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6598BE8FF7F1D49FCA8D7C4BBF8BFF2A3CE70AE2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6598BE8FF7F1D49FCA8D7C4BBF8BFF2A3CE70AE2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MY%20FASHION</string>
+		</dict>
+	</array>
+</dict>
+</plist>
