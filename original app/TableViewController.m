@@ -97,7 +97,7 @@
     //    NSString *text = [[NSBundle mainBundle] pathForResource:csvFileName ofType:@"fashion brand.csv"];
     //    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
     //    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
-    NSString *csvFile2 = [[NSBundle mainBundle] pathForResource:@"BrandList (60)" ofType:@"csv"];
+    NSString *csvFile2 = [[NSBundle mainBundle] pathForResource:@"BrandList (65)" ofType:@"csv"];
     NSData *csvData2 = [NSData dataWithContentsOfFile:csvFile2];
     NSString *csv2 = [[NSString alloc] initWithData:csvData2 encoding:NSUTF8StringEncoding];
     

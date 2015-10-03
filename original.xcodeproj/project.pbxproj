@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080634A11BBFD23400EE4591 /* BrandList (65).csv in Resources */ = {isa = PBXBuildFile; fileRef = 080634A01BBFD23400EE4591 /* BrandList (65).csv */; };
 		080DD5E1195D887200D99D0A /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5CF195D887200D99D0A /* photo1.jpg */; };
 		080DD5E2195D887200D99D0A /* photo10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5D0195D887200D99D0A /* photo10.jpg */; };
 		080DD5E3195D887200D99D0A /* photo11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080DD5D1195D887200D99D0A /* photo11.jpg */; };
@@ -188,6 +189,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		080634A01BBFD23400EE4591 /* BrandList (65).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "BrandList (65).csv"; path = "../../BrandList (65).csv"; sourceTree = "<group>"; };
 		080DD5CF195D887200D99D0A /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
 		080DD5D0195D887200D99D0A /* photo10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo10.jpg; sourceTree = "<group>"; };
 		080DD5D1195D887200D99D0A /* photo11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo11.jpg; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				089A48A41B198B9C00CF4755 /* BrandList (60).csv */,
+				080634A01BBFD23400EE4591 /* BrandList (65).csv */,
 			);
 			path = CSVs;
 			sourceTree = "<group>";
@@ -973,6 +976,7 @@
 				080DD5F2195D887200D99D0A /* photo9.jpg in Resources */,
 				08321CC019E7FBC400D027FE /* button.png in Resources */,
 				080DD5EF195D887200D99D0A /* photo6.jpg in Resources */,
+				080634A11BBFD23400EE4591 /* BrandList (65).csv in Resources */,
 				080DD5E6195D887200D99D0A /* photo14.jpg in Resources */,
 				08E3ADE71A9791EF00369D66 /* tutorial3maru.png in Resources */,
 				08E3ADEE1A97981600369D66 /* tutorial5maru.png in Resources */,
