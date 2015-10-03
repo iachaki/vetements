@@ -5,14 +5,17 @@ PODS:
   - GoogleAnalytics-iOS-SDK/Core (3.12)
   - Parse (1.7.4):
     - Bolts/Tasks (>= 1.1.5)
+  - XLPagerTabStrip (1.1.1)
 
 DEPENDENCIES:
   - GoogleAnalytics-iOS-SDK (~> 3.12)
   - Parse (~> 1.7.4)
+  - XLPagerTabStrip (~> 1.1)
 
 SPEC CHECKSUMS:
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
-  GoogleAnalytics-iOS-SDK: 0a3327a993b8ed2b8fe1c6c4a8dcf5b76d2237a8
+  GoogleAnalytics-iOS-SDK: 13241762fa4aea845eb75bef6c0da3427a26e7b3
   Parse: 6ca512c6e860b66739c95151b2f76ac4712b7842
+  XLPagerTabStrip: 222995115ef0d3a7134073b02d38023592835c17
 
 COCOAPODS: 0.37.2

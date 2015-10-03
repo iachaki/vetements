@@ -4,6 +4,7 @@
 target 'original' do
 pod 'GoogleAnalytics-iOS-SDK', '~> 3.12'
 pod 'Parse', '~> 1.7.4'
+pod 'XLPagerTabStrip', '~> 1.1'
 
 end
 

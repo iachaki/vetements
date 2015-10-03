@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-original-XLPagerTabStrip.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-original.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>472D57FF607285EB2BDC1596</key>
+		<key>2C1F180412681A4133C3056E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65DC013679144575F555C60A</key>
+		<key>AF385E7A0434BF77C472C273</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F82A170415B863B886852821</key>
+		<key>B6363CFAFE836813C31B15C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8E80040FA9CFCD083CD5DE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

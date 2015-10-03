@@ -32,7 +32,7 @@
     
     table.delegate = self;
     
-    NSString *csvfile2 = [[NSBundle mainBundle] pathForResource:@"BrandList (60)" ofType:@"csv"];
+    NSString *csvfile2 = [[NSBundle mainBundle] pathForResource:@"BrandList (75)" ofType:@"csv"];
     NSData *csvData2 = [NSData dataWithContentsOfFile:csvfile2];
     NSString *csv2 = [[NSString alloc] initWithData:csvData2 encoding:NSUTF8StringEncoding];
     
